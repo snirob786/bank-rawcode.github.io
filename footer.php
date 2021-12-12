@@ -1,26 +1,49 @@
-<!--===============================================================================================-->
-	<!-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script> -->
-<!--===============================================================================================-->
-	<script src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
-  	<script src="js/customScript.js"></script>
-    <script src="js/not-exist-form.js"></script>
-<!--===============================================================================================-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
 
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
- 
+
+</div>
+
+
+
+<script src="/js/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+<!--    <script>-->
+<!--        window.jQuery || document.write('<script src="js/main.js"><\/script>')-->
+<!--    </script>-->
+
+<script rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="/js/jquery-validation/dist/jquery.validate.js"></script>
+<script rel="stylesheet" src="js/main.js"></script>
+<script rel="stylesheet" src="js/functions.js"></script>
+<script rel="stylesheet" src="js/add_update.js"></script>
+<script rel="stylesheet" src="js/admin.js"></script>
+<script rel="stylesheet" src="js/admin-pdf-download-btn.js"></script>
+<script>
+    let doc = $(document);
+
+    doc.ready(function () {
+
+        $('.dependant-container-parent').on('click','#removeDependant',function () {
+            $(this).closest('.dependant-container').remove();
+            var depnum = dependantCounter()-1;
+            $('#depCount').val(depnum);
+        });
+
+        $('#adminlogin').submit(function(e){
+            e.preventDefault();
+
+        });
+
+
+        //    Materialize Initialization
+        $('select').formSelect();
+        $('.datepicker').datepicker({
+            yearRange: [1920,2021]
+        });
+
+
+
+    });
+</script>
 
 </body>
+
 </html>

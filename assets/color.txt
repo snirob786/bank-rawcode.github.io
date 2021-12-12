@@ -1,0 +1,6 @@
+green : #24d378
+dark green : #0f4a2c
+grey: #797979
+dimgrey: #5f7e6e
+powderblue: #c7e3e6
+nearly white: #f4fff9

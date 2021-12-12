@@ -1,0 +1,168 @@
+[16-Dec-2020 13:56:58 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 13:56:58 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 13:56:58 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 13:57:03 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 13:57:03 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 13:57:03 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 13:57:38 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 13:57:38 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 13:57:38 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 13:57:47 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 13:57:47 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 13:57:47 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 13:58:04 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 13:58:04 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 13:58:04 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 13:58:10 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 13:58:10 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 13:58:10 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 13:58:55 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 13:58:55 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 13:58:55 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 13:59:06 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 13:59:06 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 13:59:06 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 14:00:13 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 14:00:13 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 14:00:13 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 14:00:40 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 14:00:40 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 14:00:40 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 14:01:16 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 14:01:16 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 14:01:16 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 15:06:53 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 15:06:53 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 15:06:53 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 15:07:17 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 15:07:17 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 15:07:17 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 15:08:00 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 15:08:00 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 15:08:00 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 15:08:03 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 15:08:03 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 15:08:03 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 16:02:41 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 16:02:41 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 16:02:41 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 16:09:00 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 16:09:00 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 16:09:00 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 16:09:05 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 16:09:05 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 16:09:05 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 16:09:05 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 16:09:05 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 16:09:05 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 16:09:08 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 16:09:08 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 16:09:08 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 16:15:16 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 16:15:16 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 16:15:16 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:28:44 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 19:28:44 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:28:44 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:28:45 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 19:28:45 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:28:45 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:28:50 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 19:28:50 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:28:50 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:28:53 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 19:28:53 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:28:53 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:30:44 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 19:30:44 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:30:44 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:33:46 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 19:33:46 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:33:46 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:38:32 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 19:38:32 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:38:32 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:38:58 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 19:38:58 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:38:58 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:40:01 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 19:40:01 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:40:01 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:40:01 America/Boise] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 39
+[16-Dec-2020 19:43:46 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 19:43:46 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:43:46 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:46:25 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 19:46:25 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:46:25 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:46:25 America/Boise] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 39
+[16-Dec-2020 19:47:07 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 19:47:07 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:47:07 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:47:07 America/Boise] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 39
+[16-Dec-2020 19:51:01 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 19:51:01 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 19:51:01 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 20:00:46 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 20:00:46 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 20:00:46 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 20:01:41 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 20:01:41 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 20:01:41 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 20:07:23 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 20:07:23 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 20:07:23 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 20:07:36 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 20:07:36 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 20:07:36 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 20:14:51 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 20:14:51 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 20:14:51 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 20:19:55 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 25
+[16-Dec-2020 20:19:55 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[16-Dec-2020 20:19:55 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 34
+[07-Feb-2021 14:57:53 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 19
+[07-Feb-2021 14:57:53 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[07-Feb-2021 14:57:53 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[07-Feb-2021 14:58:04 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 19
+[07-Feb-2021 14:58:04 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[07-Feb-2021 14:58:04 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[07-Feb-2021 14:59:08 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 19
+[07-Feb-2021 14:59:08 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[07-Feb-2021 14:59:08 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[07-Feb-2021 23:03:51 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 19
+[07-Feb-2021 23:03:51 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[07-Feb-2021 23:03:51 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[07-Feb-2021 23:03:57 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 19
+[07-Feb-2021 23:03:57 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[07-Feb-2021 23:03:57 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[07-Feb-2021 23:04:01 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 19
+[07-Feb-2021 23:04:01 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[07-Feb-2021 23:04:01 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[07-Feb-2021 23:04:02 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 19
+[07-Feb-2021 23:04:02 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[07-Feb-2021 23:04:02 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[07-Feb-2021 23:04:02 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 19
+[07-Feb-2021 23:04:02 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[07-Feb-2021 23:04:02 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[07-Feb-2021 23:04:02 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 19
+[07-Feb-2021 23:04:02 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[07-Feb-2021 23:04:02 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[08-Feb-2021 10:26:12 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 19
+[08-Feb-2021 10:26:12 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[08-Feb-2021 10:26:12 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[14-Oct-2021 22:01:16 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'ppcebamy_cloudwa'@'localhost' (using password: YES) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 19
+[14-Oct-2021 22:01:16 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[14-Oct-2021 22:01:16 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[14-Oct-2021 22:01:26 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'ppcebamy_cloudwa'@'localhost' (using password: YES) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 19
+[14-Oct-2021 22:01:26 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[14-Oct-2021 22:01:26 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[14-Oct-2021 22:01:30 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'ppcebamy_cloudwa'@'localhost' (using password: YES) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 19
+[14-Oct-2021 22:01:30 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[14-Oct-2021 22:01:30 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[14-Oct-2021 22:01:32 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'ppcebamy_cloudwa'@'localhost' (using password: YES) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 19
+[14-Oct-2021 22:01:32 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[14-Oct-2021 22:01:32 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[14-Oct-2021 22:01:33 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'ppcebamy_cloudwa'@'localhost' (using password: YES) in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 19
+[14-Oct-2021 22:01:33 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28
+[14-Oct-2021 22:01:33 America/Boise] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home3/ppcebamy/public_html/hbctaxorg/classes/DB.php on line 28

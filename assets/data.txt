@@ -1,0 +1,69 @@
+Tax Payer's Details:
+    1. First Name
+    2. Middle Name
+    3. Last Name
+    4. SSN
+    5. DOB
+    6. Occupation
+    7. Work Phone
+
+Tax Payer's Wife's Details:
+    1. First Name
+    2. Middle Name
+    3. Last Name
+    4. SSN
+    5. DOB
+    6. Occupation
+    7. Work Phone
+
+
+Tax Payer's Other Details Details:
+    1. Street (45)
+    2. City (20)
+    3. State (2)
+    4. Zip (10)
+    5. Home Phone (10)
+    6. Email Address (40)
+
+Tax Payer's and Spouse combine info:
+    1. Blind
+    2. Disabled
+    3. Pres. Campaign Fund
+    4. Marital Status (In case of widow/widower date of spouse's death)
+
+Tax Payer's Child/Dependents:
+    1. First Name
+    2. Middle Name
+    3. Last Name
+    4. DOB
+    5. SSN
+    6. Monts Lived With you
+    7. Disabled
+    8. Full time student
+    9. Dependent's Gross Income
+
+Questions To Determine Maximum Deduction:
+    Mendatory Fields
+    1. Are you self employed
+    2. receive income from raising animals or crops
+    3. rent from real estate or other property?
+    4. income from gravel, timber, minerals, oil, gas, copyrights, parents
+
+    Optional Fields
+    5. withdraw or write checks from mutual fund
+    6. have a foreign bank account, trust or business
+    7. provide a home for or help support anyone not listed in dependants
+    8. receive any correspondence from the IRS or State Department of Taxation?
+    9. Were there any births, deaths, marriages, divorces or adoptions in your immediate family?
+    10. Did you give a gift of more than $13,000 to one or more people?
+    11. Did you have any debts cancelled, forgiven, or refinanced?
+    12. Did you go through bankruptcy proceedings?
+    13.
+        a) If you paid rent, how much did you pay? (input field)
+        b) Was heat included? (yes/no)
+    14. Did you pay interest on a student loan for yourself, your spouse, or your dependent during the year?
+    15. Did you pay expenses for yourself, your spouse, or your dependent to attend classes beyond high school?
+    16. Did you have any children under the age of 19 or 19 to 23 year old students with unearned income of more than $950?
+    17. Did you purchase a new alternative technology vehicle or electric vehicle?
+    18. install any energy property to your residence
+    19. own $50,000 or more in foreign financial assets?

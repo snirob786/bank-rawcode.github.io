@@ -1,40 +1,64 @@
-<?php 
-	session_start();
-    include_once "includes/dbh.inc.php";
- ?>
+<?php
+
+    include_once "init.php";
+    $db =  new DB();
+    $new_ses = new Session();
+
+    $matcher = array("yes","no");
+    $matcher_marriage = array("single","married_filling_jointly","married_filling_separately","head_of_house","qualifying_widow");
+
+    if (isset($_SESSION['special_id']) && !isset($_SESSION['user_type'])){
+        $session_id = $new_ses->get_session('special_id');
+        $sql = "SELECT * FROM tax_payers_data WHERE tax_payers_data_unique_ID='$session_id'";
+        $data_db = $db->select($sql);
+        $data = $data_db->fetch_assoc();
+        $ssn_display = get_ssn_display($data['tax_payers_data_ssn']);
+        $dob_display = get_dob_display($data['tax_payers_data_dob']);
+        $spdob_display = get_dob_display($data['tax_payers_data_spdob']);
+        $ssn = $data['tax_payers_data_ssn'];
+
+        $sql = "SELECT * FROM tax_payers_dependants_data WHERE tax_payers_dependants_data_owner_ssn = '$ssn'";
+        $result_dep = $db->select($sql);
+        $depcount = $result_dep->num_rows;
+
+    }else{
+
+    }
+
+
+
+    $ogTitle = "HBC Organizer";
+    $ogUrl = current_url();
+    $ogSiteName = "HBC Organizer";
+    $ogImage = "";
+    $ogType = "website";
+    $ogDescription = "";
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Home</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-5.6.1/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<!-- <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css"> -->
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-5.6.1/css/font-awesome.min.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker3.css">
-<!--<script-->
 
-    <script src="js/jquery-3.3.1.js"></script>
-<!--===============================================================================================-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv=”X-UA-Compatible” content=”IE=edge”>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo pagetitle();?></title>
+    <link rel="icon" href="assets/HBC-logo.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--  Facebook Share Content  -->
+    <meta property=”og:title” content=”<?php echo $ogTitle; ?>”/>
+    <meta property=”og:url” content=”<?php echo $ogUrl; ?>”/>
+    <meta property=”og:site_name” content=”<?php echo $ogSiteName; ?>”/>
+    <meta property=”og:image” content=”<?php echo $ogImage; ?>”/>
+    <meta property=”og:type” content=”<?php echo $ogType; ?>”/>
+    <meta property=”og:description” content=”<?php echo $ogDescription; ?>”/>
+
+
 </head>
+
+<body class="full-page" style="margin: 0;">
+    <div class="full-section">
