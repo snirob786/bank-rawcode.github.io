@@ -5,8 +5,6 @@ function checkUserDetails() {
         e.preventDefault();
     });
     var jsondata = getFormData(form);
-    console.log(jsondata);
-
 
     $.ajax({
         url: "../includes/auth.php",
@@ -16,10 +14,8 @@ function checkUserDetails() {
             // text.html(data);
             // console.log(data);
             var e = JSON.parse(data);
-            console.log(e);
-
+            console.log(e.success);
             if(e.success === 'inserted'){
-
                 window.location.replace("/user-details-input");
                 //
                 // $('#user-detail').addClass('displayNone');

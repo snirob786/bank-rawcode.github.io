@@ -11,18 +11,17 @@
         $session_id = $new_ses->get_session('special_id');
         $sql = "SELECT * FROM tax_payers_data WHERE tax_payers_data_unique_ID='$session_id'";
         $data_db = $db->select($sql);
-        $data = $data_db->fetch_assoc();
-        $ssn_display = get_ssn_display($data['tax_payers_data_ssn']);
-        $dob_display = get_dob_display($data['tax_payers_data_dob']);
-        $spdob_display = get_dob_display($data['tax_payers_data_spdob']);
-        $ssn = $data['tax_payers_data_ssn'];
+        if ($data_db->num_rows > 0){
+            $data = $data_db->fetch_assoc();
+            $ssn_display = get_ssn_display($data['tax_payers_data_ssn']);
+            $dob_display = get_dob_display($data['tax_payers_data_dob']);
+            $spdob_display = get_dob_display($data['tax_payers_data_spdob']);
+            $ssn = $data['tax_payers_data_ssn'];
 
-        $sql = "SELECT * FROM tax_payers_dependants_data WHERE tax_payers_dependants_data_owner_ssn = '$ssn'";
-        $result_dep = $db->select($sql);
-        $depcount = $result_dep->num_rows;
-
-    }else{
-
+            $sql = "SELECT * FROM tax_payers_dependants_data WHERE tax_payers_dependants_data_owner_ssn = '$ssn'";
+            $result_dep = $db->select($sql);
+            $depcount = $result_dep->num_rows;
+        }
     }
 
 
@@ -33,7 +32,6 @@
     $ogImage = "";
     $ogType = "website";
     $ogDescription = "";
-
 
 ?>
 

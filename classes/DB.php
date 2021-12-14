@@ -43,7 +43,11 @@
 
         public function delete($query){
             return $result = mysqli_query($this->db,$query);
+        }
 
+        public function error(){
+            $this->error = "Error: ". mysqli_error($this->db);
+            return $this->error;
         }
 
 

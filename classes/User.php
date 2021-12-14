@@ -41,17 +41,17 @@
             if ($this->error === false){
                 $sql = "SELECT * FROM tax_payers_data WHERE tax_payers_data_ssn = '$ssn'";
                 $state = $db->select($sql);
-                if ($state->num_rows <= 0){
+                if ($state->num_rows === 0){
                     $sql = "INSERT INTO tax_payers_data(tax_payers_data_ssn, tax_payers_data_dob, tax_payers_data_lname, tax_payers_data_unique_ID,tax_payers_data_last_update_date) VALUES ('{$ssn}','{$dob}','{$lname}','{$uniqId}','{$current_date}')";
-
                    $state = $db->insert($sql);
                    if($state){
                        session_unset();
                        $new_ses->set_session('special_id',$uniqId);
                        return 'inserted';
-                   } else{
-                       return $db->error();
                    }
+                    else{
+                        return $db->error();
+                    }
                 } else{
                     session_unset();
                     $sql = "SELECT * FROM tax_payers_data WHERE tax_payers_data_ssn='$ssn'";

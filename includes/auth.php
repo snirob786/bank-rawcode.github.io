@@ -11,6 +11,8 @@
         echo json_encode(['success' => 'error','message'=>'No data found']);
     } else if($status === 'inserted'){
         echo json_encode(['success' => 'inserted','message' => 'Data inserted successfully']);
+    } else if($status === 'not_inserted'){
+        echo json_encode(['success' => 'inserted','message' => 'Data couldn\'t insert']);
     }else if($status === 'ssn_numeric'){
         echo json_encode(['success' => 'error','message' => 'Only numeric for SSN']);
     }else if($status === 'ssn_not_equal_nine'){
