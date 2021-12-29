@@ -365,6 +365,37 @@
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="input-field col s12 l6">
+                        <select name="rcvalimony">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="paid">Paid</option>
+                            <option value="received">Received</option>
+                        </select>
+                        <label class="white-text">Did you pay or receive alimony in 2021?</label>
+                    </div>
+
+                    <div class="col s12 l6">
+                        <div class="input-field">
+                            <input type="text" id="rcvalimonyamnt" name="rcvalimonyamnt" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                            <label for="rcvalimonyamnt" class="white-text">Amount of the recieved alimony ($)</label>
+                        </div>
+                    </div>
+
+                    <div class="col s12 l6">
+                        <div class="input-field">
+                            <input type="text" id="rcpntssn" name="rcpntssn" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                            <label for="rcpntssn" class="white-text">Recipient's SSN</label>
+                        </div>
+                    </div>
+                    <div class="col s12 l6">
+                        <div class="input-field">
+                            <input type="text" id="doseparation" name="doseparation" class="datepicker" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                            <label for="doseparation" class="white-text">Date of divorce or separation</label>
+                        </div>
+                    </div>
+                </div>
+
                 <div id="deduction" class="row">
                     <div class="radio-btn-close">
                         <div class="col s12 l9">
@@ -577,7 +608,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">20.</span> Did you purchase a new home this year?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">20.</span> Did you purchase or sell a main home during the year</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -588,7 +619,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">21.</span> Did you sale your primary or rental property this year?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">21.</span> Did you sell or transfer any stock or sell rental or investment property?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -598,7 +629,7 @@
                     </div>
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">22.</span> Did you donate a to charitable organization?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">22.</span> Did you make any charitable contributions in 2021?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -618,7 +649,7 @@
                     </div>
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">24.</span> Did you go through bankruptcy proceedings?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">24.</span> Are you involved in bankruptcy, foreclosure, repossession, or had any debt (including credit cards) cancelled?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -634,6 +665,32 @@
                         <div class="col s4 l3">
                             <div class="right">
                                 <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'stimulus_irs');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">26.</span> Did you purchase health insurance through a public exchange?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'purchase_health');?>
+<!--                                Here tax_payers_data_stimulus_irs db table need to be changed -->
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">26.</span> Did you purchase health insurance through a public exchange?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'purchase_health');?>
+                                <!--                                Here tax_payers_data_stimulus_irs db table need to be changed -->
+
                             </div>
                         </div>
                     </div>
