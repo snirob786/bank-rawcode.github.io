@@ -60,14 +60,26 @@
                 </div>
 
                 <div class="row">
-                    <div class="col s12 l6">
+
+                    <div class="col s12 l4">
+                        <div class="input-field">
+                            <select name="gender">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                            <label class="white-text">Gender</label>
+                        </div>
+                    </div>
+
+                    <div class="col s12 l4">
                         <div class="input-field">
                             <input type="text" id="ssn" name="ssn" value="<?php echo $ssn_display;?>" disabled>
                             <label for="ssn" class="grey-text text-lighten-2">Social Security Number</label>
                         </div>
                     </div>
 
-                    <div class="col s12 l6">
+                    <div class="col s12 l4">
                         <div class="input-field">
                             <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
                             <label for="dob" class="grey-text text-lighten-2">Date of Birth</label>
@@ -99,82 +111,10 @@
                     </div>
                 </div>
 
-
-                <!--        Tax Payer's Wife's Details-->
+                <!--        Tax Payer's Address Details-->
                 <div class="row">
                     <div class="col s12">
-                        <div class="sub-heading">Spouse Information</div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col s12 l4">
-                        <div class="input-field">
-                            <input type="text" id="spfname" name="spfname" value="<?php echo $data['tax_payers_data_spfname'];?>">
-                            <label for="spfname" class="white-text">Spouse's First Name</label>
-                        </div>
-                    </div>
-
-                    <div class="col s12 l4">
-                        <div class="input-field">
-                            <input type="text" id="spmname" name="spmname" value="<?php echo $data['tax_payers_data_spmname'];?>">
-                            <label for="spmname" class="white-text">Spouse's Middle Name</label>
-                        </div>
-                    </div>
-                    <div class="col s12 l4">
-                        <div class="input-field">
-                            <input type="text" id="splname" name="splname" value="<?php echo $data['tax_payers_data_splname'];?>">
-                            <label for="splname" class="white-text">Spouse's Last Name</label>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col s12 l6">
-                        <div class="input-field">
-                            <input type="text" id="spssn" name="spssn" value="<?php echo $data['tax_payers_data_spssn'];?>">
-                            <label for="spssn" class="white-text">Spouse's Social Security Number</label>
-                        </div>
-                    </div>
-
-                    <div class="col s12 l6">
-                        <div class="input-field">
-                            <input type="text" id="spdob" name="spdob" class="datepicker" value="<?php echo $spdob_display;?>">
-                            <label for="spdob" class="white-text">Spouse's Date of Birth</label>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col s12 l4">
-                        <div class="input-field">
-                            <input type="text" id="spocupation" name="spocupation" value="<?php echo $data['tax_payers_data_spocupation'];?>">
-                            <label for="spocupation" class="white-text">Spouse's Occupation</label>
-                        </div>
-                    </div>
-
-                    <div class="col s12 l4">
-                        <div class="input-field">
-                            <input type="text" id="spphone" name="spphone" value="<?php echo $data['tax_payers_data_spphone'];?>">
-                            <label for="spphone" class="white-text">Spouse's Phone Number</label>
-                        </div>
-                    </div>
-
-                    <div class="col s12 l4">
-                        <div class="input-field">
-                            <input type="text" id="spemail" name="spemail" value="<?php echo $data['tax_payers_data_spemail'];?>">
-                            <label for="spemail" class="white-text">Spouse's Email Address</label>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!--        Tax Payer's Wife's Details-->
-                <div class="row">
-                    <div class="col s12">
-                        <div class="sub-heading">Address</div>
+                        <div class="sub-heading">Tax Payer's Address</div>
                     </div>
                 </div>
 
@@ -220,6 +160,140 @@
 
                 </div>
 
+
+
+
+
+                <!--        Tax Payer's Wife's Details-->
+                <div class="row">
+                    <div class="col s12">
+                        <div class="sub-heading">Spouse Information</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 l4">
+                        <div class="input-field">
+                            <input type="text" id="spfname" name="spfname" value="<?php echo $data['tax_payers_data_spfname'];?>">
+                            <label for="spfname" class="white-text">Spouse's First Name</label>
+                        </div>
+                    </div>
+
+                    <div class="col s12 l4">
+                        <div class="input-field">
+                            <input type="text" id="spmname" name="spmname" value="<?php echo $data['tax_payers_data_spmname'];?>">
+                            <label for="spmname" class="white-text">Spouse's Middle Name</label>
+                        </div>
+                    </div>
+                    <div class="col s12 l4">
+                        <div class="input-field">
+                            <input type="text" id="splname" name="splname" value="<?php echo $data['tax_payers_data_splname'];?>">
+                            <label for="splname" class="white-text">Spouse's Last Name</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col s12 l4">
+                        <div class="input-field">
+                            <select name="spgender">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                            <label class="white-text">Gender</label>
+                        </div>
+                    </div>
+                    <div class="col s12 l4">
+                        <div class="input-field">
+                            <input type="text" id="spssn" name="spssn" value="<?php echo $data['tax_payers_data_spssn'];?>">
+                            <label for="spssn" class="white-text">Spouse's Social Security Number</label>
+                        </div>
+                    </div>
+
+                    <div class="col s12 l4">
+                        <div class="input-field">
+                            <input type="text" id="spdob" name="spdob" class="datepicker" value="<?php echo $spdob_display;?>">
+                            <label for="spdob" class="white-text">Spouse's Date of Birth</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col s12 l4">
+                        <div class="input-field">
+                            <input type="text" id="spocupation" name="spocupation" value="<?php echo $data['tax_payers_data_spocupation'];?>">
+                            <label for="spocupation" class="white-text">Spouse's Occupation</label>
+                        </div>
+                    </div>
+
+                    <div class="col s12 l4">
+                        <div class="input-field">
+                            <input type="text" id="spphone" name="spphone" value="<?php echo $data['tax_payers_data_spphone'];?>">
+                            <label for="spphone" class="white-text">Spouse's Phone Number</label>
+                        </div>
+                    </div>
+
+                    <div class="col s12 l4">
+                        <div class="input-field">
+                            <input type="text" id="spemail" name="spemail" value="<?php echo $data['tax_payers_data_spemail'];?>">
+                            <label for="spemail" class="white-text">Spouse's Email Address</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--        Tax Payer's Spouse Address Details-->
+                <div class="row">
+                    <div class="col s12">
+                        <div class="sub-heading">Spouse Address</div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col s12 l4">
+                        <div class="input-field">
+                            <input type="text" id="spstreet" name="spstreet" value="<?php echo $data['tax_payers_data_street'];?>">
+                            <label for="street" class="white-text">Spouse Street<i class="tiny material-icons red-text text-lighten-1 lp-5">star_rate</i></label>
+                        </div>
+                    </div>
+
+                    <div class="col s12 l4">
+                        <div class="input-field">
+                            <input type="text" id="spapt" name="spapt" value="<?php echo $data['tax_payers_data_apt'];?>">
+                            <label for="apt" class="white-text">Spouse Apt/Suite</label>
+                        </div>
+                    </div>
+
+                    <div class="col s12 l4">
+                        <div class="input-field">
+                            <input type="text" id="spcity" name="city" value="<?php echo $data['tax_payers_data_city'];?>">
+                            <label for="city" class="white-text">Spouse City<i class="tiny material-icons red-text text-lighten-1 lp-5">star_rate</i></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 l6">
+                        <div class="input-field">
+                            <input type="text" id="spstate" name="spstate" value="<?php echo $data['tax_payers_data_state'];?>">
+                            <label for="state" class="white-text">Spouse State<i class="tiny material-icons red-text text-lighten-1 lp-5">star_rate</i></label>
+                        </div>
+                    </div>
+
+                    <div class="col s12 l6">
+                        <div class="input-field">
+                            <input type="text" id="spzip" name="spzip" value="<?php echo $data['tax_payers_data_zip'];?>">
+                            <label for="zip" class="white-text">Spouse Zip<i class="tiny material-icons red-text text-lighten-1 lp-5">star_rate</i></label>
+                        </div>
+                    </div>
+
+
+                </div>
+
                 <div class="row">
                     <div class="input-field col s12 l6">
                         <select name="isblind">
@@ -251,22 +325,6 @@
                         <label class="white-text">Are Your Spouse Disable</label>
                     </div>
                 </div>
-
-<!--                <div class="row">-->
-<!--                    <div class="input-field col s12 l6">-->
-<!--                        <select name="prescampfund">-->
-<!--                            --><?php //option_selector($matcher,$data['tax_payers_data_prescampfund'])?>
-<!--                        </select>-->
-<!--                        <label class="white-text">Your Pres. Campaign Fund</label>-->
-<!--                    </div>-->
-<!---->
-<!--                    <div class="input-field col s12 l6">-->
-<!--                        <select name="spprescampfund">-->
-<!--                            --><?php //option_selector($matcher,$data['tax_payers_data_spprescampfund'])?>
-<!--                        </select>-->
-<!--                        <label class="white-text">Your Spouse's Pres. Campaign Fund</label>-->
-<!--                    </div>-->
-<!--                </div>-->
 
                 <div class="row">
                     <div class="input-field col s12 l6">

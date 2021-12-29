@@ -53,7 +53,19 @@
                 </div>
 
                 <div class="row">
-                    <div class="col s12 l6">
+
+                    <div class="col s12 l3">
+                        <div class="input-field">
+                            <select name="gender">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                            <label class="white-text">Gender</label>
+                        </div>
+                    </div>
+
+                    <div class="col s12 l3">
                         <div class="input-field">
                             <input type="text" id="ssn" name="ssn" value="<?php echo $ssn_display;?>" disabled>
                             <label for="ssn" class="grey-text text-lighten-2">Social Security Number</label>

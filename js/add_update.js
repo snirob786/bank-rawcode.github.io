@@ -15,33 +15,39 @@ function adddependantupdate() {
         '                        </div>\n' +
         '                    </div>\n' +
         '                    <div class="row">\n' +
-        '                        <div class="col s12 l3">\n' +
+        '                        <div class="col s12 l4">\n' +
         '                            <div class="input-field">\n' +
         '                                <input type="text" id="depname" name="depname'+depnum+'">\n' +
         '                                <label for="depname" class="white-text">Full Name</label>\n' +
         '                            </div>\n' +
         '                        </div>\n' +
 
-        '                        <div class="col s12 l3">\n' +
+        '                        <div class="col s12 l4">\n' +
         '<div class="input-field">\n' +
         '<input type="text" id="deprel" name="deprel'+depnum+'">\n' +
         '                                <label for="deprel" class="white-text">Relationship</label>\n' +
         '                            </div>\n' +
         '                        </div>\n' +
 
-        '                        <div class="col s12 l2">\n' +
+        '                        <div class="col s12 l4">\n' +
         '<div class="input-field">\n' +
         '<input type="text" id="depdob" name="depdob'+depnum+'" class="datepicker">\n' +
         '                                <label for="depdob" class="white-text">Date of Birth</label>\n' +
         '                            </div>\n' +
         '                        </div>\n' +
-        '                        <div class="col s12 l2">\n' +
+        '<div class="col s12 l4">'+
+        '<div class="input-field">'+
+        '<input type="text" id="depgender" name="depgender'+depnum+'">\n' +
+        '                                <label for="depgender" class="white-text">Dependent Gender</label>\n' +
+        '</div>'+
+        '</div>'+
+        '                        <div class="col s12 l4">\n' +
         '                            <div class="input-field">\n' +
         '                                <input type="text" id="depssn" name="depssn'+depnum+'">\n' +
         '                                <label for="depssn" class="white-text">SSN</label>\n' +
         '                            </div>\n' +
         '                        </div>\n' +
-        '                        <div class="col s12 l2">\n' +
+        '                        <div class="col s12 l4">\n' +
         '                            <div class="input-field">\n' +
         '                                <input type="text" id="deplived" name="deplived'+depnum+'">\n' +
         '                                <label for="deplived' +
