@@ -684,18 +684,302 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">26.</span> Did you purchase health insurance through a public exchange?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">27.</span> Will there be any significant changes in income or deductions next year, such as retirement?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'purchase_health');?>
-                                <!--                                Here tax_payers_data_stimulus_irs db table need to be changed -->
+                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'ded_retirement');?>
 
                             </div>
                         </div>
                     </div>
 
-                        <hr class="sector_devider margin-top-custom">
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">28.</span> Did you pay anyone for domestic services in your home?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'pay_domestic');?>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">29.</span> Did you purchase a new energy-efficient car, truck, or van?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'pur_new_energy');?>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">30.</span> Are you a member of the military?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'mem_military');?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <div class="input-field">
+                            <input type="text" id="stateofresidency" name="stateofresidency" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                            <label for="stateofresidency" class="white-text">State of residency</label>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">31.</span> Were you a citizen of or lived in a foreign country?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'lived_foreign');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12">
+                        <div class="input-field">
+                            <input type="text" id="foreigncountryname" name="foreigncountryname" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                            <label for="foreigncountryname" class="white-text">Name of the Foreign country</label>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">32.</span> Did you receive any economic impact payments (stimulus payments) during 2021?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'rcv_ecn_impact');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 50px; margin-bottom: 0 !important;">
+                        <div class="col s12 l6">
+                            <div class="input-field">
+                                <input type="text" id="impactpayments" name="impactpayments" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                <label for="impactpayments" class="white-text">impact payments amount</label>
+                            </div>
+                        </div>
+
+                        <div class="col s12 l6">
+                            <div class="input-field" style="margin-bottom: 0 !important;">
+                                <input type="text" id="impactpaymentsdate" name="impactpaymentsdate" class="datepicker" value="<?php echo $dob_display;?>">
+                                <label for="impactpaymentsdate" class="grey-text text-lighten-2">Date of Birth</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">33.</span> Were any children born or adopted in 2021?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'adopted_child');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">34.</span> Did you receive any advance Child Tax Credit payment?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'child_tax_credit');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">35.</span> Do you have any children who have unearned income of $1,100 or more?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'unearned_children');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">36.</span> Did you roll over any amounts from a retirement account in 2021?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_rollover_retirement_acnt'],'rollover_retirement_acnt');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">37.</span> Did you receive any income from an installment sale?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_installmentsale'],'installmentsale');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">38.</span> Did you have any investments become worthless or were you a victim of investment theft in 2021?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_investment_theft'],'investment_theft');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">39.</span> Were you granted, or did you exercise, any employee stock options during 2021?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_employee_stock'],'employee_stock');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">40.</span> Did you receive, sell, send, exchange, or otherwise dispose of any financial interest in any virtual currency?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_dispose_financial_interest'],'dispose_financial_interest');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">41.</span> Did you, or do you plan to, contribute money before April 18, 2022 to an HSA for 2021?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_contributee_hsa'],'contributee_hsa');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">42.</span> Did you pay any interest on a loan for a boat or RV that has living quarters?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_interest_loan_rv'],'interest_loan_rv');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">43.</span> Did you pay sales taxes on a major purchase in 2021, such as a vehicle, boat, or home?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_taxes_major_purchase'],'taxes_major_purchase');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">44.</span> Did you work from a home office or use your car for business?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_work_from_home'],'work_from_home');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">45.</span> Did you receive income from a sharing/gig economy activity (e.g. Airbnb, Uber, etc.)?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_income_sharing_economy'],'income_sharing_economy');?>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">46.</span> Do you own a business or an interest in a partnership, corporation, LLC, farming activities, or other venture?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_interest_part_venture'],'interest_part_venture');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">47.</span> If you sold a home, did you claim the First-Time Homebuyer Credit when it was purchased?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_homebuyer_credit'],'homebuyer_credit');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">48.</span> Did you refinance a mortgage or take a home equity loan?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_refinance_mortgage'],'refinance_mortgage');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">49.</span> Did you use any mortgage loan proceeds for purposes other than to buy, build, or substantially improve your home?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_substantially_improve_home'],'substantially_improve_home');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">50.</span> Did you make any new energy-efficient improvements to your home?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_energy_efficient_improvements'],'energy_efficient_improvements');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="sector_devider margin-top-custom">
 
 
                     <div class="row">
