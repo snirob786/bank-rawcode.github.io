@@ -35,19 +35,13 @@ while ($result_dep_array = $result_dep->fetch_assoc()){
                     <label for="depdob" class="white-text">Date of Birth</label>
                 </div>
             </div>
-            <div class="col s12 l4">
-                <div class="input-field">
-                    <input type="text" id="depgender" name="<?php echo 'depgender'.$i;?>" value="<?php echo $result_dep_array['tax_payers_dependants_data_gender'];?>">
-                    <label for="depgender" class="white-text">Gender</label>
-                </div>
-            </div>
-            <div class="col s12 l4">
+            <div class="col s12 l6">
                 <div class="input-field">
                     <input type="text" id="depssn" name="<?php echo 'depssn'.$i;?>" value="<?php echo $result_dep_array['tax_payers_dependants_data_depssn'];?>">
                     <label for="depssn" class="white-text">SSN</label>
                 </div>
             </div>
-            <div class="col s12 l4">
+            <div class="col s12 l6">
                 <div class="input-field">
                     <input type="text" id="deplived" name="<?php echo 'deplived'.$i;?>" value="<?php echo $result_dep_array['tax_payers_dependants_data_deplived'];?>">
                     <label for="deplived" class="white-text">Month Lived With You</label>

@@ -354,9 +354,14 @@ nav .brand-logo{
 
 }
 
-.margin-top-custom{
-    margin-top: 80px;
+.margin-top-60{
+    margin-top: 60px;
 }
+
+.margin-bottom-60{
+    margin-bottom: 60px;
+}
+
 
 .logo_header{
     margin-bottom: 0 !important;
@@ -390,6 +395,45 @@ nav .brand-logo{
 
 .input-field{
     margin-top: 0 !important;
+}
+
+.row .col .col:first-child{
+    padding-left: 0 !important;
+}
+
+.row .col .col:last-child{
+    padding-right: 0 !important;
+}
+
+td .input-field{
+    margin-bottom: 0;
+    margin-right: 20px;
+}
+
+td .input-field input[type=text]{
+    background-color: #ebebeb;
+    border: none;
+    padding: 0 10px;
+    margin: 0 !important;
+}
+
+td .input-field input[type=text]:disabled{
+    background-color: darkgrey;
+    cursor: not-allowed;
+}
+
+.checklist .white-text{
+    width: 100%;
+    text-align: left;
+}
+
+.responsibilities_list ul li{
+    list-style: disc !important;
+    text-align: left !important;
+}
+
+.responsibilities_list span{
+    text-align: left;
 }
 
 /* Media Query Tab and Lower*/

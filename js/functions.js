@@ -15,7 +15,7 @@ function checkUserDetails() {
             // console.log(data);
             var e = JSON.parse(data);
             console.log(e.success);
-            if(e.success === 'inserted'){
+            if(e.success === 'inserted' || e.success === 'already_exist'){
                 window.location.replace("/user-update");
                 // $('#user-detail').addClass('displayNone');
                 // $('#user-detail-update').removeClass('displayNone');

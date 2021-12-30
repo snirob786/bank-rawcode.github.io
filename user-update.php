@@ -61,23 +61,14 @@
 
                 <div class="row">
 
-                    <div class="col s12 l4">
-                        <div class="input-field">
-                            <select name="gender">
-                                <?php custom_gender_select($genders,$data['tax_payers_data_gender'])?>
-                            </select>
-                            <label class="white-text">Gender</label>
-                        </div>
-                    </div>
-
-                    <div class="col s12 l4">
+                    <div class="col s12 l6">
                         <div class="input-field">
                             <input type="text" id="ssn" name="ssn" value="<?php echo $ssn_display;?>" disabled>
                             <label for="ssn" class="grey-text text-lighten-2">Social Security Number</label>
                         </div>
                     </div>
 
-                    <div class="col s12 l4">
+                    <div class="col s12 l6">
                         <div class="input-field">
                             <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
                             <label for="dob" class="grey-text text-lighten-2">Date of Birth</label>
@@ -192,22 +183,14 @@
                 </div>
 
                 <div class="row">
-                    <div class="col s12 l4">
-                        <div class="input-field">
-                            <select name="spgender">
-                                <?php custom_gender_select($genders,$data['tax_payers_data_spgender'])?>
-                            </select>
-                            <label class="white-text">Gender</label>
-                        </div>
-                    </div>
-                    <div class="col s12 l4">
+                    <div class="col s12 l6">
                         <div class="input-field">
                             <input type="text" id="spssn" name="spssn" value="<?php echo $data['tax_payers_data_spssn'];?>">
                             <label for="spssn" class="white-text">Spouse's Social Security Number</label>
                         </div>
                     </div>
 
-                    <div class="col s12 l4">
+                    <div class="col s12 l6">
                         <div class="input-field">
                             <input type="text" id="spdob" name="spdob" class="datepicker" value="<?php echo $spdob_display;?>">
                             <label for="spdob" class="white-text">Spouse's Date of Birth</label>
@@ -973,12 +956,518 @@
                         </div>
                     </div>
 
-                    <hr class="sector_devider margin-top-custom">
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">51.</span> Were any children attending college?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_substantially_improve_home'],'child_attending_college');?>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="row">
+                        <div class="col s12 l3">
+                                <div class="input-field">
+                                    <input type="text" id="atnd_clg_year" name="atnd_clg_year" value="<?php echo $data['tax_payers_data_substantially_improve_home'];?>" >
+                                    <label for="atnd_clg_year" class="white-text">Year of attending college</label>
+                                </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="col s12 l4">
+                                <div class="input-field">
+                                    <input type="text" id="atnd_clg_you_tution" name="atnd_clg_you_tution" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                    <label for="atnd_clg_you_tution" class="white-text">Tution paid by you ($)</label>
+                                </div>
+                            </div>
+                            <div class="col s12 l4">
+                                <div class="input-field">
+                                    <input type="text" id="atnd_clg_you_loan" name="atnd_clg_you_loan" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                    <label for="atnd_clg_you_loan" class="white-text">Student interest loan paid by you ($)</label>
+                                </div>
+                            </div>
+                            <div class="col s12 l4">
+                                <div class="input-field">
+                                    <input type="text" id="atnd_clg_you_books" name="atnd_clg_you_books" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                    <label for="atnd_clg_you_books" class="white-text">Books paid by you ($)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="col s12 l4">
+                                <div class="input-field">
+                                    <input type="text" id="atnd_clg_student_tution" name="atnd_clg_student_tution" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                    <label for="atnd_clg_student_tution" class="white-text">Tution paid by student ($)</label>
+                                </div>
+                            </div>
+                            <div class="col s12 l4">
+                                <div class="input-field">
+                                    <input type="text" id="atnd_clg_student_loan" name="atnd_clg_you_loan" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                    <label for="atnd_clg_you_loan" class="white-text">Student interest loan paid by student ($)</label>
+                                </div>
+                            </div>
+                            <div class="col s12 l4">
+                                <div class="input-field">
+                                    <input type="text" id="atnd_clg_student_books" name="atnd_clg_student_books" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                    <label for="atnd_clg_student_books" class="white-text">Books paid by student ($)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">52.</span> Did you pay any tuition for a private school for a dependent or take classes yourself?</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'tution_for_private');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s12 l4">
+                            <div class="input-field">
+                                <input type="text" id="tution_for_private_stud" name="tution_for_private_stud" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                <label for="tution_for_private_stud" class="white-text">Dependent student name</label>
+                            </div>
+                        </div>
+                        <div class="col s12 l4">
+                            <div class="input-field">
+                                <input type="text" id="tution_for_private_amount" name="tution_for_private_amount" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                <label for="tution_for_private_amount" class="white-text">Dependent student amount paid</label>
+                            </div>
+                        </div>
+                        <div class="col s12 l4">
+                            <div class="input-field">
+                                <input type="text" id="tution_for_private_schl" name="tution_for_private_schl" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                <label for="tution_for_private_schl" class="white-text">Dependent student school's name and address</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio-btn-close">
+                        <div class="col s8 l9">
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">53.</span> Did you pay for child or dependent care so you could work or go to school? (add statement if needed)</div>
+                        </div>
+                        <div class="col s4 l3">
+                            <div class="right">
+                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'depcare');?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s12 l3">
+                            <div class="input-field">
+                                <input type="text" id="depcare_prov" name="depcare_prov" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                <label for="depcare_prov" class="white-text">Name of provider</label>
+                            </div>
+                        </div>
+                        <div class="col s12 l3">
+                            <div class="input-field">
+                                <input type="text" id="depcare_prov_ssn" name="depcare_prov_ssn" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                <label for="depcare_prov_ssn" class="white-text">Provider's ssn</label>
+                            </div>
+                        </div>
+                        <div class="col s12 l3">
+                            <div class="input-field">
+                                <input type="text" id="depcare_prov_add" name="depcare_prov_add" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                <label for="tution_for_private_schl" class="white-text">Provider's address</label>
+                            </div>
+                        </div>
+                        <div class="col s12 l3">
+                            <div class="input-field">
+                                <input type="text" id="depcare_prov_add" name="depcare_prov_add" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                <label for="depcare_prov_add" class="white-text">Amount paid to provider</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="sector_devider margin-top-60" style="color: transparent !important;">
 
                     <div class="row">
                         <div class="col s12">
-                            <div class="sub-heading">Additional Note</div>
+                            <div class="section-header">
+                                <h5>Estimated Tax Payments — Tax Year 2021</h5>
+                                <hr class="sector_devider">
+                            </div>
+                        </div>
+
+                        <div class="col s12">
+                            <table class="responsive-table">
+                                <thead>
+                                <tr>
+                                    <th>Installment</th>
+                                    <th>Date Paid</th>
+                                    <th>Federal ($)</th>
+                                    <th>Date Paid</th>
+                                    <th>State ($)</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr>
+                                    <td>First</td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="first_install_fed" name="first_install_fed" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="first_install_state" name="first_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Second</td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="second_install_fed" name="second_install_fed" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="second_install_state" name="second_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Third</td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="third_install_fed" name="third_install_fed" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="third_install_state" name="third_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Fourth</td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="fourth_install_fed" name="fourth_install_fed" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="fourth_install_state" name="fourth_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Amount applied from 2020 overpayment?</td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="dob" name="dob" class="datepicker" disabled>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="overpay_install_fed" name="overpay_install_fed" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="dob" name="dob" class="datepicker" disabled>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="overpay_install_state" name="overpay_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="dob" name="dob" class="datepicker" disabled>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="total_install_fed" name="total_install_fed" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="dob" name="dob" class="datepicker" disabled>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-field">
+                                            <input type="text" id="total_install_state" name="total_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="col s12">
+                                <div class="section-header">
+                                    <h5>Advance Child Tax Credit Payments Received</h5>
+                                    <hr class="sector_devider">
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <table class="responsive-table">
+                                    <thead>
+                                    <tr>
+                                        <th>Payment date</th>
+                                        <th>Amount received</th>
+                                        <th>Payment date</th>
+                                        <th>Amount received</th>
+                                        <th>Payment date</th>
+                                        <th>Amount received</th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>July 15, 2021</p>
+                                        </td>
+                                        <td>
+                                            <div class="input-field">
+                                                <input type="text" id="first_install_fed" name="first_install_fed" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                            </div>
+                                        </td>
+                                        <td><p>September 15, 2021</p></td>
+                                        <td>
+                                            <div class="input-field">
+                                                <input type="text" id="first_install_state" name="first_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                            </div>
+                                        </td>
+                                        <td><p>November 15, 2021</p></td>
+                                        <td>
+                                            <div class="input-field">
+                                                <input type="text" id="first_install_state" name="first_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>August 15, 2021</p>
+                                        </td>
+                                        <td>
+                                            <div class="input-field">
+                                                <input type="text" id="first_install_fed" name="first_install_fed" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                            </div>
+                                        </td>
+                                        <td><p>October 15, 2021</p></td>
+                                        <td>
+                                            <div class="input-field">
+                                                <input type="text" id="first_install_state" name="first_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                            </div>
+                                        </td>
+                                        <td><p>December 15, 2021</p></td>
+                                        <td>
+                                            <div class="input-field">
+                                                <input type="text" id="first_install_state" name="first_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="row checklist">
+                            <div class="col s12">
+                                <div class="section-header">
+                                    <h5>Tax Preparation Checklist</h5>
+                                    <hr class="sector_devider">
+                                    <P>Please provide the following documentation:</P>
+                                </div>
+                            </div>
+                            <div class="col s12">
+                                <label>
+                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <span class="white-text">All Forms W-2 (wages), 1099-INT (interest), 1099-DIV (dividends), 1099-B (proceeds from broker or barter transactions), 1099‑R
+(pensions and IRA distributions), Schedules K-1 from partnerships, S corporations, estates and trusts, and other income reporting
+statements, including all copies provided from the payer.</span>
+                                </label>
+                            </div>
+                            <div class="col s12">
+                                <label>
+                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <span class="white-text">Form 1095-A (for health insurance purchased through a public exchange), Form 1095-B (for health insurance purchased outside
+of a public exchange), or Form 1095-C (for employer-provided health insurance coverage).</span>
+                                </label>
+                            </div>
+                            <div class="col s12">
+                                <label>
+                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <span class="white-text">If you are a new client, provide copies of last year’s tax returns.</span>
+                                </label>
+                            </div>
+                            <div class="col s12">
+                                <label>
+                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <span class="white-text">The completed Individual Income Tax Organizer. Note: If you choose not to fill out the organizer, you must at least answer
+the “Yes” or “No” questions under “Questions — All Taxpayers.”</span>
+                                </label>
+                            </div>
+                            <div class="col s12">
+                                <label>
+                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <span class="white-text">Copy of the closing statement if you bought or sold real estate.</span>
+                                </label>
+                            </div>
+                            <div class="col s12">
+                                <label>
+                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <span class="white-text">Mileage figures for any automobile expenses claimed, including total mileage, commuting mileage, and business mileage.</span>
+                                </label>
+                            </div>
+                            <div class="col s12">
+                                <label>
+                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <span class="white-text">Detail of estimated tax payments made, if any.</span>
+                                </label>
+                            </div>
+                            <div class="col s12">
+                                <label>
+                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <span class="white-text">Income and deductions categorized on a separate sheet for business or rental activities.</span>
+                                </label>
+                            </div>
+                            <div class="col s12">
+                                <label>
+                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <span class="white-text">List of itemized deductions categorized on a separate sheet for medical, taxes, interest, charitable, and miscellaneous deductions.</span>
+                                </label>
+                            </div>
+                            <div class="col s12">
+                                <label>
+                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <span class="white-text">Copy of all acknowledgement letters received from charitable organizations for contributions made in 2021.</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row responsibilities_list">
+                            <div class="col s12">
+                                <div class="section-header">
+                                    <h5>Taxpayer Responsibilities</h5>
+                                    <hr class="sector_devider">
+                                </div>
+                            </div>
+
+                            <div class="col s12">
+                                <ul>
+                                    <li>You agree to provide us all income and deductible expense information. If you receive additional information after we begin
+                                        working on your return, you will contact us immediately to ensure your completed tax returns contain all relevant information.</li>
+                                    <li>You affirm that all expenses or other deduction amounts are accurate and that you have all required supporting written records.
+                                        In some cases, we will ask to review your documentation.</li>
+                                    <li>You must be able to provide written records of all items included on your return if audited by either the IRS or state tax authority.
+                                        We can provide guidance concerning what evidence is acceptable.</li>
+                                    <li>You must review the return carefully before signing to make sure the information is correct.</li>
+                                    <li>Fees must be paid before your tax return is delivered to you or filed for you. If you terminate this engagement before completion,
+                                        you agree to pay a fee for work completed. A retainer is required for preparation of late returns.</li>
+                                    <li>You should keep a copy of your tax return and any related tax documents. You may be assessed a fee if you request a copy in the
+                                        future.</li>
+                                </ul>
+
+                                <span style="text-align: left"><p><b>Signatures.</b> By signing below, you acknowledge that you have read, understand, and accept your obligations and responsibilities.
+                                        For a joint return, both taxpayers must sign.</p></span>
+                            </div>
+                            <div class="col s12 l4">
+                                <div class="input-field">
+                                    <input type="text" id="rcvalimonyamnt" name="rcvalimonyamnt" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                    <label for="rcvalimonyamnt" class="white-text">Taxpayer initials</label>
+                                </div>
+                            </div>
+                            <div class="col s12 l4">
+                                <div class="input-field">
+                                    <input type="text" id="rcvalimonyamnt" name="rcvalimonyamnt" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                    <label for="rcvalimonyamnt" class="white-text">Taxpayer's spouse initials</label>
+                                </div>
+                            </div>
+                            <div class="col s12 l4">
+                                <div class="input-field">
+                                    <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
+                                    <label for="dob" class="grey-text text-lighten-2">Date</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="section-header">
+                                <h5>Privacy Policy</h5>
+                                <hr class="sector_devider">
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <p class="left-align" style="margin-bottom: 5px">The nature of our work requires us to collect certain nonpublic information. We collect financial and personal information from
+                                applications, worksheets, reporting statements, and other forms, as well as interviews and conversations with our clients and
+                                affiliates. We may also review banking and credit card information about our clients in the performance of receipt of payment.
+                                Under our policy, all information we obtain about you will be provided by you or obtained with your permission.</p>
+                            <p class="left-align">Our firm has procedures and policies in place to protect your confidential information. We restrict access to your confidential
+                                information to those within our firm who need to know in order to provide you with services. We will not disclose your personal
+                                information to a third party without your permission, except where required by law. We maintain physical, electronic, and
+                                procedural safeguards in compliance with federal regulations that protect your personal information from unauthorized access.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="section-header">
+                                <h5>Additional Note</h5>
+                                <hr class="sector_devider">
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -990,7 +1479,10 @@
 
                     <div class="row">
                         <div class="col s12">
-                            <div class="sub-heading">Taxpayer Consent</div>
+                            <div class="section-header">
+                                <h5>Taxpayer Consent</h5>
+                                <hr class="sector_devider">
+                            </div>
                         </div>
                     </div>
 

@@ -6,7 +6,6 @@
 
     $matcher = array("yes","no");
     $array_datas = array('paid','received');
-    $genders = array('mail','female');
     $matcher_marriage = array("single","married_filling_jointly","married_filling_separately","head_of_house","qualifying_widow");
 
     if (isset($_SESSION['special_id']) && !isset($_SESSION['user_type'])){
