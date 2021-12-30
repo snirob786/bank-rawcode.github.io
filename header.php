@@ -5,6 +5,8 @@
     $new_ses = new Session();
 
     $matcher = array("yes","no");
+    $array_datas = array('paid','received');
+    $genders = array('mail','female');
     $matcher_marriage = array("single","married_filling_jointly","married_filling_separately","head_of_house","qualifying_widow");
 
     if (isset($_SESSION['special_id']) && !isset($_SESSION['user_type'])){
@@ -16,6 +18,8 @@
             $ssn_display = get_ssn_display($data['tax_payers_data_ssn']);
             $dob_display = get_dob_display($data['tax_payers_data_dob']);
             $spdob_display = get_dob_display($data['tax_payers_data_spdob']);
+            $impactpaymentsdate = get_dob_display($data['tax_payers_data_impactpaymentsdate']);
+            $doseparation = get_dob_display($data['tax_payers_data_doseparation']);
             $ssn = $data['tax_payers_data_ssn'];
 
             $sql = "SELECT * FROM tax_payers_dependants_data WHERE tax_payers_dependants_data_owner_ssn = '$ssn'";

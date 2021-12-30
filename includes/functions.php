@@ -87,6 +87,59 @@ function option_selector($matcher, $data){
     }
 }
 
+function custom_paid_select($array_datas, $data){
+
+    if(empty($data)){
+        echo '<option value="" disabled selected>Choose your option</option>';
+        echo '<option value="paid">Paid</option>';
+        echo '<option value="received">Received</option>';
+    }else{
+        echo '<option value="" disabled>Choose your option</option>';
+        foreach ($array_datas as $value){
+            if ($value === 'paid'){
+                $text = 'Paid';
+            }elseif ($value === 'received'){
+                $text = 'Received';
+            }else{
+                $text = ucfirst($value);
+            }
+            if ($data === $value){
+                echo '<option value="'.$value.'" selected>'.$text.'</option>';
+            }else{
+                echo '<option value="'.$value.'">'.$text.'</option>';
+            }
+
+        }
+    }
+}
+
+
+function custom_gender_select($genders, $data){
+
+    if(empty($data)){
+        echo '<option value="" disabled selected>Choose your option</option>';
+        echo '<option value="male">Male</option>';
+        echo '<option value="female">Female</option>';
+    }else{
+        echo '<option value="" disabled>Choose your option</option>';
+        foreach ($genders as $value){
+            if ($value === 'male'){
+                $text = 'Male';
+            }elseif ($value === 'female'){
+                $text = 'Female';
+            }else{
+                $text = ucfirst($value);
+            }
+            if ($data === $value){
+                echo '<option value="'.$value.'" selected>'.$text.'</option>';
+            }else{
+                echo '<option value="'.$value.'">'.$text.'</option>';
+            }
+
+        }
+    }
+}
+
 
 function option_checked($matcher,$data, $data_name){
     foreach ($matcher as $value){

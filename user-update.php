@@ -64,9 +64,7 @@
                     <div class="col s12 l4">
                         <div class="input-field">
                             <select name="gender">
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
+                                <?php custom_gender_select($genders,$data['tax_payers_data_gender'])?>
                             </select>
                             <label class="white-text">Gender</label>
                         </div>
@@ -157,7 +155,6 @@
                         </div>
                     </div>
 
-
                 </div>
 
 
@@ -198,9 +195,7 @@
                     <div class="col s12 l4">
                         <div class="input-field">
                             <select name="spgender">
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
+                                <?php custom_gender_select($genders,$data['tax_payers_data_spgender'])?>
                             </select>
                             <label class="white-text">Gender</label>
                         </div>
@@ -256,21 +251,21 @@
                 <div class="row">
                     <div class="col s12 l4">
                         <div class="input-field">
-                            <input type="text" id="spstreet" name="spstreet" value="<?php echo $data['tax_payers_data_street'];?>">
+                            <input type="text" id="spstreet" name="spstreet" value="<?php echo $data['tax_payers_data_spstreet'];?>">
                             <label for="street" class="white-text">Spouse Street<i class="tiny material-icons red-text text-lighten-1 lp-5">star_rate</i></label>
                         </div>
                     </div>
 
                     <div class="col s12 l4">
                         <div class="input-field">
-                            <input type="text" id="spapt" name="spapt" value="<?php echo $data['tax_payers_data_apt'];?>">
+                            <input type="text" id="spapt" name="spapt" value="<?php echo $data['tax_payers_data_spapt'];?>">
                             <label for="apt" class="white-text">Spouse Apt/Suite</label>
                         </div>
                     </div>
 
                     <div class="col s12 l4">
                         <div class="input-field">
-                            <input type="text" id="spcity" name="city" value="<?php echo $data['tax_payers_data_city'];?>">
+                            <input type="text" id="spcity" name="spcity" value="<?php echo $data['tax_payers_data_spcity'];?>">
                             <label for="city" class="white-text">Spouse City<i class="tiny material-icons red-text text-lighten-1 lp-5">star_rate</i></label>
                         </div>
                     </div>
@@ -279,14 +274,14 @@
                 <div class="row">
                     <div class="col s12 l6">
                         <div class="input-field">
-                            <input type="text" id="spstate" name="spstate" value="<?php echo $data['tax_payers_data_state'];?>">
+                            <input type="text" id="spstate" name="spstate" value="<?php echo $data['tax_payers_data_spstate'];?>">
                             <label for="state" class="white-text">Spouse State<i class="tiny material-icons red-text text-lighten-1 lp-5">star_rate</i></label>
                         </div>
                     </div>
 
                     <div class="col s12 l6">
                         <div class="input-field">
-                            <input type="text" id="spzip" name="spzip" value="<?php echo $data['tax_payers_data_zip'];?>">
+                            <input type="text" id="spzip" name="spzip" value="<?php echo $data['tax_payers_data_spzip'];?>">
                             <label for="zip" class="white-text">Spouse Zip<i class="tiny material-icons red-text text-lighten-1 lp-5">star_rate</i></label>
                         </div>
                     </div>
@@ -365,32 +360,31 @@
                     </div>
                 </div>
 
+
                 <div class="row">
                     <div class="input-field col s12 l6">
                         <select name="rcvalimony">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="paid">Paid</option>
-                            <option value="received">Received</option>
+                            <?php custom_paid_select($array_datas,$data['tax_payers_data_rcvalimony']);?>
                         </select>
                         <label class="white-text">Did you pay or receive alimony in 2021?</label>
                     </div>
 
                     <div class="col s12 l6">
                         <div class="input-field">
-                            <input type="text" id="rcvalimonyamnt" name="rcvalimonyamnt" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                            <input type="text" id="rcvalimonyamnt" name="rcvalimonyamnt" value="<?php echo $data['tax_payers_data_rcvalimonyamnt'];?>" >
                             <label for="rcvalimonyamnt" class="white-text">Amount of the recieved alimony ($)</label>
                         </div>
                     </div>
 
                     <div class="col s12 l6">
                         <div class="input-field">
-                            <input type="text" id="rcpntssn" name="rcpntssn" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                            <input type="text" id="rcpntssn" name="rcpntssn" value="<?php echo $data['tax_payers_data_rcpntssn'];?>" >
                             <label for="rcpntssn" class="white-text">Recipient's SSN</label>
                         </div>
                     </div>
                     <div class="col s12 l6">
                         <div class="input-field">
-                            <input type="text" id="doseparation" name="doseparation" class="datepicker" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                            <input type="text" id="doseparation" name="doseparation" class="datepicker" value="<?php echo $doseparation;?>" >
                             <label for="doseparation" class="white-text">Date of divorce or separation</label>
                         </div>
                     </div>
@@ -675,7 +669,7 @@
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'purchase_health');?>
+                                <?php option_checked($matcher,$data['tax_payers_data_purchase_health'],'purchase_health');?>
 <!--                                Here tax_payers_data_stimulus_irs db table need to be changed -->
 
                             </div>
@@ -688,7 +682,7 @@
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'ded_retirement');?>
+                                <?php option_checked($matcher,$data['tax_payers_data_ded_retirement'],'ded_retirement');?>
 
                             </div>
                         </div>
@@ -700,7 +694,7 @@
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'pay_domestic');?>
+                                <?php option_checked($matcher,$data['tax_payers_data_pay_domestic'],'pay_domestic');?>
 
                             </div>
                         </div>
@@ -713,7 +707,7 @@
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'pur_new_energy');?>
+                                <?php option_checked($matcher,$data['tax_payers_data_pur_new_energy'],'pur_new_energy');?>
 
                             </div>
                         </div>
@@ -724,13 +718,13 @@
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'mem_military');?>
+                                <?php option_checked($matcher,$data['tax_payers_data_mem_military'],'mem_military');?>
                             </div>
                         </div>
                     </div>
                     <div class="col s12">
                         <div class="input-field">
-                            <input type="text" id="stateofresidency" name="stateofresidency" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                            <input type="text" id="stateofresidency" name="stateofresidency" value="<?php echo $data['tax_payers_data_stateofresidency'];?>" >
                             <label for="stateofresidency" class="white-text">State of residency</label>
                         </div>
                     </div>
@@ -741,14 +735,14 @@
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'lived_foreign');?>
+                                <?php option_checked($matcher,$data['tax_payers_data_lived_foreign'],'lived_foreign');?>
                             </div>
                         </div>
                     </div>
 
                     <div class="col s12">
                         <div class="input-field">
-                            <input type="text" id="foreigncountryname" name="foreigncountryname" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                            <input type="text" id="foreigncountryname" name="foreigncountryname" value="<?php echo $data['tax_payers_data_foreigncountryname'];?>" >
                             <label for="foreigncountryname" class="white-text">Name of the Foreign country</label>
                         </div>
                     </div>
@@ -759,7 +753,7 @@
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'rcv_ecn_impact');?>
+                                <?php option_checked($matcher,$data['tax_payers_data_rcv_ecn_impact'],'rcv_ecn_impact');?>
                             </div>
                         </div>
                     </div>
@@ -767,14 +761,14 @@
                     <div class="row" style="margin-top: 50px; margin-bottom: 0 !important;">
                         <div class="col s12 l6">
                             <div class="input-field">
-                                <input type="text" id="impactpayments" name="impactpayments" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                <input type="text" id="impactpayments" name="impactpayments" value="<?php echo $data['tax_payers_data_impactpayments'];?>" >
                                 <label for="impactpayments" class="white-text">impact payments amount</label>
                             </div>
                         </div>
 
                         <div class="col s12 l6">
                             <div class="input-field" style="margin-bottom: 0 !important;">
-                                <input type="text" id="impactpaymentsdate" name="impactpaymentsdate" class="datepicker" value="<?php echo $dob_display;?>">
+                                <input type="text" id="impactpaymentsdate" name="impactpaymentsdate" class="datepicker" value="<?php echo $impactpaymentsdate;?>">
                                 <label for="impactpaymentsdate" class="grey-text text-lighten-2">Date of Birth</label>
                             </div>
                         </div>
@@ -786,7 +780,7 @@
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'adopted_child');?>
+                                <?php option_checked($matcher,$data['tax_payers_data_adopted_child'],'adopted_child');?>
                             </div>
                         </div>
                     </div>
@@ -797,7 +791,7 @@
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'child_tax_credit');?>
+                                <?php option_checked($matcher,$data['tax_payers_data_child_tax_credit'],'child_tax_credit');?>
                             </div>
                         </div>
                     </div>
@@ -808,7 +802,7 @@
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'unearned_children');?>
+                                <?php option_checked($matcher,$data['tax_payers_data_unearned_children'],'unearned_children');?>
                             </div>
                         </div>
                     </div>
