@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 30, 2021 at 09:23 AM
+-- Generation Time: Dec 31, 2021 at 10:02 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -53,7 +53,6 @@ CREATE TABLE `tax_payers_data` (
   `tax_payers_data_fname` varchar(45) DEFAULT NULL,
   `tax_payers_data_mname` varchar(45) DEFAULT NULL,
   `tax_payers_data_lname` varchar(45) DEFAULT NULL,
-  `tax_payers_data_gender` varchar(45) DEFAULT NULL,
   `tax_payers_data_email` varchar(45) DEFAULT NULL,
   `tax_payers_data_dob` date DEFAULT NULL,
   `tax_payers_data_ocupation` varchar(45) DEFAULT NULL,
@@ -71,7 +70,6 @@ CREATE TABLE `tax_payers_data` (
   `tax_payers_data_spocupation` varchar(45) DEFAULT NULL,
   `tax_payers_data_spphone` varchar(45) DEFAULT NULL,
   `tax_payers_data_spemail` varchar(45) DEFAULT NULL,
-  `tax_payers_data_spgender` varchar(45) DEFAULT NULL,
   `tax_payers_data_spstreet` varchar(45) DEFAULT NULL,
   `tax_payers_data_spapt` varchar(45) DEFAULT NULL,
   `tax_payers_data_spcity` varchar(45) DEFAULT NULL,
@@ -165,8 +163,8 @@ CREATE TABLE `tax_payers_data` (
 -- Dumping data for table `tax_payers_data`
 --
 
-INSERT INTO `tax_payers_data` (`tax_payers_data_ssn`, `tax_payers_data_fname`, `tax_payers_data_mname`, `tax_payers_data_lname`, `tax_payers_data_gender`, `tax_payers_data_email`, `tax_payers_data_dob`, `tax_payers_data_ocupation`, `tax_payers_data_phone`, `tax_payers_data_street`, `tax_payers_data_apt`, `tax_payers_data_city`, `tax_payers_data_state`, `tax_payers_data_zip`, `tax_payers_data_spfname`, `tax_payers_data_spmname`, `tax_payers_data_splname`, `tax_payers_data_spssn`, `tax_payers_data_spdob`, `tax_payers_data_spocupation`, `tax_payers_data_spphone`, `tax_payers_data_spemail`, `tax_payers_data_spgender`, `tax_payers_data_spstreet`, `tax_payers_data_spapt`, `tax_payers_data_spcity`, `tax_payers_data_spstate`, `tax_payers_data_spzip`, `tax_payers_data_homephone`, `tax_payers_data_isblind`, `tax_payers_data_isspblind`, `tax_payers_data_isdisable`, `tax_payers_data_isspdisable`, `tax_payers_data_prescampfund`, `tax_payers_data_spprescampfund`, `tax_payers_data_marital_status`, `tax_payers_data_spousedead`, `tax_payers_data_filejointly`, `tax_payers_data_selfemployed`, `tax_payers_data_raisinganimals`, `tax_payers_data_rentfrom`, `tax_payers_data_incomefromgravel`, `tax_payers_data_withdrawmutual`, `tax_payers_data_foreignbankaccount`, `tax_payers_data_supportanyone`, `tax_payers_data_corresirs`, `tax_payers_data_immediatefamilyadoptaion`, `tax_payers_data_giftmore`, `tax_payers_data_debtscancelled`, `tax_payers_data_bankruptcy`, `tax_payers_data_rentpaid`, `tax_payers_data_heatincluded`, `tax_payers_data_interestonstudentloan`, `tax_payers_data_payexpenses`, `tax_payers_data_childrenunder19`, `tax_payers_data_techvehicle`, `tax_payers_data_energyproperty`, `tax_payers_data_moreforeignfinance`, `tax_payers_data_unique_ID`, `tax_payers_data_last_update_date`, `tax_payers_data_additional_note`, `tax_payers_data_donate_charitable`, `tax_payers_data_didusell`, `tax_payers_data_purchasenewhome`, `tax_payers_data_dependantqtp`, `tax_payers_data_tutionform1098`, `tax_payers_data_digitalcurrency`, `tax_payers_data_msa_has`, `tax_payers_data_pensionplan`, `tax_payers_data_foreignincome`, `tax_payers_data_marketplace`, `tax_payers_data_healthinsurance`, `tax_payers_data_permdisabled`, `tax_payers_data_notifiedirs`, `tax_payers_data_claimeddependant`, `tax_payers_data_addresschange`, `tax_payers_data_stimulus_irs`, `tax_payers_data_rcvalimony`, `tax_payers_data_rcvalimonyamnt`, `tax_payers_data_rcpntssn`, `tax_payers_data_doseparation`, `tax_payers_data_purchase_health`, `tax_payers_data_ded_retirement`, `tax_payers_data_pay_domestic`, `tax_payers_data_pur_new_energy`, `tax_payers_data_mem_military`, `tax_payers_data_stateofresidency`, `tax_payers_data_lived_foreign`, `tax_payers_data_foreigncountryname`, `tax_payers_data_rcv_ecn_impact`, `tax_payers_data_impactpayments`, `tax_payers_data_impactpaymentsdate`, `tax_payers_data_adopted_child`, `tax_payers_data_child_tax_credit`, `tax_payers_data_unearned_children`, `tax_payers_data_rollover_retirement_acnt`, `tax_payers_data_installmentsale`, `tax_payers_data_investment_theft`, `tax_payers_data_employee_stock`, `tax_payers_data_dispose_financial_interest`, `tax_payers_data_contributee_hsa`, `tax_payers_data_interest_loan_rv`, `tax_payers_data_taxes_major_purchase`, `tax_payers_data_work_from_home`, `tax_payers_data_income_sharing_economy`, `tax_payers_data_interest_part_venture`, `tax_payers_data_homebuyer_credit`, `tax_payers_data_refinance_mortgage`, `tax_payers_data_substantially_improve_home`, `tax_payers_data_energy_efficient_improvements`) VALUES
-(255485487, NULL, NULL, 'Abir', NULL, NULL, '2021-12-13', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '61be0d3dce969', '2021-12-18 16:33:01', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `tax_payers_data` (`tax_payers_data_ssn`, `tax_payers_data_fname`, `tax_payers_data_mname`, `tax_payers_data_lname`, `tax_payers_data_email`, `tax_payers_data_dob`, `tax_payers_data_ocupation`, `tax_payers_data_phone`, `tax_payers_data_street`, `tax_payers_data_apt`, `tax_payers_data_city`, `tax_payers_data_state`, `tax_payers_data_zip`, `tax_payers_data_spfname`, `tax_payers_data_spmname`, `tax_payers_data_splname`, `tax_payers_data_spssn`, `tax_payers_data_spdob`, `tax_payers_data_spocupation`, `tax_payers_data_spphone`, `tax_payers_data_spemail`, `tax_payers_data_spstreet`, `tax_payers_data_spapt`, `tax_payers_data_spcity`, `tax_payers_data_spstate`, `tax_payers_data_spzip`, `tax_payers_data_homephone`, `tax_payers_data_isblind`, `tax_payers_data_isspblind`, `tax_payers_data_isdisable`, `tax_payers_data_isspdisable`, `tax_payers_data_prescampfund`, `tax_payers_data_spprescampfund`, `tax_payers_data_marital_status`, `tax_payers_data_spousedead`, `tax_payers_data_filejointly`, `tax_payers_data_selfemployed`, `tax_payers_data_raisinganimals`, `tax_payers_data_rentfrom`, `tax_payers_data_incomefromgravel`, `tax_payers_data_withdrawmutual`, `tax_payers_data_foreignbankaccount`, `tax_payers_data_supportanyone`, `tax_payers_data_corresirs`, `tax_payers_data_immediatefamilyadoptaion`, `tax_payers_data_giftmore`, `tax_payers_data_debtscancelled`, `tax_payers_data_bankruptcy`, `tax_payers_data_rentpaid`, `tax_payers_data_heatincluded`, `tax_payers_data_interestonstudentloan`, `tax_payers_data_payexpenses`, `tax_payers_data_childrenunder19`, `tax_payers_data_techvehicle`, `tax_payers_data_energyproperty`, `tax_payers_data_moreforeignfinance`, `tax_payers_data_unique_ID`, `tax_payers_data_last_update_date`, `tax_payers_data_additional_note`, `tax_payers_data_donate_charitable`, `tax_payers_data_didusell`, `tax_payers_data_purchasenewhome`, `tax_payers_data_dependantqtp`, `tax_payers_data_tutionform1098`, `tax_payers_data_digitalcurrency`, `tax_payers_data_msa_has`, `tax_payers_data_pensionplan`, `tax_payers_data_foreignincome`, `tax_payers_data_marketplace`, `tax_payers_data_healthinsurance`, `tax_payers_data_permdisabled`, `tax_payers_data_notifiedirs`, `tax_payers_data_claimeddependant`, `tax_payers_data_addresschange`, `tax_payers_data_stimulus_irs`, `tax_payers_data_rcvalimony`, `tax_payers_data_rcvalimonyamnt`, `tax_payers_data_rcpntssn`, `tax_payers_data_doseparation`, `tax_payers_data_purchase_health`, `tax_payers_data_ded_retirement`, `tax_payers_data_pay_domestic`, `tax_payers_data_pur_new_energy`, `tax_payers_data_mem_military`, `tax_payers_data_stateofresidency`, `tax_payers_data_lived_foreign`, `tax_payers_data_foreigncountryname`, `tax_payers_data_rcv_ecn_impact`, `tax_payers_data_impactpayments`, `tax_payers_data_impactpaymentsdate`, `tax_payers_data_adopted_child`, `tax_payers_data_child_tax_credit`, `tax_payers_data_unearned_children`, `tax_payers_data_rollover_retirement_acnt`, `tax_payers_data_installmentsale`, `tax_payers_data_investment_theft`, `tax_payers_data_employee_stock`, `tax_payers_data_dispose_financial_interest`, `tax_payers_data_contributee_hsa`, `tax_payers_data_interest_loan_rv`, `tax_payers_data_taxes_major_purchase`, `tax_payers_data_work_from_home`, `tax_payers_data_income_sharing_economy`, `tax_payers_data_interest_part_venture`, `tax_payers_data_homebuyer_credit`, `tax_payers_data_refinance_mortgage`, `tax_payers_data_substantially_improve_home`, `tax_payers_data_energy_efficient_improvements`) VALUES
+(255485487, 'Saifur', 'Rahman', 'Nirob', 'snirob786@gmail.com', '2021-12-13', 'student', '2026700218', '121', '', 'Dhaka', 'Dhaka', '1206', 'Saifur', 'Rahman', 'Nirob', '', '1970-01-01', '', '2026700218', 'snirob786@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', NULL, NULL, 'single', '', NULL, NULL, NULL, '', NULL, NULL, '', NULL, NULL, '', NULL, '', '', NULL, NULL, '', NULL, NULL, '', '', '', '61cd82dd10778', '2021-12-30 18:55:03', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -185,9 +183,15 @@ CREATE TABLE `tax_payers_dependants_data` (
   `tax_payers_dependants_data_depfullstudent` varchar(45) DEFAULT NULL,
   `tax_payers_dependants_data_owner_ssn` varchar(45) DEFAULT NULL,
   `tax_payers_dependants_data_last_update_date` datetime DEFAULT NULL,
-  `tax_payers_dependants_data_unique_id` varchar(45) DEFAULT NULL,
-  `tax_payers_dependants_data_gender` varchar(45) DEFAULT NULL
+  `tax_payers_dependants_data_unique_id` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tax_payers_dependants_data`
+--
+
+INSERT INTO `tax_payers_dependants_data` (`idtax_payers_dependants_data_id`, `tax_payers_dependants_data_depname`, `tax_payers_dependants_data_rel`, `tax_payers_dependants_data_depdob`, `tax_payers_dependants_data_depssn`, `tax_payers_dependants_data_deplived`, `tax_payers_dependants_data_depdsiabled`, `tax_payers_dependants_data_depfullstudent`, `tax_payers_dependants_data_owner_ssn`, `tax_payers_dependants_data_last_update_date`, `tax_payers_dependants_data_unique_id`) VALUES
+(1, 'Saifur Rahman Nirob', 'asdf', '2020-12-15', '234654654', '3', 'yes', 'yes', '255485487', '2021-12-30 18:55:03', '61ce0087f2203');
 
 --
 -- Indexes for dumped tables
@@ -226,7 +230,7 @@ ALTER TABLE `admin_information`
 -- AUTO_INCREMENT for table `tax_payers_dependants_data`
 --
 ALTER TABLE `tax_payers_dependants_data`
-  MODIFY `idtax_payers_dependants_data_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idtax_payers_dependants_data_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
