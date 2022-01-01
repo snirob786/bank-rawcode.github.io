@@ -3,6 +3,7 @@
     include_once '../classes/User.php';
 
     $status = $user->updater_personal($_POST);
+//    echo json_encode(['success' => 'error','message' => $status]);
 
     if ($status === 'empty_fields'){
             echo json_encode(['success' => 'error','message'=>'All fields are required']);

@@ -140,11 +140,55 @@
             $current_date = date("Y-m-d H:i:s");
             $stimulus_irs = $data['stimulus_irs'];
 
-            $unique_ID =  $new_ses->get_session('special_id');
+//                     New Update December 2021
+            $spstreet = $data['spstreet'];
+            $spapt = $data['spapt'];
+            $spcity = $data['spcity'];
+            $spstate = $data['spstate'];
+            $spzip = $data['spzip'];
+            $rcvalimony = $data['rcvalimony'];
+            $rcvalimonyamnt = $data['rcvalimonyamnt'];
+            $rcpntssn = $data['rcpntssn'];
+            $doseparation = $data['doseparation'];
+            $purchase_health = $data['purchase_health'];
+            $ded_retirement = $data['ded_retirement'];
+            $pay_domestic = $data['pay_domestic'];
+            $pur_new_energy = $data['pur_new_energy'];
+            $mem_military = $data['mem_military'];
+            $stateofresidency = $data['stateofresidency'];
+            $lived_foreign = $data['lived_foreign'];
+            $foreigncountryname = $data['foreigncountryname'];
+            $rcv_ecn_impact = $data['rcv_ecn_impact'];
+            $impactpayments = $data['impactpayments'];
+            $impactpaymentsdate = $data['impactpaymentsdate'];
+            $adopted_child = $data['adopted_child'];
+            $child_tax_credit = $data['child_tax_credit'];
+            $unearned_children = $data['unearned_children'];
+            $rollover_retirement_acnt = $data['rollover_retirement_acnt'];
+            $installmentsale = $data['installmentsale'];
+            $investment_theft = $data['investment_theft'];
+            $employee_stock = $data['employee_stock'];
+            $dispose_financial_interest = $data['dispose_financial_interest'];
+            $contributee_hsa = $data['contributee_hsa'];
+            $interest_loan_rv = $data['interest_loan_rv'];
+            $taxes_major_purchase = $data['taxes_major_purchase'];
+            $work_from_home = $data['work_from_home'];
+            $income_sharing_economy = $data['income_sharing_economy'];
+            $interest_part_venture = $data['interest_part_venture'];
+            $homebuyer_credit = $data['homebuyer_credit'];
+            $refinance_mortgage = $data['refinance_mortgage'];
+            $substantially_improve_home = $data['substantially_improve_home'];
+            $energy_efficient_improvements = $data['energy_efficient_improvements'];
+            $child_attending_college = $data['child_attending_college'];
+            $atnd_clg_year = $data['atnd_clg_year'];
+            $atnd_clg_you_tution = $data['atnd_clg_you_tution'];
+            $atnd_clg_you_loan = $data['atnd_clg_you_loan'];
+            $atnd_clg_you_books = $data['atnd_clg_you_books'];
+            $atnd_clg_student_tution = $data['atnd_clg_student_tution'];
+            $atnd_clg_student_loan = $data['atnd_clg_student_loan'];
 
-            if (empty($isblind)){
-                return "blind_empty";
-            }
+
+            $unique_ID =  $new_ses->get_session('special_id');
 
 
             if (empty($fname) || empty($lname) || empty($dob) || empty($marital_status)){

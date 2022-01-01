@@ -436,6 +436,15 @@ td .input-field input[type=text]:disabled{
     text-align: left;
 }
 
+
+.total_data{
+    background-color: white;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Media Query Tab and Lower*/
 
 @media screen and (max-width: 1024px){

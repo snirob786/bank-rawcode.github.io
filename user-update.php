@@ -1136,17 +1136,17 @@
                                     <td>Second</td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
+                                            <input type="text" id="second_install_fed_date" name="second_install_fed_date" class="datepicker" value="<?php get_dob_display($data['tax_payers_data_second_install_fed_date']);?>">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="second_install_fed" name="second_install_fed" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                            <input type="text" id="second_install_fed" name="second_install_fed" value="<?php echo $data['tax_payers_data_second_install_fed'];?>" >
                                         </div>
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="second_install_fed_date" name="second_install_fed_date" class="datepicker" value="<?php echo $data['tax_payers_data_second_install_fed_date'];?>">
+                                            <input type="text" id="second_install_state_date" name="second_install_state_date" class="datepicker" value="<?php get_dob_display($data['tax_payers_data_second_install_state_date']);?>">
                                         </div>
                                     </td>
                                     <td>
@@ -1159,22 +1159,22 @@
                                     <td>Third</td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="second_install_state_date" name="second_install_state_date" class="datepicker" value="<?php echo $data['tax_payers_data_second_install_state_date'];?>">
+                                            <input type="text" id="third_install_fed_date" name="third_install_fed_date" class="datepicker" value="<?php get_dob_display($data['tax_payers_data_third_install_fed_date']);?>">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="third_install_fed" name="third_install_fed" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                            <input type="text" id="third_install_fed" name="third_install_fed" value="<?php echo $data['tax_payers_data_third_install_fed'];?>" >
                                         </div>
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
+                                            <input type="text" id="third_install_state_date" name="third_install_state_date" class="datepicker" value="<?php get_dob_display($data['tax_payers_data_third_install_state_date']);?>">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="third_install_state" name="third_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                            <input type="text" id="third_install_state" name="third_install_state" value="<?php echo $data['tax_payers_data_third_install_state'];?>" >
                                         </div>
                                     </td>
                                 </tr>
@@ -1182,22 +1182,22 @@
                                     <td>Fourth</td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
+                                            <input type="text" id="fourth_install_fed_date" name="fourth_install_fed_date" class="datepicker" value="<?php get_dob_display($data['tax_payers_data_fourth_install_fed_date']);?>">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="fourth_install_fed" name="fourth_install_fed" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                            <input type="text" id="fourth_install_fed" name="fourth_install_fed" value="<?php echo $data['tax_payers_data_fourth_install_fed'];?>" >
                                         </div>
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
+                                            <input type="text" id="fourth_install_state_date" name="fourth_install_state_date" class="datepicker" value="<?php get_dob_display($data['tax_payers_data_fourth_install_state_date']);?>">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="fourth_install_state" name="fourth_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                            <input type="text" id="fourth_install_state" name="fourth_install_state" value="<?php echo $data['tax_payers_data_fourth_install_state'];?>" >
                                         </div>
                                     </td>
                                 </tr>
@@ -1205,22 +1205,22 @@
                                     <td>Amount applied from 2020 overpayment?</td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="dob" name="dob" class="datepicker" disabled>
+                                            <input type="text" id="overpay_install_fed_dis" class="datepicker" disabled>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="overpay_install_fed" name="overpay_install_fed" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                            <input type="text" id="overpay_install_fed" name="overpay_install_fed" value="<?php echo $data['tax_payers_data_overpay_install_fed'];?>" >
                                         </div>
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="dob" name="dob" class="datepicker" disabled>
+                                            <input type="text" id="overpay_install_state_dis" disabled>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="overpay_install_state" name="overpay_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                            <input type="text" id="overpay_install_state" name="overpay_install_state" value="<?php echo $data['tax_payers_data_overpay_install_state'];?>" >
                                         </div>
                                     </td>
                                 </tr>
@@ -1228,22 +1228,22 @@
                                     <td>Total</td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="dob" name="dob" class="datepicker" disabled>
+                                            <input type="text" id="total_install_fed_dis" disabled>
+                                        </div>
+                                    </td>
+                                    <td class="total_data_parent">
+                                        <div class="total_data">
+                                            <p>data</p>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="total_install_fed" name="total_install_fed" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                            <input type="text" id="total_install_state" disabled>
                                         </div>
                                     </td>
-                                    <td>
-                                        <div class="input-field">
-                                            <input type="text" id="dob" name="dob" class="datepicker" disabled>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-field">
-                                            <input type="text" id="total_install_state" name="total_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                    <td class="total_data_parent">
+                                        <div class="total_data">
+                                            <p>data</p>
                                         </div>
                                     </td>
                                 </tr>
@@ -1280,19 +1280,19 @@
                                         </td>
                                         <td>
                                             <div class="input-field">
-                                                <input type="text" id="first_install_fed" name="first_install_fed" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                                <input type="text" id="pay_rec_july" name="pay_rec_july" value="<?php get_dob_display($data['tax_payers_data_pay_rec_july']);?>" >
                                             </div>
                                         </td>
                                         <td><p>September 15, 2021</p></td>
                                         <td>
                                             <div class="input-field">
-                                                <input type="text" id="first_install_state" name="first_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                                <input type="text" id="pay_rec_sept" name="pay_rec_sept" value="<?php get_dob_display($data['tax_payers_data_pay_rec_sept']);?>" >
                                             </div>
                                         </td>
                                         <td><p>November 15, 2021</p></td>
                                         <td>
                                             <div class="input-field">
-                                                <input type="text" id="first_install_state" name="first_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                                <input type="text" id="pay_rec_nov" name="pay_rec_nov" value="<?php get_dob_display($data['tax_payers_data_pay_rec_nov']);?>" >
                                             </div>
                                         </td>
                                     </tr>
@@ -1302,19 +1302,19 @@
                                         </td>
                                         <td>
                                             <div class="input-field">
-                                                <input type="text" id="first_install_fed" name="first_install_fed" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                                <input type="text" id="pay_rec_august" name="pay_rec_august" value="<?php get_dob_display($data['tax_payers_data_pay_rec_august']);?>" >
                                             </div>
                                         </td>
                                         <td><p>October 15, 2021</p></td>
                                         <td>
                                             <div class="input-field">
-                                                <input type="text" id="first_install_state" name="first_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                                <input type="text" id="pay_rec_oct" name="pay_rec_oct" value="<?php get_dob_display($data['tax_payers_data_pay_rec_oct']);?>" >
                                             </div>
                                         </td>
                                         <td><p>December 15, 2021</p></td>
                                         <td>
                                             <div class="input-field">
-                                                <input type="text" id="first_install_state" name="first_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                                <input type="text" id="pay_rec_dec" name="pay_rec_dec" value="<?php get_dob_display($data['tax_payers_data_pay_rec_dec']);?>" >
                                             </div>
                                         </td>
                                     </tr>
@@ -1333,7 +1333,7 @@
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <input type="checkbox" id="w2_form" name="w2_form"/>
                                     <span class="white-text">All Forms W-2 (wages), 1099-INT (interest), 1099-DIV (dividends), 1099-B (proceeds from broker or barter transactions), 1099‑R
 (pensions and IRA distributions), Schedules K-1 from partnerships, S corporations, estates and trusts, and other income reporting
 statements, including all copies provided from the payer.</span>
@@ -1341,57 +1341,57 @@ statements, including all copies provided from the payer.</span>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <input type="checkbox" id="1095a_form" name="1095a_form"/>
                                     <span class="white-text">Form 1095-A (for health insurance purchased through a public exchange), Form 1095-B (for health insurance purchased outside
 of a public exchange), or Form 1095-C (for employer-provided health insurance coverage).</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <input type="checkbox" id="new_client_last_copy" name="new_client_last_copy"/>
                                     <span class="white-text">If you are a new client, provide copies of last year’s tax returns.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <input type="checkbox" id="not_to_fill_out_org" name="not_to_fill_out_org"/>
                                     <span class="white-text">The completed Individual Income Tax Organizer. Note: If you choose not to fill out the organizer, you must at least answer
 the “Yes” or “No” questions under “Questions — All Taxpayers.”</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <input type="checkbox" id="copy_closing_state" name="copy_closing_state"/>
                                     <span class="white-text">Copy of the closing statement if you bought or sold real estate.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <input type="checkbox" id="mile_fig_auto" name="mile_fig_auto"/>detail_any_tax_made
                                     <span class="white-text">Mileage figures for any automobile expenses claimed, including total mileage, commuting mileage, and business mileage.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <input type="checkbox" id="detail_any_tax_made" name="detail_any_tax_made"/>inc_ded_cat
                                     <span class="white-text">Detail of estimated tax payments made, if any.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <input type="checkbox" id="inc_ded_cat" name="inc_ded_cat"/>
                                     <span class="white-text">Income and deductions categorized on a separate sheet for business or rental activities.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <input type="checkbox" id="list_item_ded_cat" name="list_item_ded_cat"/>
                                     <span class="white-text">List of itemized deductions categorized on a separate sheet for medical, taxes, interest, charitable, and miscellaneous deductions.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="consentConf" name="consentConf"/>
+                                    <input type="checkbox" id="copy_all_acknow" name="copy_all_acknow"/>
                                     <span class="white-text">Copy of all acknowledgement letters received from charitable organizations for contributions made in 2021.</span>
                                 </label>
                             </div>
@@ -1425,20 +1425,20 @@ the “Yes” or “No” questions under “Questions — All Taxpayers.”</sp
                             </div>
                             <div class="col s12 l4">
                                 <div class="input-field">
-                                    <input type="text" id="rcvalimonyamnt" name="rcvalimonyamnt" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
-                                    <label for="rcvalimonyamnt" class="white-text">Taxpayer initials</label>
+                                    <input type="text" id="tax_initial_sig" name="tax_initial_sig" value="<?php echo $data['tax_payers_data_tax_initial_sig'];?>" >
+                                    <label for="tax_initial_sig" class="white-text">Taxpayer initials</label>
                                 </div>
                             </div>
                             <div class="col s12 l4">
                                 <div class="input-field">
-                                    <input type="text" id="rcvalimonyamnt" name="rcvalimonyamnt" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
-                                    <label for="rcvalimonyamnt" class="white-text">Taxpayer's spouse initials</label>
+                                    <input type="text" id="tax_sp_initial_sig" name="tax_sp_initial_sig" value="<?php echo $data['tax_payers_data_tax_sp_initial_sig'];?>" >
+                                    <label for="tax_sp_initial_sig" class="white-text">Taxpayer's spouse initials</label>
                                 </div>
                             </div>
                             <div class="col s12 l4">
                                 <div class="input-field">
-                                    <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
-                                    <label for="dob" class="grey-text text-lighten-2">Date</label>
+                                    <input type="text" id="sign_date" name="sign_date" class="datepicker" value="<?php get_dob_display($data['tax_payers_data_sign_date']);?>">
+                                    <label for="sign_date" class="grey-text text-lighten-2">Date</label>
                                 </div>
                             </div>
                         </div>

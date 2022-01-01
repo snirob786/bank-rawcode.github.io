@@ -84,6 +84,7 @@ function update_data(jsonData) {
 
     if ($('#consentConf').is(":checked"))
     {
+        console.log(jsonData);
         $.ajax({
             url: "../includes/auth-update.php",
             method: "POST",
@@ -95,12 +96,14 @@ function update_data(jsonData) {
                     text.addClass('indigo-text');
                     text.css('display','block');
                     window.location.hash = '#heading';
+                    console.log(e.success);
                 } else {
                     if (e.success === 'error'){
                         text.addClass('red-text');
                         text.css('display','block');
                     }
                     text.html(e.message);
+                    console.log(e.message);
                     setTimeout(function () {
                         text.hide('slow');
                     },5000)
