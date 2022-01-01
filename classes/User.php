@@ -142,6 +142,10 @@
 
             $unique_ID =  $new_ses->get_session('special_id');
 
+            if (empty($isblind)){
+                return "blind_empty";
+            }
+
 
             if (empty($fname) || empty($lname) || empty($dob) || empty($marital_status)){
                 $this->error = true;

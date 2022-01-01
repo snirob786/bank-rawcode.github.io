@@ -26,6 +26,9 @@
     } else if($status === 'dob_mismatch'){
         echo json_encode(['success' => 'error','message'=>'Date of Birth Mismatch']);
     }
+    else if($status === 'blind_empty'){
+        echo json_encode(['success' => 'error','message'=>'Blind empty']);
+    }
     else{
         echo json_encode(['success' => 'error','message' => 'special: '.$status]);
     }

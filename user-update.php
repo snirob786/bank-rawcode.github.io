@@ -1080,8 +1080,8 @@
                         </div>
                         <div class="col s12 l3">
                             <div class="input-field">
-                                <input type="text" id="depcare_prov_add" name="depcare_prov_add" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
-                                <label for="depcare_prov_add" class="white-text">Amount paid to provider</label>
+                                <input type="text" id="depcare_prov_amnt" name="depcare_prov_amnt" value="<?php echo $data['tax_payers_data_depcare_prov_amnt'];?>" >
+                                <label for="depcare_prov_amnt" class="white-text">Amount paid to provider</label>
                             </div>
                         </div>
                     </div>
@@ -1113,22 +1113,22 @@
                                     <td>First</td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
+                                            <input type="text" id="first_install_fed_date" name="first_install_fed_date" class="datepicker" value="<?php get_dob_display($data['tax_payers_data_first_install_fed_date']);?>">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="first_install_fed" name="first_install_fed" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                            <input type="text" id="first_install_fed" name="first_install_fed" value="<?php echo $data['tax_payers_data_first_install_fed'];?>" >
                                         </div>
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
+                                            <input type="text" id="first_install_state_date" name="first_install_state_date" class="datepicker" value="<?php get_dob_display($data['tax_payers_data_first_install_state_date']);?>">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="first_install_state" name="first_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                            <input type="text" id="first_install_state" name="first_install_state" value="<?php echo $data['tax_payers_data_first_install_state'];?>" >
                                         </div>
                                     </td>
                                 </tr>
@@ -1146,12 +1146,12 @@
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
+                                            <input type="text" id="second_install_fed_date" name="second_install_fed_date" class="datepicker" value="<?php echo $data['tax_payers_data_second_install_fed_date'];?>">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="second_install_state" name="second_install_state" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                            <input type="text" id="second_install_state" name="second_install_state" value="<?php echo $data['tax_payers_data_second_install_state'];?>" >
                                         </div>
                                     </td>
                                 </tr>
@@ -1159,7 +1159,7 @@
                                     <td>Third</td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="dob" name="dob" class="datepicker" value="<?php echo $dob_display;?>">
+                                            <input type="text" id="second_install_state_date" name="second_install_state_date" class="datepicker" value="<?php echo $data['tax_payers_data_second_install_state_date'];?>">
                                         </div>
                                     </td>
                                     <td>

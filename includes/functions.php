@@ -118,7 +118,7 @@ function custom_paid_select($array_datas, $data){
 function option_checked($matcher,$data, $data_name){
     foreach ($matcher as $value){
         if (empty($value)){
-            $value = "yes";
+            $value = "no";
         }
         if ($data === $value){
             echo '<label>';
@@ -127,7 +127,7 @@ function option_checked($matcher,$data, $data_name){
             echo '</label>';
         }else{
             echo '<label>';
-            echo '<input name="'.$data_name.'" type="radio" class="with-gap" value="'.$value.'"/>';
+            echo '<input name="'.$data_name.'" type="radio" class="with-gap" value="'.$value.'" checked/>';
             echo '<span class="white-text">'.$value.'</span>';
             echo '</label>';
         }
