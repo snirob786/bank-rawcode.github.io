@@ -1341,7 +1341,7 @@ statements, including all copies provided from the payer.</span>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="1095a_form" name="1095a_form"/>
+                                    <input type="checkbox" id="a1095_form" name="a1095_form"/>
                                     <span class="white-text">Form 1095-A (for health insurance purchased through a public exchange), Form 1095-B (for health insurance purchased outside
 of a public exchange), or Form 1095-C (for employer-provided health insurance coverage).</span>
                                 </label>
