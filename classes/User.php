@@ -186,6 +186,27 @@
             $atnd_clg_you_books = $data['atnd_clg_you_books'];
             $atnd_clg_student_tution = $data['atnd_clg_student_tution'];
             $atnd_clg_student_loan = $data['atnd_clg_student_loan'];
+            $homebuyer_credit = $data['homebuyer_credit'];
+            $refinance_mortgage = $data['refinance_mortgage'];
+            $substantially_improve_home = $data['substantially_improve_home'];
+            $energy_efficient_improvements = $data['energy_efficient_improvements'];
+            $child_attending_college = $data['child_attending_college'];
+            $atnd_clg_year = $data['atnd_clg_year'];
+            $atnd_clg_you_tution = $data['atnd_clg_you_tution'];
+            $atnd_clg_you_loan = $data['atnd_clg_you_loan'];
+            $atnd_clg_you_books = $data['atnd_clg_you_books'];
+            $atnd_clg_student_tution = $data['atnd_clg_student_tution'];
+            $atnd_clg_student_loan = $data['atnd_clg_student_loan'];
+            $atnd_clg_student_books = $data['atnd_clg_student_books'];
+            $tution_for_private = $data['tution_for_private'];
+            $tution_for_private_stud = $data['tution_for_private_stud'];
+            $tution_for_private_amount = $data['tution_for_private_amount'];
+            $tution_for_private_schl = $data['tution_for_private_schl'];
+            $depcare = $data['depcare'];
+            $depcare_prov = $data['depcare_prov'];
+            $depcare_prov_ssn = $data['depcare_prov_ssn'];
+            $depcare_prov_add = $data['depcare_prov_add'];
+
 
 
             $unique_ID =  $new_ses->get_session('special_id');
