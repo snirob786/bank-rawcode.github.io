@@ -970,26 +970,26 @@
                     <div class="row">
                         <div class="col s12 l3">
                                 <div class="input-field">
-                                    <input type="text" id="atnd_clg_year" name="atnd_clg_year" value="<?php echo $data['tax_payers_data_substantially_improve_home'];?>" >
+                                    <input type="text" id="atnd_clg_year" name="atnd_clg_year" value="<?php echo $data['tax_payers_data_atnd_clg_year'];?>" >
                                     <label for="atnd_clg_year" class="white-text">Year of attending college</label>
                                 </div>
                         </div>
                         <div class="col s12">
                             <div class="col s12 l4">
                                 <div class="input-field">
-                                    <input type="text" id="atnd_clg_you_tution" name="atnd_clg_you_tution" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                    <input type="text" id="atnd_clg_you_tution" name="atnd_clg_you_tution" value="<?php echo $data['tax_payers_data_atnd_clg_you_tution'];?>" >
                                     <label for="atnd_clg_you_tution" class="white-text">Tution paid by you ($)</label>
                                 </div>
                             </div>
                             <div class="col s12 l4">
                                 <div class="input-field">
-                                    <input type="text" id="atnd_clg_you_loan" name="atnd_clg_you_loan" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                    <input type="text" id="atnd_clg_you_loan" name="atnd_clg_you_loan" value="<?php echo $data['tax_payers_data_atnd_clg_you_loan'];?>" >
                                     <label for="atnd_clg_you_loan" class="white-text">Student interest loan paid by you ($)</label>
                                 </div>
                             </div>
                             <div class="col s12 l4">
                                 <div class="input-field">
-                                    <input type="text" id="atnd_clg_you_books" name="atnd_clg_you_books" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                    <input type="text" id="atnd_clg_you_books" name="atnd_clg_you_books" value="<?php echo $data['tax_payers_data_atnd_clg_you_books'];?>" >
                                     <label for="atnd_clg_you_books" class="white-text">Books paid by you ($)</label>
                                 </div>
                             </div>
@@ -997,19 +997,19 @@
                         <div class="col s12">
                             <div class="col s12 l4">
                                 <div class="input-field">
-                                    <input type="text" id="atnd_clg_student_tution" name="atnd_clg_student_tution" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                    <input type="text" id="atnd_clg_student_tution" name="atnd_clg_student_tution" value="<?php echo $data['tax_payers_data_atnd_clg_student_tution'];?>" >
                                     <label for="atnd_clg_student_tution" class="white-text">Tution paid by student ($)</label>
                                 </div>
                             </div>
                             <div class="col s12 l4">
                                 <div class="input-field">
-                                    <input type="text" id="atnd_clg_student_loan" name="atnd_clg_you_loan" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                    <input type="text" id="atnd_clg_student_loan" name="atnd_clg_student_loan" value="<?php echo $data['tax_payers_data_atnd_clg_student_loan'];?>" >
                                     <label for="atnd_clg_you_loan" class="white-text">Student interest loan paid by student ($)</label>
                                 </div>
                             </div>
                             <div class="col s12 l4">
                                 <div class="input-field">
-                                    <input type="text" id="atnd_clg_student_books" name="atnd_clg_student_books" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                    <input type="text" id="atnd_clg_student_books" name="atnd_clg_student_books" value="<?php echo $data['tax_payers_data_atnd_clg_student_books'];?>" >
                                     <label for="atnd_clg_student_books" class="white-text">Books paid by student ($)</label>
                                 </div>
                             </div>
@@ -1022,7 +1022,7 @@
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'tution_for_private');?>
+                                <?php option_checked($matcher,$data['tax_payers_data_tution_for_private'],'tution_for_private');?>
                             </div>
                         </div>
                     </div>
@@ -1030,19 +1030,19 @@
                     <div class="row">
                         <div class="col s12 l4">
                             <div class="input-field">
-                                <input type="text" id="tution_for_private_stud" name="tution_for_private_stud" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                <input type="text" id="tution_for_private_stud" name="tution_for_private_stud" value="<?php echo $data['tax_payers_data_tution_for_private_stud'];?>" >
                                 <label for="tution_for_private_stud" class="white-text">Dependent student name</label>
                             </div>
                         </div>
                         <div class="col s12 l4">
                             <div class="input-field">
-                                <input type="text" id="tution_for_private_amount" name="tution_for_private_amount" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                <input type="text" id="tution_for_private_amount" name="tution_for_private_amount" value="<?php echo $data['tax_payers_data_tution_for_private_amount'];?>" >
                                 <label for="tution_for_private_amount" class="white-text">Dependent student amount paid</label>
                             </div>
                         </div>
                         <div class="col s12 l4">
                             <div class="input-field">
-                                <input type="text" id="tution_for_private_schl" name="tution_for_private_schl" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                <input type="text" id="tution_for_private_schl" name="tution_for_private_schl" value="<?php echo $data['tax_payers_data_tution_for_private_schl'];?>" >
                                 <label for="tution_for_private_schl" class="white-text">Dependent student school's name and address</label>
                             </div>
                         </div>
@@ -1054,7 +1054,7 @@
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_stimulus_irs'],'depcare');?>
+                                <?php option_checked($matcher,$data['tax_payers_data_depcare'],'depcare');?>
                             </div>
                         </div>
                     </div>
@@ -1062,19 +1062,19 @@
                     <div class="row">
                         <div class="col s12 l3">
                             <div class="input-field">
-                                <input type="text" id="depcare_prov" name="depcare_prov" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                <input type="text" id="depcare_prov" name="depcare_prov" value="<?php echo $data['tax_payers_data_depcare_prov'];?>" >
                                 <label for="depcare_prov" class="white-text">Name of provider</label>
                             </div>
                         </div>
                         <div class="col s12 l3">
                             <div class="input-field">
-                                <input type="text" id="depcare_prov_ssn" name="depcare_prov_ssn" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                <input type="text" id="depcare_prov_ssn" name="depcare_prov_ssn" value="<?php echo $data['tax_payers_data_depcare_prov_ssn'];?>" >
                                 <label for="depcare_prov_ssn" class="white-text">Provider's ssn</label>
                             </div>
                         </div>
                         <div class="col s12 l3">
                             <div class="input-field">
-                                <input type="text" id="depcare_prov_add" name="depcare_prov_add" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
+                                <input type="text" id="depcare_prov_add" name="depcare_prov_add" value="<?php echo $data['tax_payers_data_depcare_prov_add'];?>" >
                                 <label for="tution_for_private_schl" class="white-text">Provider's address</label>
                             </div>
                         </div>
@@ -1333,7 +1333,8 @@
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="w2_form" name="w2_form"/>
+                                    <input type="hidden" name="w2_form" value="no"/>
+                                    <input type="checkbox" id="w2_form" name="w2_form" value="on"/>
                                     <span class="white-text">All Forms W-2 (wages), 1099-INT (interest), 1099-DIV (dividends), 1099-B (proceeds from broker or barter transactions), 1099‑R
 (pensions and IRA distributions), Schedules K-1 from partnerships, S corporations, estates and trusts, and other income reporting
 statements, including all copies provided from the payer.</span>
@@ -1341,57 +1342,66 @@ statements, including all copies provided from the payer.</span>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="a1095_form" name="a1095_form"/>
+                                    <input type="hidden" name="a1095_form" value="no"/>
+                                    <input type="checkbox" id="a1095_form" name="a1095_form" value="on"/>
                                     <span class="white-text">Form 1095-A (for health insurance purchased through a public exchange), Form 1095-B (for health insurance purchased outside
 of a public exchange), or Form 1095-C (for employer-provided health insurance coverage).</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="new_client_last_copy" name="new_client_last_copy"/>
+                                    <input type="hidden" name="new_client_last_copy" value="no"/>
+                                    <input type="checkbox" id="new_client_last_copy" name="new_client_last_copy" value="on"/>
                                     <span class="white-text">If you are a new client, provide copies of last year’s tax returns.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="not_to_fill_out_org" name="not_to_fill_out_org"/>
+                                    <input type="hidden" name="not_to_fill_out_org" value="no"/>
+                                    <input type="checkbox" id="not_to_fill_out_org" name="not_to_fill_out_org" value="on"/>
                                     <span class="white-text">The completed Individual Income Tax Organizer. Note: If you choose not to fill out the organizer, you must at least answer
 the “Yes” or “No” questions under “Questions — All Taxpayers.”</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="copy_closing_state" name="copy_closing_state"/>
+                                    <input type="hidden" name="copy_closing_state" value="no"/>
+                                    <input type="checkbox" id="copy_closing_state" name="copy_closing_state" value="on"/>
                                     <span class="white-text">Copy of the closing statement if you bought or sold real estate.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="mile_fig_auto" name="mile_fig_auto"/>detail_any_tax_made
+                                    <input type="hidden" name="mile_fig_auto" value="no"/>
+                                    <input type="checkbox" id="mile_fig_auto" name="mile_fig_auto" value="on"/>
                                     <span class="white-text">Mileage figures for any automobile expenses claimed, including total mileage, commuting mileage, and business mileage.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="detail_any_tax_made" name="detail_any_tax_made"/>inc_ded_cat
+                                    <input type="hidden" name="detail_any_tax_made" value="no"/>
+                                    <input type="checkbox" id="detail_any_tax_made" name="detail_any_tax_made" value="on"/>
                                     <span class="white-text">Detail of estimated tax payments made, if any.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="inc_ded_cat" name="inc_ded_cat"/>
+                                    <input type="hidden" name="inc_ded_cat" value="no"/>
+                                    <input type="checkbox" id="inc_ded_cat" name="inc_ded_cat" value="on"/>
                                     <span class="white-text">Income and deductions categorized on a separate sheet for business or rental activities.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="list_item_ded_cat" name="list_item_ded_cat"/>
+                                    <input type="hidden" name="list_item_ded_cat" value="no"/>
+                                    <input type="checkbox" id="list_item_ded_cat" name="list_item_ded_cat" value="on"/>
                                     <span class="white-text">List of itemized deductions categorized on a separate sheet for medical, taxes, interest, charitable, and miscellaneous deductions.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="checkbox" id="copy_all_acknow" name="copy_all_acknow"/>
+                                    <input type="hidden" id="copy_all_acknow" name="copy_all_acknow" value="no"/>
+                                    <input type="checkbox" id="copy_all_acknow" name="copy_all_acknow" value="on"/>
                                     <span class="white-text">Copy of all acknowledgement letters received from charitable organizations for contributions made in 2021.</span>
                                 </label>
                             </div>

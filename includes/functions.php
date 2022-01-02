@@ -90,17 +90,21 @@ function option_selector($matcher, $data){
 function custom_paid_select($array_datas, $data){
 
     if(empty($data)){
-        echo '<option value="" disabled selected>Choose your option</option>';
+        echo '<option value="none" selected>None</option>';
         echo '<option value="paid">Paid</option>';
         echo '<option value="received">Received</option>';
     }else{
-        echo '<option value="" disabled>Choose your option</option>';
+//        echo '<option value="" disabled>Choose your option</option>';
         foreach ($array_datas as $value){
             if ($value === 'paid'){
                 $text = 'Paid';
             }elseif ($value === 'received'){
                 $text = 'Received';
-            }else{
+            }
+            elseif ($value === 'none'){
+                $text = 'None';
+            }
+            else{
                 $text = ucfirst($value);
             }
             if ($data === $value){
