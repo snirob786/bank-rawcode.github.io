@@ -338,3 +338,30 @@ function array_index_exist_checker($data,$index){
         return 'no';
     }
 }
+
+
+function total_calc($data,$state){
+    $first = $data['tax_payers_data_first_install_'.$state];
+    $second = $data['tax_payers_data_second_install_'.$state];
+    $third = $data['tax_payers_data_third_install_'.$state];
+    $fourth = $data['tax_payers_data_fourth_install_'.$state];
+    $overpay = $data['tax_payers_data_overpay_install_'.$state];
+    if(empty($first)){
+        $first = 0;
+    }
+    if(empty($second)){
+        $second = 0;
+    }
+    if(empty($third)){
+        $third = 0;
+    }
+    if(empty($fourth)){
+        $fourth = 0;
+    }
+    if(empty($overpay)){
+        $overpay = 0;
+    }
+
+    $total = $first + $second + $third + $fourth + $overpay;
+    return $total;
+}

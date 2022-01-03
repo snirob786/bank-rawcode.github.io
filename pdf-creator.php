@@ -94,6 +94,26 @@ $pdf->Cell(200,20,"Taxpayer Information","0","1","C");
 
 
     //    Set font to ariel,bold,14pt
+       $pdf->SetFont('Times','',14);
+       $pdf->Cell(200,20," Tax Payers Address","0","1","C");
+   //    Personal Details
+       $pdf->SetLeftMargin(10);
+       $pdf->SetTextColor(0,0,0);
+       $pdf->SetFont('Arial','',10);
+       $pdf->Cell(70,10,"Street Address",1,0,"C");
+       $pdf->Cell(20,10,"Apt/Suite",1,0,"C");
+       $pdf->Cell(60,10,"City",1,0,"C");
+       $pdf->Cell(20,10,"State",1,0,"C");
+       $pdf->Cell(20,10,"Zip",1,1,"C");
+
+    //    Personal Details Data
+    $pdf->Cell(70,10,ucfirst($ownder_data['tax_payers_data_street']),1,0,"C");
+    $pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_apt']),1,0,"C");
+    $pdf->Cell(60,10,ucfirst($ownder_data['tax_payers_data_city']),1,0,"C");
+    $pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_state']),1,0,"C");
+    $pdf->Cell(20,10,$ownder_data['tax_payers_data_zip'],1,1,"C");
+
+    //    Set font to ariel,bold,14pt
     $pdf->SetFont('Times','',14);
     $pdf->Cell(200,20,"Spouse Information","0","1","C");
 
@@ -167,26 +187,6 @@ $pdf->Cell(200,20,"Taxpayer Information","0","1","C");
     $pdf->SetFont('Arial','',10);
     $pdf->Cell(150,10,$ownder_data['tax_payers_data_spemail'],1,1,"C");
 
-
-
-    //    Set font to ariel,bold,14pt
-    $pdf->SetFont('Times','',14);
-    $pdf->Cell(200,20,"Address","0","1","C");
-//    Personal Details
-    $pdf->SetLeftMargin(10);
-    $pdf->SetTextColor(0,0,0);
-    $pdf->SetFont('Arial','',10);
-    $pdf->Cell(70,10,"Street Address",1,0,"C");
-    $pdf->Cell(20,10,"Apt/Suite",1,0,"C");
-    $pdf->Cell(60,10,"City",1,0,"C");
-    $pdf->Cell(20,10,"State",1,0,"C");
-    $pdf->Cell(20,10,"Zip",1,1,"C");
-//    Personal Details Data
-    $pdf->Cell(70,10,ucfirst($ownder_data['tax_payers_data_street']),1,0,"C");
-    $pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_apt']),1,0,"C");
-    $pdf->Cell(60,10,ucfirst($ownder_data['tax_payers_data_city']),1,0,"C");
-    $pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_state']),1,0,"C");
-    $pdf->Cell(20,10,$ownder_data['tax_payers_data_zip'],1,1,"C");
 
 
 //    Set font to ariel,bold,14pt
