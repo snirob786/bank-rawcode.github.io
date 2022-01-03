@@ -321,3 +321,20 @@ function pdf_call_function($pdf,$string,$rowNumber,$data){
     $pdf->Cell(20,($line*$cellHeight),$data,0,1,"C");
 }
 
+function checkbox_toggler($data, $handler){
+    if ($data === 'no' || empty($data)){
+        echo '<input type="hidden" name="<'.$handler.'" value="no"/>';
+        echo '<input type="checkbox" id="'.$handler.'" name="'.$handler.'" value="on"/>';
+    } elseif ($data === 'on'){
+        echo '<input type="hidden" name="'.$handler.'" value="no"/>';
+        echo '<input type="checkbox" id="'.$handler.'" name="'.$handler.'" value="on" checked/>';
+    }
+}
+
+function array_index_exist_checker($data,$index){
+    if (array_key_exists($index, $data)){
+        return $data[$index];
+    } else{
+        return 'no';
+    }
+}

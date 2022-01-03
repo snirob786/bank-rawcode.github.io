@@ -223,17 +223,16 @@
             $tax_initial_sig = $data['tax_initial_sig'];
             $tax_sp_initial_sig = $data['tax_sp_initial_sig'];
             $sign_date = date("Y-m-d", strtotime($data['sign_date']));
-            $w2_form = $data['w2_form'];
-            $a1095_form = $data['a1095_form'];
-            $new_client_last_copy = $data['new_client_last_copy'];
-            $not_to_fill_out_org = $data['not_to_fill_out_org'];
-            $copy_closing_state = $data['copy_closing_state'];
-            $mile_fig_auto = $data['mile_fig_auto'];
-            $detail_any_tax_made = $data['detail_any_tax_made'];
-            $inc_ded_cat = $data['inc_ded_cat'];
-            $list_item_ded_cat = $data['list_item_ded_cat'];
-            $copy_all_acknow = $data['copy_all_acknow'];
-
+            $w2_form = array_index_exist_checker($data,'w2_form');
+            $a1095_form = array_index_exist_checker($data,'a1095_form');
+            $new_client_last_copy = array_index_exist_checker($data,'new_client_last_copy');
+            $not_to_fill_out_org = array_index_exist_checker($data,'not_to_fill_out_org');
+            $copy_closing_state = array_index_exist_checker($data,'copy_closing_state');
+            $mile_fig_auto = array_index_exist_checker($data,'mile_fig_auto');
+            $detail_any_tax_made = array_index_exist_checker($data,'detail_any_tax_made');
+            $inc_ded_cat = array_index_exist_checker($data,'inc_ded_cat');
+            $list_item_ded_cat = array_index_exist_checker($data,'list_item_ded_cat');
+            $copy_all_acknow = array_index_exist_checker($data,'copy_all_acknow');
 
             $unique_ID =  $new_ses->get_session('special_id');
 

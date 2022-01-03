@@ -84,7 +84,7 @@ function update_data(jsonData) {
 
     if ($('#consentConf').is(":checked"))
     {
-        console.log(jsonData);
+        // console.log(jsonData);
         $.ajax({
             url: "../includes/auth-update.php",
             method: "POST",
@@ -95,15 +95,16 @@ function update_data(jsonData) {
                 if(e.success === 'updated'){
                     text.addClass('indigo-text');
                     text.css('display','block');
-                    window.location.hash = '#heading';
-                    console.log(e.success);
+                    window.location.assign('#heading');
+                    // console.log(e.success);
                 } else {
                     if (e.success === 'error'){
                         text.addClass('red-text');
                         text.css('display','block');
+                        window.location.assign('#heading');
+                        // console.log(e.message);
                     }
                     text.html(e.message);
-                    console.log(e.message);
                     setTimeout(function () {
                         text.hide('slow');
                     },5000)
@@ -112,7 +113,6 @@ function update_data(jsonData) {
                 text.html(e.message);
                 setTimeout(function () {
                     text.hide('slow');
-                    // goBack();
                 },5000);
 
 

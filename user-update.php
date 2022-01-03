@@ -1333,8 +1333,7 @@
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="hidden" name="w2_form" value="no"/>
-                                    <input type="checkbox" id="w2_form" name="w2_form" value="on"/>
+                                    <?php checkbox_toggler($data['tax_payers_data_w2_form'],'w2_form');?>
                                     <span class="white-text">All Forms W-2 (wages), 1099-INT (interest), 1099-DIV (dividends), 1099-B (proceeds from broker or barter transactions), 1099‑R
 (pensions and IRA distributions), Schedules K-1 from partnerships, S corporations, estates and trusts, and other income reporting
 statements, including all copies provided from the payer.</span>
@@ -1342,66 +1341,57 @@ statements, including all copies provided from the payer.</span>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="hidden" name="a1095_form" value="no"/>
-                                    <input type="checkbox" id="a1095_form" name="a1095_form" value="on"/>
+                                    <?php checkbox_toggler($data['tax_payers_data_a1095_form'],'a1095_form');?>
                                     <span class="white-text">Form 1095-A (for health insurance purchased through a public exchange), Form 1095-B (for health insurance purchased outside
 of a public exchange), or Form 1095-C (for employer-provided health insurance coverage).</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="hidden" name="new_client_last_copy" value="no"/>
-                                    <input type="checkbox" id="new_client_last_copy" name="new_client_last_copy" value="on"/>
+                                    <?php checkbox_toggler($data['tax_payers_data_new_client_last_copy'],'new_client_last_copy');?>
                                     <span class="white-text">If you are a new client, provide copies of last year’s tax returns.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="hidden" name="not_to_fill_out_org" value="no"/>
-                                    <input type="checkbox" id="not_to_fill_out_org" name="not_to_fill_out_org" value="on"/>
+                                    <?php checkbox_toggler($data['tax_payers_data_not_to_fill_out_org'],'not_to_fill_out_org');?>
                                     <span class="white-text">The completed Individual Income Tax Organizer. Note: If you choose not to fill out the organizer, you must at least answer
 the “Yes” or “No” questions under “Questions — All Taxpayers.”</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="hidden" name="copy_closing_state" value="no"/>
-                                    <input type="checkbox" id="copy_closing_state" name="copy_closing_state" value="on"/>
+                                    <?php checkbox_toggler($data['tax_payers_data_copy_closing_state'],'copy_closing_state');?>
                                     <span class="white-text">Copy of the closing statement if you bought or sold real estate.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="hidden" name="mile_fig_auto" value="no"/>
-                                    <input type="checkbox" id="mile_fig_auto" name="mile_fig_auto" value="on"/>
+                                    <?php checkbox_toggler($data['tax_payers_data_mile_fig_auto'],'mile_fig_auto');?>
                                     <span class="white-text">Mileage figures for any automobile expenses claimed, including total mileage, commuting mileage, and business mileage.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="hidden" name="detail_any_tax_made" value="no"/>
-                                    <input type="checkbox" id="detail_any_tax_made" name="detail_any_tax_made" value="on"/>
+                                    <?php checkbox_toggler($data['tax_payers_data_detail_any_tax_made'],'detail_any_tax_made');?>
                                     <span class="white-text">Detail of estimated tax payments made, if any.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="hidden" name="inc_ded_cat" value="no"/>
-                                    <input type="checkbox" id="inc_ded_cat" name="inc_ded_cat" value="on"/>
+                                    <?php checkbox_toggler($data['tax_payers_data_inc_ded_cat'],'inc_ded_cat');?>
                                     <span class="white-text">Income and deductions categorized on a separate sheet for business or rental activities.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="hidden" name="list_item_ded_cat" value="no"/>
-                                    <input type="checkbox" id="list_item_ded_cat" name="list_item_ded_cat" value="on"/>
+                                    <?php checkbox_toggler($data['tax_payers_data_list_item_ded_cat'],'list_item_ded_cat');?>
                                     <span class="white-text">List of itemized deductions categorized on a separate sheet for medical, taxes, interest, charitable, and miscellaneous deductions.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
-                                    <input type="hidden" id="copy_all_acknow" name="copy_all_acknow" value="no"/>
-                                    <input type="checkbox" id="copy_all_acknow" name="copy_all_acknow" value="on"/>
+                                    <?php checkbox_toggler($data['tax_payers_data_copy_all_acknow'],'copy_all_acknow');?>
                                     <span class="white-text">Copy of all acknowledgement letters received from charitable organizations for contributions made in 2021.</span>
                                 </label>
                             </div>
