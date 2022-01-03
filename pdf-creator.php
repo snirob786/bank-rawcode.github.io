@@ -493,6 +493,61 @@ $pdf->Cell(30,10,ucfirst($ownder_data['tax_payers_data_impactpayments']),1,1,"C"
 $pdf->Cell(160,10,"Payment received date",1,0,"L");
 $pdf->Cell(30,10,ucfirst($ownder_data['tax_payers_data_impactpaymentsdate']),1,1,"C");
 
+//    Question 33:
+$pdf->Cell(10,11,"33.",0,0,"C");
+$pdf->Cell(160,10,"Were any children born or adopted in 2021?",0,0,"L");
+$pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_adopted_child']),0,1,"C");
+
+//    Question 34:
+$pdf->Cell(10,11,"34.",0,0,"C");
+$pdf->Cell(160,10,"Did you receive any advance Child Tax Credit payment?",0,0,"L");
+$pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_child_tax_credit']),0,1,"C");
+
+//    Question 35:
+$pdf->Cell(10,11,"35.",0,0,"C");
+$pdf->Cell(160,10,"Do you have any children who have unearned income of $1,100 or more?",0,0,"L");
+$pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_unearned_children']),0,1,"C");
+
+//    Question 36:
+$pdf->Cell(10,11,"36.",0,0,"C");
+$pdf->Cell(160,10,"Did you roll over any amounts from a retirement account in 2021?",0,0,"L");
+$pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_rollover_retirement_acnt']),0,1,"C");
+
+//    Question 37:
+$pdf->Cell(10,11,"37.",0,0,"C");
+$pdf->Cell(160,10,"Did you receive any income from an installment sale?",0,0,"L");
+$pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_installmentsale']),0,1,"C");
+
+//    Question 38:
+$pdf->Cell(10,11,"38.",0,0,"C");
+$pdf->Cell(160,10,"Did you have any investments become worthless or were you a victim of investment theft in 2021?",0,0,"L");
+$pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_investment_theft']),0,1,"C");
+
+//    Question 39:
+$pdf->Cell(10,11,"39.",0,0,"C");
+$pdf->Cell(160,10,"Were you granted, or did you exercise, any employee stock options during 2021?",0,0,"L");
+$pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_employee_stock']),0,1,"C");
+
+//    Question 40:
+$pdf->Cell(10,11,"40.",0,0,"C");
+$pdf->Cell(160,10,"Did you receive, sell, send, exchange, or otherwise dispose of any financial interest in any virtual currency?",0,0,"L");
+$pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_dispose_financial_interest']),0,1,"C");
+
+//    Question 41:
+$pdf->Cell(10,11,"41.",0,0,"C");
+$pdf->Cell(160,10,"Did you, or do you plan to, contribute money before April 18, 2022 to an HSA for 2021?",0,0,"L");
+$pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_contributee_hsa']),0,1,"C");
+
+//    Question 42:
+$pdf->Cell(10,11,"42.",0,0,"C");
+$pdf->Cell(160,10,"Did you pay any interest on a loan for a boat or RV that has living quarters?",0,0,"L");
+$pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_interest_loan_rv']),0,1,"C");
+
+//    Question 43:
+$pdf->Cell(10,11,"43.",0,0,"C");
+$pdf->Cell(160,10,"Did you pay sales taxes on a major purchase in 2021, such as a vehicle, boat, or home?",0,0,"L");
+$pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_taxes_major_purchase']),0,1,"C");
+
 
     $pdf->Ln(5);
 
