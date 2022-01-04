@@ -13,6 +13,15 @@
 
     $pdf->AddPage();
 
+    function date_checker($data){
+
+        if( $data == '1970-01-01'){
+            return "";
+        } else{
+            return date("m/d/Y",strtotime($data));
+        }
+    }
+
 //    Set font to ariel,bold,14pt
 $pdf->SetFont('Times','',18);
 $pdf->Cell(200,20,"HBC Tax & Accounting Inc.","0","1","C");
@@ -56,7 +65,7 @@ $pdf->Cell(200,20,"Taxpayer Information","0","1","C");
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',10);
-    $pdf->Cell(150,10,date("m/d/Y",strtotime($ownder_data['tax_payers_data_dob'])),1,1,"C");
+    $pdf->Cell(150,10,date_checker($ownder_data['tax_payers_data_dob']),1,1,"C");
 
 //    User Occupation Details
     $pdf->SetLeftMargin(10);
@@ -152,7 +161,7 @@ $pdf->Cell(200,20,"Taxpayer Information","0","1","C");
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',10);
-    $pdf->Cell(150,10,date("m/d/Y",strtotime($ownder_data['tax_payers_data_spdob'])),1,1,"C");
+    $pdf->Cell(150,10,date_checker($ownder_data['tax_payers_data_spdob']),1,1,"C");
 
 //    User Owner's Wife Occupation Details
     $pdf->SetLeftMargin(10);
@@ -223,7 +232,7 @@ $pdf->Cell(200,20,"Taxpayer Information","0","1","C");
     $pdf->Cell(50,10,ucfirst($ownder_data['tax_payers_data_rcpntssn']),1,1,"C");
 
     $pdf->Cell(140,10,"Date of divorce or separation",1,0,"C");
-    $pdf->Cell(50,10,ucfirst($ownder_data['tax_payers_data_doseparation']),1,1,"C");
+    $pdf->Cell(50,10,date_checker($ownder_data['tax_payers_data_doseparation']),1,1,"C");
 
 //    Set font to ariel,bold,14pt
     $pdf->SetFont('Times','',14);
@@ -235,7 +244,7 @@ $pdf->Cell(200,20,"Taxpayer Information","0","1","C");
     $pdf->Cell(95,10,"Filing Status",1,0,"C");
     $pdf->Cell(95,10,"Spouse Death Date",1,1,"C");
     $pdf->Cell(95,10,ucwords(str_replace('_',' ',$ownder_data['tax_payers_data_marital_status'])),1,0,"C");
-    $pdf->Cell(95,10,$ownder_data['tax_payers_data_spousedead'],1,1,"C");
+    $pdf->Cell(95,10,date_checker($ownder_data['tax_payers_data_spousedead']),1,1,"C");
 
     $pdf->Ln(5);
 
@@ -281,7 +290,7 @@ $pdf->Cell(200,20,"Taxpayer Information","0","1","C");
         while ($depData = $depResult->fetch_assoc()){
             $pdf->Cell(47.5,10,ucfirst($depData['tax_payers_dependants_data_depname']),1,0,"C");
             $pdf->Cell(47.5,10,ucfirst($depData['tax_payers_dependants_data_rel']),1,0,"C");
-            $pdf->Cell(45,10,date("M d, Y",strtotime($depData['tax_payers_dependants_data_depdob'])),1,0,"C");
+            $pdf->Cell(45,10,date_checker($depData['tax_payers_dependants_data_depdob']),1,0,"C");
             $pdf->Cell(50,10,get_ssn_display_dashes($depData['tax_payers_dependants_data_depssn']),1,1,"C");
         }
     }
@@ -433,9 +442,10 @@ pdf_call_function($pdf,$string,"19.",ucfirst($ownder_data['tax_payers_data_energ
 
 
 //    Question 24:
-    $pdf->Cell(10,11,"24.",0,0,"C");
-    $pdf->Cell(160,10,"Are you involved in bankruptcy, foreclosure, repossession, or had any debt (including credit cards) cancelled?",0,0,"L");
-    $pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_bankruptcy']),0,1,"C");
+
+$string = "Are you involved in bankruptcy, foreclosure, repossession, or had any debt (including credit cards) cancelled?";
+pdf_call_function($pdf,$string,"24.",ucfirst($ownder_data['tax_payers_data_bankruptcy']));
+
 
 //    Question 25:
 $pdf->Cell(10,11,"25.",0,0,"C");
@@ -448,9 +458,10 @@ $pdf->Cell(160,10,"Did you purchase health insurance through a public exchange?"
 $pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_purchase_health']),0,1,"C");
 
 //    Question 27:
-$pdf->Cell(10,11,"27.",0,0,"C");
-$pdf->Cell(160,10,"Will there be any significant changes in income or deductions next year, such as retirement?",0,0,"L");
-$pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_ded_retirement']),0,1,"C");
+
+$string = "Will there be any significant changes in income or deductions next year, such as retirement?";
+pdf_call_function($pdf,$string,"27.",ucfirst($ownder_data['tax_payers_data_ded_retirement']));
+
 
 //    Question 28:
 $pdf->Cell(10,11,"28.",0,0,"C");
@@ -468,7 +479,7 @@ $pdf->Cell(160,10,"Are you a member of the military?",0,0,"L");
 $pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_mem_military']),0,1,"C");
 
 //    State of residency:
-$pdf->Cell(160,10,"State of residency",1,0,"L");
+$pdf->Cell(160,10,"State of residency",1,0,"C");
 $pdf->Cell(30,10,ucfirst($ownder_data['tax_payers_data_stateofresidency']),1,1,"C");
 
 //    Question 31:
@@ -477,7 +488,7 @@ $pdf->Cell(160,10,"Were you a citizen of or lived in a foreign country?",0,0,"L"
 $pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_lived_foreign']),0,1,"C");
 
 //    Foreign country:
-$pdf->Cell(160,10,"Foreign country",1,0,"L");
+$pdf->Cell(160,10,"Foreign country",1,0,"C");
 $pdf->Cell(30,10,ucfirst($ownder_data['tax_payers_data_foreigncountryname']),1,1,"C");
 
 //    Question 32:
@@ -486,12 +497,12 @@ $pdf->Cell(160,10,"Did you receive any economic impact payments (stimulus paymen
 $pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_rcv_ecn_impact']),0,1,"C");
 
 //    Impact payments amount:
-$pdf->Cell(160,10,"Impact payments amount",1,0,"L");
+$pdf->Cell(160,10,"Impact payments amount",1,0,"C");
 $pdf->Cell(30,10,ucfirst($ownder_data['tax_payers_data_impactpayments']),1,1,"C");
 
 //    Payment received date:
-$pdf->Cell(160,10,"Payment received date",1,0,"L");
-$pdf->Cell(30,10,ucfirst($ownder_data['tax_payers_data_impactpaymentsdate']),1,1,"C");
+$pdf->Cell(160,10,"Payment received date",1,0,"C");
+$pdf->Cell(30,10,date_checker($ownder_data['tax_payers_data_impactpaymentsdate']),1,1,"C");
 
 //    Question 33:
 $pdf->Cell(10,11,"33.",0,0,"C");
@@ -519,9 +530,9 @@ $pdf->Cell(160,10,"Did you receive any income from an installment sale?",0,0,"L"
 $pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_installmentsale']),0,1,"C");
 
 //    Question 38:
-$pdf->Cell(10,11,"38.",0,0,"C");
-$pdf->Cell(160,10,"Did you have any investments become worthless or were you a victim of investment theft in 2021?",0,0,"L");
-$pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_investment_theft']),0,1,"C");
+$string = "Did you have any investments become worthless or were you a victim of investment theft in 2021?";
+pdf_call_function($pdf,$string,"38.",ucfirst($ownder_data['tax_payers_data_investment_theft']));
+
 
 //    Question 39:
 $pdf->Cell(10,11,"39.",0,0,"C");
@@ -529,9 +540,8 @@ $pdf->Cell(160,10,"Were you granted, or did you exercise, any employee stock opt
 $pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_employee_stock']),0,1,"C");
 
 //    Question 40:
-$pdf->Cell(10,11,"40.",0,0,"C");
-$pdf->Cell(160,10,"Did you receive, sell, send, exchange, or otherwise dispose of any financial interest in any virtual currency?",0,0,"L");
-$pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_dispose_financial_interest']),0,1,"C");
+$string = "Did you receive, sell, send, exchange, or otherwise dispose of any financial interest in any virtual currency?";
+pdf_call_function($pdf,$string,"40.",ucfirst($ownder_data['tax_payers_data_dispose_financial_interest']));
 
 //    Question 41:
 $pdf->Cell(10,11,"41.",0,0,"C");
@@ -548,6 +558,203 @@ $pdf->Cell(10,11,"43.",0,0,"C");
 $pdf->Cell(160,10,"Did you pay sales taxes on a major purchase in 2021, such as a vehicle, boat, or home?",0,0,"L");
 $pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_taxes_major_purchase']),0,1,"C");
 
+//    Question 44:
+$pdf->Cell(10,11,"44.",0,0,"C");
+$pdf->Cell(160,10,"Did you work from a home office or use your car for business?",0,0,"L");
+$pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_work_from_home']),0,1,"C");
+
+//    Question 45:
+$pdf->Cell(10,11,"45.",0,0,"C");
+$pdf->Cell(160,10,"Did you receive income from a sharing/gig economy activity (e.g. Airbnb, Uber, etc.)?",0,0,"L");
+$pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_income_sharing_economy']),0,1,"C");
+
+//    Question 46:
+$string = "Do you own a business or an interest in a partnership, corporation, LLC, farming activities, or other venture?";
+pdf_call_function($pdf,$string,"46.",ucfirst($ownder_data['tax_payers_data_interest_part_venture']));
+
+//    Question 47:
+$string = "If you sold a home, did you claim the First-Time Homebuyer Credit when it was purchased?";
+pdf_call_function($pdf,$string,"47.",ucfirst($ownder_data['tax_payers_data_homebuyer_credit']));
+
+//    Question 48:
+$string = "Did you refinance a mortgage or take a home equity loan?";
+pdf_call_function($pdf,$string,"48.",ucfirst($ownder_data['tax_payers_data_refinance_mortgage']));
+
+//    Question 49:
+$string = "Did you use any mortgage loan proceeds for purposes other than to buy, build, or substantially improve your home?";
+pdf_call_function($pdf,$string,"49.",ucfirst($ownder_data['tax_payers_data_substantially_improve_home']));
+
+//    Question 50:
+$string = "Did you make any new energy-efficient improvements to your home?";
+pdf_call_function($pdf,$string,"50.",ucfirst($ownder_data['tax_payers_data_energy_efficient_improvements']));
+
+//    Question 51:
+$string = "Were any children attending college?";
+pdf_call_function($pdf,$string,"51.",ucfirst($ownder_data['tax_payers_data_child_attending_college']));
+
+// Year of attending college
+$pdf->Cell(140,10,"Year in college",1,0,"C");
+$pdf->Cell(50,10,ucfirst($ownder_data['tax_payers_data_atnd_clg_year']),1,1,"C");
+
+// Payments by the Tax Payer
+$pdf->Cell(47.5,10,"Paid by you",1,0,"C");
+$pdf->Cell(47.5,10,"Tution Fees",1,0,"C");
+$pdf->Cell(47.5,10,"Student Loan Interest",1,0,"C");
+$pdf->Cell(47.5,10,"Books Bought",1,1,"C");
+$pdf->Cell(47.5,10,"$",1,0,"C");
+$pdf->Cell(47.5,10,ucfirst($ownder_data['tax_payers_data_atnd_clg_you_tution']),1,0,"C");
+$pdf->Cell(47.5,10,ucfirst($ownder_data['tax_payers_data_atnd_clg_you_loan']),1,0,"C");
+$pdf->Cell(47.5,10,ucfirst($ownder_data['tax_payers_data_atnd_clg_you_books']),1,1,"C");
+
+
+// Payments by the Student
+$pdf->Cell(47.5,10,"Paid by Student",1,0,"C");
+$pdf->Cell(47.5,10,"Tution Fees",1,0,"C");
+$pdf->Cell(47.5,10,"Student Loan Interest",1,0,"C");
+$pdf->Cell(47.5,10,"Books Bought",1,1,"C");
+$pdf->Cell(47.5,10,"$",1,0,"C");
+$pdf->Cell(47.5,10,ucfirst($ownder_data['tax_payers_data_atnd_clg_student_tution']),1,0,"C");
+$pdf->Cell(47.5,10,ucfirst($ownder_data['tax_payers_data_atnd_clg_student_loan']),1,0,"C");
+$pdf->Cell(47.5,10,ucfirst($ownder_data['tax_payers_data_atnd_clg_student_books']),1,1,"C");
+
+
+//    Question 52:
+$string = "Did you pay any tuition for a private school for a dependent or take classes yourself?";
+pdf_call_function($pdf,$string,"52.",ucfirst($ownder_data['tax_payers_data_tution_for_private']));
+$pdf->Ln(10);
+// Tution of dependant
+$pdf->Cell(120,10,"Student",1,0,"C");
+$pdf->Cell(70,10,"Amount Paid ($)",1,1,"C");
+$pdf->Cell(120,10,ucfirst($ownder_data['tax_payers_data_tution_for_private_stud']),1,0,"C");
+$pdf->Cell(70,10,ucfirst($ownder_data['tax_payers_data_tution_for_private_amount']),1,1,"C");
+$pdf->Cell(190,10,"Name and address of the school",1,1,"C");
+$pdf->Cell(190,10,ucfirst($ownder_data['tax_payers_data_tution_for_private_schl']),1,1,"C");
+
+//    Question 53:
+$string = "Did you pay for child or dependent care so you could work or go to school? (add statement if needed)";
+pdf_call_function($pdf,$string,"53.",ucfirst($ownder_data['tax_payers_data_depcare']));
+$pdf->Ln(10);
+
+// Dependent Care Statement
+$pdf->Cell(95,10,"Provider Name",1,0,"C");
+$pdf->Cell(95,10,"Provider SSN",1,1,"C");
+$pdf->Cell(95,10,ucfirst($ownder_data['tax_payers_data_depcare_prov']),1,0,"C");
+$pdf->Cell(95,10,ucfirst($ownder_data['tax_payers_data_depcare_prov_ssn']),1,1,"C");
+$pdf->Cell(95,10,"Provider Address",1,0,"C");
+$pdf->Cell(95,10,"Amount Paid ($)",1,1,"C");
+$pdf->Cell(95,10,ucfirst($ownder_data['tax_payers_data_depcare_prov_add']),1,0,"C");
+$pdf->Cell(95,10,ucfirst($ownder_data['tax_payers_data_depcare_prov_amnt']),1,1,"C");
+
+
+    $pdf->Ln(5);
+
+ //    Set font to ariel,bold,14pt
+ $pdf->SetFont('Times','',14);
+ $pdf->Cell(200,20,"Estimated Tax Payments - Tax Year 2021","0","1","C");
+// Estimated payment
+$pdf->Cell(50,10,"Installment",1,0,"C");
+$pdf->Cell(35,10,"Date Paid",1,0,"C");
+$pdf->Cell(35,10,"Federal ($)",1,0,"C");
+$pdf->Cell(35,10,"Date Paid",1,0,"C");
+$pdf->Cell(35,10,"State ($)",1,1,"C");
+
+$pdf->Cell(50,10,"First",1,0,"C");
+$pdf->Cell(35,10,date_checker($ownder_data['tax_payers_data_first_install_fed_date']),1,0,"C");
+$pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_first_install_fed']),1,0,"C");
+$pdf->Cell(35,10,date_checker($ownder_data['tax_payers_data_first_install_state_date']),1,0,"C");
+$pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_first_install_state']),1,1,"C");
+
+$pdf->Cell(50,10,"Second",1,0,"C");
+$pdf->Cell(35,10,date_checker($ownder_data['tax_payers_data_second_install_fed_date']),1,0,"C");
+$pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_second_install_fed']),1,0,"C");
+$pdf->Cell(35,10,date_checker($ownder_data['tax_payers_data_second_install_state_date']),1,0,"C");
+$pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_second_install_state']),1,1,"C");
+
+$pdf->Cell(50,10,"Third",1,0,"C");
+$pdf->Cell(35,10,date_checker($ownder_data['tax_payers_data_third_install_fed_date']),1,0,"C");
+$pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_third_install_fed']),1,0,"C");
+$pdf->Cell(35,10,date_checker($ownder_data['tax_payers_data_third_install_state_date']),1,0,"C");
+$pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_third_install_state']),1,1,"C");
+
+$pdf->Cell(50,10,"Fourth",1,0,"C");
+$pdf->Cell(35,10,date_checker($ownder_data['tax_payers_data_fourth_install_fed_date']),1,0,"C");
+$pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_fourth_install_fed']),1,0,"C");
+$pdf->Cell(35,10,date_checker($ownder_data['tax_payers_data_fourth_install_state_date']),1,0,"C");
+$pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_fourth_install_state']),1,1,"C");
+
+$pdf->Cell(50,10,"2020 overpay amount?",1,0,"C");
+$pdf->Cell(35,10,"",1,0,"C");
+$pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_overpay_install_fed']),1,0,"C");
+$pdf->Cell(35,10,"",1,0,"C");
+$pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_overpay_install_state']),1,1,"C");
+
+
+$total_fed = $ownder_data['tax_payers_data_first_install_fed'] + $ownder_data['tax_payers_data_second_install_fed']+ $ownder_data['tax_payers_data_third_install_fed']+ $ownder_data['tax_payers_data_fourth_install_fed']+$ownder_data['tax_payers_data_overpay_install_fed'];
+
+$total_state = intval($ownder_data['tax_payers_data_first_install_state']) + intval($ownder_data['tax_payers_data_second_install_state'])+ intval($ownder_data['tax_payers_data_third_install_state'])+ intval($ownder_data['tax_payers_data_fourth_install_state'])+intval($ownder_data['tax_payers_data_overpay_install_state']);
+
+$pdf->Cell(50,10,"Total",1,0,"C");
+$pdf->Cell(35,10,"",1,0,"C");
+$pdf->Cell(35,10,$total_fed,1,0,"C");
+$pdf->Cell(35,10,"",1,0,"C");
+$pdf->Cell(35,10,$total_state,1,1,"C");
+
+//    Set font to ariel,bold,14pt
+$pdf->SetFont('Times','',14);
+$pdf->Cell(200,20,"Advance Child Tax Credit Payments Received","0","1","C");
+
+// Advance child payment details
+$pdf->Cell(31.66,10,"Payment Date",1,0,"C");
+$pdf->Cell(31.66,10,"Amount Received",1,0,"C");
+$pdf->Cell(31.66,10,"Payment Date",1,0,"C");
+$pdf->Cell(31.66,10,"Amount Received",1,0,"C");
+$pdf->Cell(31.66,10,"Payment Date",1,0,"C");
+$pdf->Cell(31.66,10,"Amount Received",1,1,"C");
+
+$pdf->Cell(31.66,10,"July 15, 2021",1,0,"C");
+$pdf->Cell(31.66,10,$ownder_data['tax_payers_data_pay_rec_july'],1,0,"C");
+$pdf->Cell(31.66,10,"Septebmer 15, 2021",1,0,"C");
+$pdf->Cell(31.66,10,$ownder_data['tax_payers_data_pay_rec_sept'],1,0,"C");
+$pdf->Cell(31.66,10,"November 15, 2021",1,0,"C");
+$pdf->Cell(31.66,10,$ownder_data['tax_payers_data_pay_rec_nov'],1,1,"C");
+
+$pdf->Cell(31.66,10,"August 15, 2021",1,0,"C");
+$pdf->Cell(31.66,10,$ownder_data['tax_payers_data_pay_rec_august'],1,0,"C");
+$pdf->Cell(31.66,10,"October 15, 2021",1,0,"C");
+$pdf->Cell(31.66,10,$ownder_data['tax_payers_data_pay_rec_oct'],1,0,"C");
+$pdf->Cell(31.66,10,"December 15, 2021",1,0,"C");
+$pdf->Cell(31.66,10,$ownder_data['tax_payers_data_pay_rec_dec'],1,1,"C");
+
+
+function tax_prep_check($pdf,$text,$data){
+    if(empty($data)){
+        $pdf->setFillColor(0,0,0);
+        $pdf->SetDrawColor(255,255,255);
+        $pdf->SetLineWidth(5);
+        $pdf->Cell(5,7,'','T',0,"C",true);
+        $pdf->SetLineWidth(0.2);
+        $pdf->SetDrawColor(0,0,0);
+        // $pdf->setFillColor(255,255,255);
+        $pdf->Cell(165,10,$text,0,1,"C");
+    } else{
+        $pdf->setFillColor(0,0,0);
+        $pdf->SetDrawColor(255,255,255);
+        $pdf->SetLineWidth(5);
+        $pdf->Cell(5,7,'','T',0,"C",true);
+        $pdf->SetLineWidth(0.2);
+        $pdf->SetDrawColor(0,0,0);
+        $pdf->setFillColor(255,255,255);
+        $pdf->Cell(165,10,$text,0,1,"C");
+    }
+}
+
+//    Set font to ariel,bold,14pt
+$pdf->SetFont('Times','',14);
+$pdf->Cell(200,20,"Tax Preparation Checklist","0","1","C");
+//    Consent:
+tax_prep_check($pdf,'All Forms W-2 (wages), 1099-INT (interest), 1099-DIV (dividends), 1099-B (proceeds from broker or barter transactions), 1099-R
+(pensions and IRA distributions), Schedules K-1 from partnerships, S corporations, estates and trusts, and other income reporting
+statements, including all copies provided from the payer.',$ownder_data['tax_payers_data_w2_form']);
 
     $pdf->Ln(5);
 
@@ -566,7 +773,7 @@ $pdf->Cell(20,10,ucfirst($ownder_data['tax_payers_data_taxes_major_purchase']),0
 
 
     $pdf->Ln(5);
-//    Consent:
+
    //    Consent:
     $pdf->setFillColor(0,0,0);
     $pdf->SetDrawColor(255,255,255);
