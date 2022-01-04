@@ -321,6 +321,92 @@ function pdf_call_function($pdf,$string,$rowNumber,$data){
     $pdf->Cell(20,($line*$cellHeight),$data,0,1,"C");
 }
 
+
+function pdf_check_generator($pdf,$string,$data){
+    $cellWidth = 160;
+    $cellHeight = 10;
+
+    if ($pdf->GetStringWidth($string)<$cellWidth){
+        $line = 1;
+    } else{
+        $textLength = strlen($string);
+        $errMargin=10;		//cell width error margin, just in case
+        $startChar=0;		//character start position for each line
+        $maxChar=0;			//maximum character in a line, to be incremented later
+        $textArray=array();	//to hold the strings for each line
+        $tmpString="";		//to hold the string for a line (temporary)
+
+        while ($startChar<$textLength){
+            while($pdf->GetStringWidth( $tmpString ) < ($cellWidth-$errMargin) && ($startChar+$maxChar) < $textLength ) {
+                $maxChar++;
+                $tmpString=substr($string,$startChar,$maxChar);
+            }
+
+            //move startChar to next line
+            $startChar=$startChar+$maxChar;
+            //then add it into the array so we know how many line are needed
+            array_push($textArray,$tmpString);
+            //reset maxChar and tmpString
+            $maxChar=0;
+            $tmpString='';
+        }
+
+        $line = count($textArray);
+    }
+
+
+    if($data === 'on'){
+        $xPos = $pdf->GetX();
+        $yPos = $pdf->GetY();
+        $pdf->SetXY($xPos,$yPos);
+        $pdf->setFillColor(0,0,0);
+        $pdf->SetDrawColor(255,255,255);
+        $pdf->SetLineWidth(5);
+        $pdf->Cell(5,7,'','T',0,"C",true);
+        $pdf->SetLineWidth(0.2);
+        $pdf->MultiCell($cellWidth,$cellHeight,$string,0,"L");
+
+    }else{
+        $xPos = $pdf->GetX();
+        $yPos = $pdf->GetY();
+        $pdf->SetXY($xPos,$yPos);
+        $pdf->setFillColor(255,255,255);
+        $pdf->SetDrawColor(0,0,0);
+        $pdf->SetLineWidth(0.2);
+        $pdf->Cell(5,5,'',1,0,"C",true);
+        $pdf->SetLineWidth(0.2);
+        $xPos = $pdf->GetX();
+        $yPos = $pdf->GetY();
+        $pdf->SetXY($xPos,$yPos-2.5);
+        $pdf->MultiCell($cellWidth,$cellHeight,$string,0,"L");
+    }
+}
+
+//MultiCell with bullet
+function pdf_multicellblt($pdf,$blt, $txt)
+{
+    $w = 190;
+    $h = 5;
+    $border=0;
+    $align='L';
+    $fill=false;
+    //Get bullet width including margins
+    $blt_width = $pdf->GetStringWidth($blt)+$pdf->cMargin*2;
+
+    //Save x
+    $bak_x = $pdf->x;
+
+    //Output bullet
+    $pdf->Cell($blt_width,$h,$blt,0,'',$fill);
+
+    //Output text
+    $pdf->MultiCell($w-$blt_width,$h,$txt,$border,$align,$fill);
+
+    //Restore x
+    $pdf->x = $bak_x;
+}
+
+
 function checkbox_toggler($data, $handler){
     if ($data === 'no' || empty($data)){
         echo '<input type="hidden" name="<'.$handler.'" value="no"/>';

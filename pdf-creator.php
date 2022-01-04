@@ -646,12 +646,16 @@ $pdf->Cell(95,10,ucfirst($ownder_data['tax_payers_data_depcare_prov_add']),1,0,"
 $pdf->Cell(95,10,ucfirst($ownder_data['tax_payers_data_depcare_prov_amnt']),1,1,"C");
 
 
-    $pdf->Ln(5);
+$pdf->Ln(10);
 
  //    Set font to ariel,bold,14pt
- $pdf->SetFont('Times','',14);
- $pdf->Cell(200,20,"Estimated Tax Payments - Tax Year 2021","0","1","C");
+ $pdf->SetFont('Times','',20);
+ $pdf->SetFillColor(100,100,100);
+$pdf->SetTextColor(255,255,255);
+ $pdf->Cell(190,20,"Estimated Tax Payments - Tax Year 2021",0,1,"C",'F');
 // Estimated payment
+$pdf->SetFont('Times','',14);
+$pdf->SetTextColor(0,0,0);
 $pdf->Cell(50,10,"Installment",1,0,"C");
 $pdf->Cell(35,10,"Date Paid",1,0,"C");
 $pdf->Cell(35,10,"Federal ($)",1,0,"C");
@@ -689,7 +693,7 @@ $pdf->Cell(35,10,"",1,0,"C");
 $pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_overpay_install_state']),1,1,"C");
 
 
-$total_fed = $ownder_data['tax_payers_data_first_install_fed'] + $ownder_data['tax_payers_data_second_install_fed']+ $ownder_data['tax_payers_data_third_install_fed']+ $ownder_data['tax_payers_data_fourth_install_fed']+$ownder_data['tax_payers_data_overpay_install_fed'];
+$total_fed = intval($ownder_data['tax_payers_data_first_install_fed']) + intval($ownder_data['tax_payers_data_second_install_fed'])+ intval($ownder_data['tax_payers_data_third_install_fed'])+ intval($ownder_data['tax_payers_data_fourth_install_fed'])+intval($ownder_data['tax_payers_data_overpay_install_fed']);
 
 $total_state = intval($ownder_data['tax_payers_data_first_install_state']) + intval($ownder_data['tax_payers_data_second_install_state'])+ intval($ownder_data['tax_payers_data_third_install_state'])+ intval($ownder_data['tax_payers_data_fourth_install_state'])+intval($ownder_data['tax_payers_data_overpay_install_state']);
 
@@ -699,69 +703,170 @@ $pdf->Cell(35,10,$total_fed,1,0,"C");
 $pdf->Cell(35,10,"",1,0,"C");
 $pdf->Cell(35,10,$total_state,1,1,"C");
 
+
+$pdf->Ln(10);
+
 //    Set font to ariel,bold,14pt
-$pdf->SetFont('Times','',14);
-$pdf->Cell(200,20,"Advance Child Tax Credit Payments Received","0","1","C");
+$pdf->SetFont('Times','',20);
+$pdf->SetFillColor(100,100,100);
+$pdf->SetTextColor(255,255,255);
+$pdf->Cell(190,20,"Advance Child Tax Credit Payments Received",0,1,"C","F");
 
 // Advance child payment details
-$pdf->Cell(31.66,10,"Payment Date",1,0,"C");
-$pdf->Cell(31.66,10,"Amount Received",1,0,"C");
-$pdf->Cell(31.66,10,"Payment Date",1,0,"C");
-$pdf->Cell(31.66,10,"Amount Received",1,0,"C");
-$pdf->Cell(31.66,10,"Payment Date",1,0,"C");
-$pdf->Cell(31.66,10,"Amount Received",1,1,"C");
+$pdf->SetFont('Times','',14);
+$pdf->SetTextColor(0,0,0);
+$pdf->Cell(95,10,"Payment Date",1,0,"C");
+$pdf->Cell(95,10,"Amount Received",1,1,"C");
 
-$pdf->Cell(31.66,10,"July 15, 2021",1,0,"C");
-$pdf->Cell(31.66,10,$ownder_data['tax_payers_data_pay_rec_july'],1,0,"C");
-$pdf->Cell(31.66,10,"Septebmer 15, 2021",1,0,"C");
-$pdf->Cell(31.66,10,$ownder_data['tax_payers_data_pay_rec_sept'],1,0,"C");
-$pdf->Cell(31.66,10,"November 15, 2021",1,0,"C");
-$pdf->Cell(31.66,10,$ownder_data['tax_payers_data_pay_rec_nov'],1,1,"C");
+$pdf->Cell(95,10,"July 15, 2021",1,0,"C");
+$pdf->Cell(95,10,$ownder_data['tax_payers_data_pay_rec_july'],1,1,"C");
+$pdf->Cell(95,10,"Septebmer 15, 2021",1,0,"C");
+$pdf->Cell(95,10,$ownder_data['tax_payers_data_pay_rec_sept'],1,1,"C");
+$pdf->Cell(95,10,"November 15, 2021",1,0,"C");
+$pdf->Cell(95,10,$ownder_data['tax_payers_data_pay_rec_nov'],1,1,"C");
+$pdf->Cell(95,10,"August 15, 2021",1,0,"C");
+$pdf->Cell(95,10,$ownder_data['tax_payers_data_pay_rec_august'],1,1,"C");
+$pdf->Cell(95,10,"October 15, 2021",1,0,"C");
+$pdf->Cell(95,10,$ownder_data['tax_payers_data_pay_rec_oct'],1,1,"C");
+$pdf->Cell(95,10,"December 15, 2021",1,0,"C");
+$pdf->Cell(95,10,$ownder_data['tax_payers_data_pay_rec_dec'],1,1,"C");
 
-$pdf->Cell(31.66,10,"August 15, 2021",1,0,"C");
-$pdf->Cell(31.66,10,$ownder_data['tax_payers_data_pay_rec_august'],1,0,"C");
-$pdf->Cell(31.66,10,"October 15, 2021",1,0,"C");
-$pdf->Cell(31.66,10,$ownder_data['tax_payers_data_pay_rec_oct'],1,0,"C");
-$pdf->Cell(31.66,10,"December 15, 2021",1,0,"C");
-$pdf->Cell(31.66,10,$ownder_data['tax_payers_data_pay_rec_dec'],1,1,"C");
-
-
-function tax_prep_check($pdf,$text,$data){
-    if(empty($data)){
-        $pdf->setFillColor(0,0,0);
-        $pdf->SetDrawColor(255,255,255);
-        $pdf->SetLineWidth(5);
-        $pdf->Cell(5,7,'','T',0,"C",true);
-        $pdf->SetLineWidth(0.2);
-        $pdf->SetDrawColor(0,0,0);
-        // $pdf->setFillColor(255,255,255);
-        $pdf->Cell(165,10,$text,0,1,"C");
-    } else{
-        $pdf->setFillColor(0,0,0);
-        $pdf->SetDrawColor(255,255,255);
-        $pdf->SetLineWidth(5);
-        $pdf->Cell(5,7,'','T',0,"C",true);
-        $pdf->SetLineWidth(0.2);
-        $pdf->SetDrawColor(0,0,0);
-        $pdf->setFillColor(255,255,255);
-        $pdf->Cell(165,10,$text,0,1,"C");
-    }
-}
+$pdf->Ln(10);
 
 //    Set font to ariel,bold,14pt
-$pdf->SetFont('Times','',14);
-$pdf->Cell(200,20,"Tax Preparation Checklist","0","1","C");
+$pdf->SetFont('Times','',20);
+$pdf->SetFillColor(100,100,100);
+$pdf->SetTextColor(255,255,255);
+$pdf->Cell(190,20,"Tax Preparation Checklist",1,1,"C",'F');
+$pdf->Ln(5);
 //    Consent:
-tax_prep_check($pdf,'All Forms W-2 (wages), 1099-INT (interest), 1099-DIV (dividends), 1099-B (proceeds from broker or barter transactions), 1099-R
-(pensions and IRA distributions), Schedules K-1 from partnerships, S corporations, estates and trusts, and other income reporting
-statements, including all copies provided from the payer.',$ownder_data['tax_payers_data_w2_form']);
+$pdf->SetFont('Times','',14);
+$pdf->SetTextColor(0,0,0);
+    $string = 'All Forms W-2 (wages), 1099-INT (interest), 1099-DIV (dividends), 1099-B (proceeds from broker or barter transactions), 1099-R
+    (pensions and IRA distributions), Schedules K-1 from partnerships, S corporations, estates and trusts, and other income reporting
+    statements, including all copies provided from the payer.';
+    pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_w2_form']);
+    $pdf->Ln(5);
+
+    $string = 'Form 1095-A (for health insurance purchased through a public exchange), Form 1095-B (for health insurance purchased outside
+of a public exchange), or Form 1095-C (for employer-provided health insurance coverage).';
+    pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_a1095_form']);
+    $pdf->Ln(5);
+
+    $string = 'If you are a new client, provide copies of last year’s tax returns.';
+    pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_new_client_last_copy']);
+    $pdf->Ln(5);
+
+    $string = 'The completed Individual Income Tax Organizer. Note: If you choose not to fill out the organizer, you must at least answer
+the “Yes” or “No” questions under “Questions — All Taxpayers.”';
+    pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_not_to_fill_out_org']);
+    $pdf->Ln(5);
+
+    $string = 'Copy of the closing statement if you bought or sold real estate.';
+    pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_copy_closing_state']);
+    $pdf->Ln(5);
+
+    $string = 'Mileage figures for any automobile expenses claimed, including total mileage, commuting mileage, and business mileage.';
+    pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_mile_fig_auto']);
+    $pdf->Ln(5);
+
+    $string = 'Detail of estimated tax payments made, if any.';
+    pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_detail_any_tax_made']);
+    $pdf->Ln(5);
+
+    $string = 'Income and deductions categorized on a separate sheet for business or rental activities.';
+    pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_inc_ded_cat']);
+    $pdf->Ln(5);
+
+    $string = 'List of itemized deductions categorized on a separate sheet for medical, taxes, interest, charitable, and miscellaneous deductions.';
+    pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_list_item_ded_cat']);
+    $pdf->Ln(5);
+
+    $string = 'Copy of all acknowledgement letters received from charitable organizations for contributions made in 2021.';
+    pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_copy_all_acknow']);
+    $pdf->Ln(5);
+
+
+
+    //  Tax Payer Information
+    $pdf->SetFont('Times','',20);
+    $pdf->SetFillColor(100,100,100);
+    $pdf->SetTextColor(255,255,255);
+    $pdf->Cell(190,20,"Taxpayer Responsibilities",0,1,"C",'F');
+
+    $pdf->SetFont('Times','',14);
+    $pdf->SetTextColor(0,0,0);
+    $pdf->SetLeftMargin(10);
+    $pdf->SetTextColor(0,0,0);
+    $pdf->SetFont('Arial','',10);
+
+    $string = 'You agree to provide us all income and deductible expense information. If you receive additional information after we begin working on your return, you will contact us immediately to ensure your completed tax returns contain all relevant information.';
+    pdf_multicellblt($pdf,chr(149),$string);
+    $pdf->Ln(5);
+
+$string = 'You affirm that all expenses or other deduction amounts are accurate and that you have all required supporting written records. In some cases, we will ask to review your documentation.';
+pdf_multicellblt($pdf,chr(149),$string);
+$pdf->Ln(5);
+
+$string = 'You must be able to provide written records of all items included on your return if audited by either the IRS or state tax authority. We can provide guidance concerning what evidence is acceptable.';
+pdf_multicellblt($pdf,chr(149),$string);
+$pdf->Ln(5);
+
+$string = 'You must review the return carefully before signing to make sure the information is correct.';
+pdf_multicellblt($pdf,chr(149),$string);
+$pdf->Ln(5);
+
+$string = 'Fees must be paid before your tax return is delivered to you or filed for you. If you terminate this engagement before completion, you agree to pay a fee for work completed. A retainer is required for preparation of late returns.';
+pdf_multicellblt($pdf,chr(149),$string);
+$pdf->Ln(5);
+
+$string = 'You should keep a copy of your tax return and any related tax documents. You may be assessed a fee if you request a copy in the future.';
+pdf_multicellblt($pdf,chr(149),$string);
+$pdf->Ln(5);
+
+
+
+
+ $pdf->Write(5,"Signatures. By signing below, you acknowledge that you have read, understand, and accept your obligations and responsibilities. For a joint return, both taxpayers must sign.");
+
+    $pdf->Ln(10);
+
+    $pdf->Cell(63,10,"Taxpayer",1,0,"C");
+    $pdf->Cell(63,10,"Spouse",1,0,"C");
+    $pdf->Cell(64,10,"Date",1,1,"C");
+
+    $pdf->Cell(63,10,ucfirst($ownder_data['tax_payers_data_tax_initial_sig']),1,0,"C");
+    $pdf->Cell(63,10,ucfirst($ownder_data['tax_payers_data_tax_sp_initial_sig']),1,0,"C");
+    $pdf->Cell(64,10,date_checker($ownder_data['tax_payers_data_sign_date']),1,1,"C");
 
     $pdf->Ln(5);
 
-    //  Additional Information
-    $pdf->SetFont('Times','',14);
-    $pdf->Cell(200,20,"Additional Note","0","1","C");
+    //  Tax Payer Information
+    $pdf->SetFont('Times','',20);
+    $pdf->SetFillColor(100,100,100);
+    $pdf->SetTextColor(255,255,255);
+    $pdf->Cell(190,20,"Privacy Policy",0,1,"C",'F');
 
+    $pdf->SetFont('Times','',14);
+    $pdf->SetTextColor(0,0,0);
+    $pdf->SetLeftMargin(10);
+    $pdf->SetTextColor(0,0,0);
+    $pdf->SetFont('Arial','',10);
+    $pdf->MultiCell(190,5,'The nature of our work requires us to collect certain nonpublic information. We collect financial and personal information from applications, worksheets, reporting statements, and other forms, as well as interviews and conversations with our clients and affiliates. We may also review banking and credit card information about our clients in the performance of receipt of payment. Under our policy, all information we obtain about you will be provided by you or obtained with your permission.',0,"L");
+    $pdf->Ln(3);
+    $pdf->MultiCell(190,5,'Our firm has procedures and policies in place to protect your confidential information. We restrict access to your confidential information to those within our firm who need to know in order to provide you with services. We will not disclose your personal information to a third party without your permission, except where required by law. We maintain physical, electronic, and procedural safeguards in compliance with federal regulations that protect your personal information from unauthorized access.',0,"L");
+$pdf->Ln(5);
+
+
+
+    //  Additional Information
+    $pdf->SetFont('Times','',20);
+    $pdf->SetFillColor(100,100,100);
+    $pdf->SetTextColor(255,255,255);
+    $pdf->Cell(190,20,"Additional Note",0,1,"C",'F');
+
+    $pdf->SetFont('Times','',14);
+    $pdf->SetTextColor(0,0,0);
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',10);
@@ -770,7 +875,6 @@ statements, including all copies provided from the payer.',$ownder_data['tax_pay
     }else{
         $pdf->Cell(190,50,$ownder_data['tax_payers_data_additional_note'],1,1,"C");
     }
-
 
     $pdf->Ln(5);
 
