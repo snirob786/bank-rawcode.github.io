@@ -27,5 +27,5 @@
         echo json_encode(['success' => 'error','message'=>'Date of Birth Mismatch']);
     }
     else{
-        echo json_encode(['success' => 'error','message' => 'special: '.$status]);
+        echo json_encode(['success' => 'success','message' => $status]);
     }

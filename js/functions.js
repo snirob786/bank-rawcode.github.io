@@ -5,7 +5,6 @@ function checkUserDetails() {
         e.preventDefault();
     });
     var jsondata = getFormData(form);
-
     $.ajax({
         url: "../includes/auth.php",
         method: "POST",

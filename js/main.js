@@ -4,6 +4,7 @@ function toAdmin() {
     $('#user-detail').fadeOut("fast",function () {
         $(this).addClass('displayNone');
         $('#admin-login').removeClass('displayNone');
+        $('#admin-login').css('display','block');
     });
 
 }
@@ -15,6 +16,7 @@ function toUser() {
     $('#admin-login').fadeOut("fast",function () {
         $(this).addClass('displayNone');
         $('#user-detail').removeClass('displayNone');
+        $('#user-detail').css('display','block');
     });
 
 }
@@ -146,4 +148,5 @@ function removeDependant(id){
 
     console.log('.dependant-container'+id);
 }
+
 

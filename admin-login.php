@@ -34,11 +34,6 @@
                 </div>
                 <div class="bottom-content">Not an Admin? <p id="login-changer-to-user" class="login-changer" onclick="toUser()">Check Your Details</p></div>
             </div>
-
-            <?php include_once "footer-desclaimer.php";?>
-
-
-
         </form>
     </div>
-
+    <?php include "footer-desclaimer.php";?>

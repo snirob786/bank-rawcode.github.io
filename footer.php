@@ -35,8 +35,11 @@
 
         //    Materialize Initialization
         $('select').formSelect();
+        var currYear = (new Date()).getFullYear();
         $('.datepicker').datepicker({
-            yearRange: [1920,2021]
+            defaultDate: new Date(currYear,0,1),
+            maxDate: new Date(currYear,12,31),
+            yearRange: [1920, currYear]
         });
 
 

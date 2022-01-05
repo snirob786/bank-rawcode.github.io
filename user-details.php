@@ -60,4 +60,4 @@
     </div>
     <div class="bottom-content displayNone">Are you Admin? <p id="login-changer-to-admin" class="login-changer" onclick="toAdmin()">Login Here</p></div>
 
-<?php include_once "footer-desclaimer.php";?>
+<?php include "footer-desclaimer.php";?>
