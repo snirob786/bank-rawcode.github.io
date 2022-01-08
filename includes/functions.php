@@ -48,7 +48,11 @@ function get_ssn_display($ssn){
 
 
 function get_dob_display($dob){
-    return $return_dob = date("M d, Y", strtotime($dob));
+    if(empty($dob)){
+        return "no date found";
+    }else{
+        return date("M d, Y", strtotime($dob));
+    }
 }
 
 

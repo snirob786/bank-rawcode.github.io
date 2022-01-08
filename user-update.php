@@ -1113,7 +1113,7 @@
                                     <td>First</td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="first_install_fed_date" name="first_install_fed_date" class="datepicker" value="<?php get_dob_display($data['tax_payers_data_first_install_fed_date']);?>" placeholder="Enter the date">
+                                            <input type="text" id="first_install_fed_date" name="first_install_fed_date" class="datepicker" value="<?php echo get_dob_display($data['tax_payers_data_first_install_fed_date']);?>" placeholder="Enter the date">
                                         </div>
                                     </td>
                                     <td>
@@ -1123,7 +1123,7 @@
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="first_install_state_date" name="first_install_state_date" class="datepicker" value="<?php get_dob_display($data['tax_payers_data_first_install_state_date']);?>" placeholder="Enter the date">
+                                            <input type="text" id="first_install_state_date" name="first_install_state_date" class="datepicker" value="<?php echo get_dob_display($data['tax_payers_data_first_install_state_date']);?>" placeholder="Enter the date">
                                         </div>
                                     </td>
                                     <td>
@@ -1136,7 +1136,7 @@
                                     <td>Second</td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="second_install_fed_date" name="second_install_fed_date" class="datepicker" value="<?php get_dob_display($data['tax_payers_data_second_install_fed_date']);?>" placeholder="Enter the date">
+                                            <input type="text" id="second_install_fed_date" name="second_install_fed_date" class="datepicker" value="<?php echo get_dob_display($data['tax_payers_data_second_install_fed_date']);?>" placeholder="Enter the date">
                                         </div>
                                     </td>
                                     <td>
@@ -1146,7 +1146,7 @@
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="second_install_state_date" name="second_install_state_date" class="datepicker" value="<?php get_dob_display($data['tax_payers_data_second_install_state_date']);?>" placeholder="Enter the date">
+                                            <input type="text" id="second_install_state_date" name="second_install_state_date" class="datepicker" value="<?php echo get_dob_display($data['tax_payers_data_second_install_state_date']);?>" placeholder="Enter the date">
                                         </div>
                                     </td>
                                     <td>
@@ -1159,7 +1159,7 @@
                                     <td>Third</td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="third_install_fed_date" name="third_install_fed_date" class="datepicker" value="<?php get_dob_display($data['tax_payers_data_third_install_fed_date']);?>" placeholder="Enter the date">
+                                            <input type="text" id="third_install_fed_date" name="third_install_fed_date" class="datepicker" value="<?php echo get_dob_display($data['tax_payers_data_third_install_fed_date']);?>" placeholder="Enter the date">
                                         </div>
                                     </td>
                                     <td>
@@ -1169,7 +1169,7 @@
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="third_install_state_date" name="third_install_state_date" class="datepicker" value="<?php get_dob_display($data['tax_payers_data_third_install_state_date']);?>" placeholder="Enter the date">
+                                            <input type="text" id="third_install_state_date" name="third_install_state_date" class="datepicker" value="<?php echo get_dob_display($data['tax_payers_data_third_install_state_date']);?>" placeholder="Enter the date">
                                         </div>
                                     </td>
                                     <td>
@@ -1182,7 +1182,7 @@
                                     <td>Fourth</td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="fourth_install_fed_date" name="fourth_install_fed_date" class="datepicker" value="<?php get_dob_display($data['tax_payers_data_fourth_install_fed_date']);?>" placeholder="Enter the date">
+                                            <input type="text" id="fourth_install_fed_date" name="fourth_install_fed_date" class="datepicker" value="<?php echo get_dob_display($data['tax_payers_data_fourth_install_fed_date']);?>" placeholder="Enter the date">
                                         </div>
                                     </td>
                                     <td>
@@ -1192,7 +1192,7 @@
                                     </td>
                                     <td>
                                         <div class="input-field">
-                                            <input type="text" id="fourth_install_state_date" name="fourth_install_state_date" class="datepicker" value="<?php get_dob_display($data['tax_payers_data_fourth_install_state_date']);?>" placeholder="Enter the date">
+                                            <input type="text" id="fourth_install_state_date" name="fourth_install_state_date" class="datepicker" value="<?php echo get_dob_display($data['tax_payers_data_fourth_install_state_date']);?>" placeholder="Enter the date">
                                         </div>
                                     </td>
                                     <td>
@@ -1280,19 +1280,19 @@
                                         </td>
                                         <td>
                                             <div class="input-field">
-                                                <input type="text" id="pay_rec_july" name="pay_rec_july" value="<?php get_dob_display($data['tax_payers_data_pay_rec_july']);?>" placeholder="0">
+                                                <input type="text" id="pay_rec_july" name="pay_rec_july" value="<?php echo $data['tax_payers_data_pay_rec_july'];?>" placeholder="0">
                                             </div>
                                         </td>
                                         <td><p>September 15, 2021</p></td>
                                         <td>
                                             <div class="input-field">
-                                                <input type="text" id="pay_rec_sept" name="pay_rec_sept" value="<?php get_dob_display($data['tax_payers_data_pay_rec_sept']);?>" placeholder="0">
+                                                <input type="text" id="pay_rec_sept" name="pay_rec_sept" value="<?php echo $data['tax_payers_data_pay_rec_sept'];?>" placeholder="0">
                                             </div>
                                         </td>
                                         <td><p>November 15, 2021</p></td>
                                         <td>
                                             <div class="input-field">
-                                                <input type="text" id="pay_rec_nov" name="pay_rec_nov" value="<?php get_dob_display($data['tax_payers_data_pay_rec_nov']);?>" placeholder="0">
+                                                <input type="text" id="pay_rec_nov" name="pay_rec_nov" value="<?php echo $data['tax_payers_data_pay_rec_nov'];?>" placeholder="0">
                                             </div>
                                         </td>
                                     </tr>
@@ -1302,19 +1302,19 @@
                                         </td>
                                         <td>
                                             <div class="input-field">
-                                                <input type="text" id="pay_rec_august" name="pay_rec_august" value="<?php get_dob_display($data['tax_payers_data_pay_rec_august']);?>" placeholder="0">
+                                                <input type="text" id="pay_rec_august" name="pay_rec_august" value="<?php echo $data['tax_payers_data_pay_rec_august'];?>" placeholder="0">
                                             </div>
                                         </td>
                                         <td><p>October 15, 2021</p></td>
                                         <td>
                                             <div class="input-field">
-                                                <input type="text" id="pay_rec_oct" name="pay_rec_oct" value="<?php get_dob_display($data['tax_payers_data_pay_rec_oct']);?>" placeholder="0">
+                                                <input type="text" id="pay_rec_oct" name="pay_rec_oct" value="<?php echo $data['tax_payers_data_pay_rec_oct'];?>" placeholder="0">
                                             </div>
                                         </td>
                                         <td><p>December 15, 2021</p></td>
                                         <td>
                                             <div class="input-field">
-                                                <input type="text" id="pay_rec_dec" name="pay_rec_dec" value="<?php get_dob_display($data['tax_payers_data_pay_rec_dec']);?>" placeholder="0">
+                                                <input type="text" id="pay_rec_dec" name="pay_rec_dec" value="<?php echo $data['tax_payers_data_pay_rec_dec'];?>" placeholder="0">
                                             </div>
                                         </td>
                                     </tr>
