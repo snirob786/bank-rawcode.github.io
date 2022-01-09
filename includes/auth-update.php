@@ -20,5 +20,5 @@
     }else if($status === 'check_declare'){
         echo json_encode(['success' => 'error','message' => 'Tax Payer Consent must be checked']);
     } else{
-        echo $status;
+        echo json_encode(['success'=>'error','meesage'=> $status ]);
     }

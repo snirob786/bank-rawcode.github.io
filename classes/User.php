@@ -90,7 +90,7 @@
             $spmname = $db->real_escape($data['spmname']);
             $splname = $db->real_escape($data['splname']);
             $spssn = $db->real_escape($data['spssn']);
-            $spdob = date("Y-m-d", strtotime($data['spdob']));
+            $spdob = set_dob_display($data['spdob']);
             $spocupation = $db->real_escape($data['spocupation']);
             $spphone = $db->real_escape($data['spphone']);
             $spemail = filter_var($data['spemail'], FILTER_SANITIZE_EMAIL);
@@ -130,7 +130,6 @@
             $dependantqtp = $data['dependantqtp'];
             $techvehicle = $data['techvehicle'];
             $energyproperty = $data['energyproperty'];
-            $moreforeignfinance = $data['moreforeignfinance'];
             $purchasenewhome = $data['purchasenewhome'];
             $didusell = $data['didusell'];
             $donate_charitable = $data['donate_charitable'];
@@ -149,7 +148,7 @@
             $rcvalimony = $data['rcvalimony'];
             $rcvalimonyamnt = $data['rcvalimonyamnt'];
             $rcpntssn = $data['rcpntssn'];
-            $doseparation = date("Y-m-d", strtotime($data['doseparation']));
+            $doseparation = set_dob_display($data['doseparation']);
             $purchase_health = $data['purchase_health'];
             $ded_retirement = $data['ded_retirement'];
             $pay_domestic = $data['pay_domestic'];
@@ -160,7 +159,7 @@
             $foreigncountryname = $data['foreigncountryname'];
             $rcv_ecn_impact = $data['rcv_ecn_impact'];
             $impactpayments = $data['impactpayments'];
-            $impactpaymentsdate = date("Y-m-d", strtotime($data['impactpaymentsdate']));
+            $impactpaymentsdate = set_dob_display($data['impactpaymentsdate']);
             $adopted_child = $data['adopted_child'];
             $child_tax_credit = $data['child_tax_credit'];
             $unearned_children = $data['unearned_children'];
@@ -196,21 +195,23 @@
             $depcare_prov_ssn = $data['depcare_prov_ssn'];
             $depcare_prov_add = $data['depcare_prov_add'];
             $depcare_prov_amnt = $data['depcare_prov_amnt'];
-            $first_install_fed_date = date("Y-m-d", strtotime($data['first_install_fed_date']));
+            $first_install_fed_date = set_dob_display($data['first_install_fed_date']);
+
             $first_install_fed = $data['first_install_fed'];
-            $first_install_state_date = date("Y-m-d", strtotime($data['first_install_state_date']));
+
+            $first_install_state_date = set_dob_display($data['first_install_state_date']);
             $first_install_state = $data['first_install_state'];
-            $second_install_fed_date = date("Y-m-d", strtotime($data['second_install_fed_date']));
+            $second_install_fed_date = set_dob_display($data['second_install_fed_date']);
             $second_install_fed = $data['second_install_fed'];
-            $second_install_state_date = date("Y-m-d", strtotime($data['second_install_state_date']));
+            $second_install_state_date = set_dob_display($data['second_install_state_date']);
             $second_install_state = $data['second_install_state'];
-            $third_install_fed_date = date("Y-m-d", strtotime($data['third_install_fed_date']));
+            $third_install_fed_date = set_dob_display($data['third_install_fed_date']);
             $third_install_fed = $data['third_install_fed'];
-            $third_install_state_date = date("Y-m-d", strtotime($data['third_install_state_date']));
+            $third_install_state_date = set_dob_display($data['third_install_state_date']);
             $third_install_state = $data['third_install_state'];
-            $fourth_install_fed_date = date("Y-m-d", strtotime($data['fourth_install_fed_date']));
+            $fourth_install_fed_date = set_dob_display($data['fourth_install_fed_date']);
             $fourth_install_fed = $data['fourth_install_fed'];
-            $fourth_install_state_date = date("Y-m-d", strtotime($data['fourth_install_state_date']));
+            $fourth_install_state_date = set_dob_display($data['fourth_install_state_date']);
             $fourth_install_state = $data['fourth_install_state'];
             $overpay_install_fed = $data['overpay_install_fed'];
             $overpay_install_state = $data['overpay_install_state'];
@@ -222,7 +223,7 @@
             $pay_rec_dec = $data['pay_rec_dec'];
             $tax_initial_sig = $data['tax_initial_sig'];
             $tax_sp_initial_sig = $data['tax_sp_initial_sig'];
-            $sign_date = date("Y-m-d", strtotime($data['sign_date']));
+            $sign_date = set_dob_display($data['sign_date']);
             $w2_form = array_index_exist_checker($data,'w2_form');
             $a1095_form = array_index_exist_checker($data,'a1095_form');
             $new_client_last_copy = array_index_exist_checker($data,'new_client_last_copy');
@@ -233,6 +234,18 @@
             $inc_ded_cat = array_index_exist_checker($data,'inc_ded_cat');
             $list_item_ded_cat = array_index_exist_checker($data,'list_item_ded_cat');
             $copy_all_acknow = array_index_exist_checker($data,'copy_all_acknow');
+            $same_as = array_index_exist_checker($data,'same_as');
+            $file_jointly = $data['file_jointly'];
+            $ip_pin = $data['ip_pin'];
+            $sp_ip_pin = $data['sp_ip_pin'];
+            $dl_no = $data['dl_no'];
+            $dl_state = $data['dl_state'];
+            $dl_issue_date = set_dob_display($data['dl_issue_date']);
+            $dl_exp_date = set_dob_display($data['dl_exp_date']);
+            $sp_dl_no = $data['sp_dl_no'];
+            $sp_dl_state = $data['sp_dl_state'];
+            $sp_dl_issue_date = set_dob_display($data['sp_dl_issue_date']);
+            $sp_dl_exp_date = set_dob_display($data['sp_dl_exp_date']);
 
             $unique_ID =  $new_ses->get_session('special_id');
 
@@ -294,7 +307,6 @@ SET    tax_payers_data_fname = '$fname',
        tax_payers_data_dependantqtp = '$dependantqtp',
        tax_payers_data_techvehicle = '$techvehicle',
        tax_payers_data_energyproperty = '$energyproperty',
-       tax_payers_data_moreforeignfinance = '$moreforeignfinance',
        tax_payers_data_purchasenewhome = '$purchasenewhome',
        tax_payers_data_didusell = '$didusell',
        tax_payers_data_donate_charitable = '$donate_charitable',
@@ -397,7 +409,18 @@ SET    tax_payers_data_fname = '$fname',
        tax_payers_data_detail_any_tax_made = '$detail_any_tax_made',
        tax_payers_data_inc_ded_cat = '$inc_ded_cat',
        tax_payers_data_list_item_ded_cat = '$list_item_ded_cat',
-       tax_payers_data_copy_all_acknow = '$copy_all_acknow'
+       tax_payers_data_copy_all_acknow = '$copy_all_acknow',
+       tax_payers_data_file_jointly = '$file_jointly',
+       tax_payers_data_ip_pin = '$ip_pin',
+       tax_payers_data_sp_ip_pin = '$sp_ip_pin',
+       tax_payers_data_dl_no = '$dl_no',
+       tax_payers_data_dl_state = '$dl_state',
+       tax_payers_data_dl_issue_date = '$dl_issue_date',
+       tax_payers_data_dl_exp_date = '$dl_exp_date',
+       tax_payers_data_sp_dl_no = '$sp_dl_no',
+       tax_payers_data_sp_dl_state = '$sp_dl_state',
+       tax_payers_data_sp_dl_issue_date = '$sp_dl_issue_date',
+       tax_payers_data_sp_dl_exp_date = '$sp_dl_exp_date'
 WHERE  tax_payers_data_unique_id = '$unique_ID' ";
 
                     $result = $db->update($sql);
@@ -405,6 +428,7 @@ WHERE  tax_payers_data_unique_id = '$unique_ID' ";
                         return 'updated';
                     } else{
                         return 'not_updated';
+//                        return $db->error_reason($sql);
                     }
                 }
             }
@@ -430,6 +454,8 @@ WHERE  tax_payers_data_unique_id = '$unique_ID' ";
                 $depdsiabled = $data['depdsiabled'.$i];
                 $depfullstudent = $data['depfullstudent'.$i];
                 $current_date = date("Y-m-d H:i:s");
+                $dep_ip_pin = $data['dep_ip_pin'];
+                $dep_income = $data['dep_income'];
                 $uniqId = uniqid();
 
                 if( preg_match("/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/", str_replace('-', '',$depssn )) ){
@@ -458,7 +484,7 @@ WHERE  tax_payers_data_unique_id = '$unique_ID' ";
                             tax_payers_dependants_data_last_update_date = '$current_date'";
                             $result = $db->update($sql);
                         }else{
-                            $sql = "INSERT INTO tax_payers_dependants_data(tax_payers_dependants_data_depname,tax_payers_dependants_data_rel, tax_payers_dependants_data_depdob, tax_payers_dependants_data_depssn, tax_payers_dependants_data_deplived,tax_payers_dependants_data_depdsiabled,tax_payers_dependants_data_depfullstudent,tax_payers_dependants_data_owner_ssn,tax_payers_dependants_data_last_update_date,tax_payers_dependants_data_unique_id) VALUES ('{$depname}','{$deprel}','{$depdob}','{$depssn}','{$deplived}','{$depdsiabled}','{$depfullstudent}','{$ssn}','{$current_date}','{$uniqId}')";
+                            $sql = "INSERT INTO tax_payers_dependants_data(tax_payers_dependants_data_depname,tax_payers_dependants_data_rel, tax_payers_dependants_data_depdob, tax_payers_dependants_data_depssn, tax_payers_dependants_data_deplived,tax_payers_dependants_data_depdsiabled,tax_payers_dependants_data_depfullstudent,tax_payers_dependants_data_owner_ssn,tax_payers_dependants_data_last_update_date,tax_payers_data_dep_ip_pin,tax_payers_data_dep_income,tax_payers_dependants_data_unique_id) VALUES ('{$depname}','{$deprel}','{$depdob}','{$depssn}','{$deplived}','{$depdsiabled}','{$depfullstudent}','{$ssn}','{$current_date}','{$dep_ip_pin}','$dep_income','{$uniqId}')";
                             $state = $db->insert($sql);
                         }
 

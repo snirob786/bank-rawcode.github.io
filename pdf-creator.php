@@ -13,14 +13,14 @@
 
     $pdf->AddPage();
 
-    function date_checker($data){
-
-        if( $data == '1970-01-01'){
-            return "";
-        } else{
-            return date("m/d/Y",strtotime($data));
-        }
-    }
+//    function get_dob_display($data){
+//
+//        if( $data == '1970-01-01'){
+//            return "";
+//        } else{
+//            return date("m/d/Y",strtotime($data));
+//        }
+//    }
 
 //    Set font to ariel,bold,14pt
 $pdf->SetFont('Times','',18);
@@ -37,11 +37,11 @@ $pdf->Cell(200,20,"Taxpayer Information","0","1","C");
     $pdf->SetTextColor(255,255,255);
     $pdf->SetFont('Arial','',10);
     $pdf->SetFillColor(100,100,100);
-    $pdf->Cell(40,10,"Name",1,0,"C",true);
+    $pdf->Cell(60,10,"Name",1,0,"C",true);
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',10);
-    $pdf->Cell(150,10,ucfirst($ownder_data['tax_payers_data_fname']).' '.ucfirst($ownder_data['tax_payers_data_mname']).' '.ucfirst  ($ownder_data['tax_payers_data_lname']),1,1,"C");
+    $pdf->Cell(130,10,ucfirst($ownder_data['tax_payers_data_fname']).' '.ucfirst($ownder_data['tax_payers_data_mname']).' '.ucfirst  ($ownder_data['tax_payers_data_lname']),1,1,"C");
 
 
 //    User SSN Details
@@ -49,11 +49,11 @@ $pdf->Cell(200,20,"Taxpayer Information","0","1","C");
     $pdf->SetTextColor(255,255,255);
     $pdf->SetFont('Arial','',10);
     $pdf->SetFillColor(100,100,100);
-    $pdf->Cell(40,10,"Soc. Sec. No.",1,0,"C",true);
+    $pdf->Cell(60,10,"Soc. Sec. No.",1,0,"C",true);
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',10);
-    $pdf->Cell(150,10,get_ssn_display_dashes($ownder_data['tax_payers_data_ssn']),1,1,"C");
+    $pdf->Cell(130,10,get_ssn_display_dashes($ownder_data['tax_payers_data_ssn']),1,1,"C");
 
 
 //    User Date of Birth Details
@@ -61,22 +61,33 @@ $pdf->Cell(200,20,"Taxpayer Information","0","1","C");
     $pdf->SetTextColor(255,255,255);
     $pdf->SetFont('Arial','',10);
     $pdf->SetFillColor(100,100,100);
-    $pdf->Cell(40,10,"Date of Birth",1,0,"C",true);
+    $pdf->Cell(60,10,"Date of Birth",1,0,"C",true);
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',10);
-    $pdf->Cell(150,10,date_checker($ownder_data['tax_payers_data_dob']),1,1,"C");
+    $pdf->Cell(130,10,get_dob_display($ownder_data['tax_payers_data_dob']),1,1,"C");
+
+//    User IP Pin
+    $pdf->SetLeftMargin(10);
+    $pdf->SetTextColor(255,255,255);
+    $pdf->SetFont('Arial','',10);
+    $pdf->SetFillColor(100,100,100);
+    $pdf->Cell(60,10,"IP Pin",1,0,"C",true);
+    $pdf->SetLeftMargin(10);
+    $pdf->SetTextColor(0,0,0);
+    $pdf->SetFont('Arial','',10);
+    $pdf->Cell(130,10,$ownder_data['tax_payers_data_ip_pin'],1,1,"C");
 
 //    User Occupation Details
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(255,255,255);
     $pdf->SetFont('Arial','',10);
     $pdf->SetFillColor(100,100,100);
-    $pdf->Cell(40,10,"Occupation",1,0,"C",true);
+    $pdf->Cell(60,10,"Occupation",1,0,"C",true);
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',10);
-    $pdf->Cell(150,10,ucfirst($ownder_data['tax_payers_data_ocupation']),1,1,"C");
+    $pdf->Cell(130,10,ucfirst($ownder_data['tax_payers_data_ocupation']),1,1,"C");
 
 
 //    User Work Phone Details
@@ -84,22 +95,66 @@ $pdf->Cell(200,20,"Taxpayer Information","0","1","C");
     $pdf->SetTextColor(255,255,255);
     $pdf->SetFont('Arial','',10);
     $pdf->SetFillColor(100,100,100);
-    $pdf->Cell(40,10,"Phone",1,0,"C",true);
+    $pdf->Cell(60,10,"Phone",1,0,"C",true);
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',10);
-    $pdf->Cell(150,10,$ownder_data['tax_payers_data_phone'],1,1,"C");
+    $pdf->Cell(130,10,$ownder_data['tax_payers_data_phone'],1,1,"C");
 
 //    User Email Details
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(255,255,255);
     $pdf->SetFont('Arial','',10);
     $pdf->SetFillColor(100,100,100);
-    $pdf->Cell(40,10,"Email",1,0,"C",true);
+    $pdf->Cell(60,10,"Email",1,0,"C",true);
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',10);
-    $pdf->Cell(150,10,$ownder_data['tax_payers_data_email'],1,1,"C");
+    $pdf->Cell(130,10,$ownder_data['tax_payers_data_email'],1,1,"C");
+
+//    Driving License
+    $pdf->SetLeftMargin(10);
+    $pdf->SetTextColor(255,255,255);
+    $pdf->SetFont('Arial','',10);
+    $pdf->SetFillColor(100,100,100);
+    $pdf->Cell(60,10,"Driving License",1,0,"C",true);
+    $pdf->SetLeftMargin(10);
+    $pdf->SetTextColor(0,0,0);
+    $pdf->SetFont('Arial','',10);
+    $pdf->Cell(130,10,$ownder_data['tax_payers_data_dl_no'],1,1,"C");
+
+//    Driving License State
+    $pdf->SetLeftMargin(10);
+    $pdf->SetTextColor(255,255,255);
+    $pdf->SetFont('Arial','',10);
+    $pdf->SetFillColor(100,100,100);
+    $pdf->Cell(60,10,"Driving License State",1,0,"C",true);
+    $pdf->SetLeftMargin(10);
+    $pdf->SetTextColor(0,0,0);
+    $pdf->SetFont('Arial','',10);
+    $pdf->Cell(130,10,$ownder_data['tax_payers_data_dl_state'],1,1,"C");
+
+    //    Driving License Issue Date
+    $pdf->SetLeftMargin(10);
+    $pdf->SetTextColor(255,255,255);
+    $pdf->SetFont('Arial','',10);
+    $pdf->SetFillColor(100,100,100);
+    $pdf->Cell(60,10,"Driving License Issue Date",1,0,"C",true);
+    $pdf->SetLeftMargin(10);
+    $pdf->SetTextColor(0,0,0);
+    $pdf->SetFont('Arial','',10);
+    $pdf->Cell(130,10,get_dob_display($ownder_data['tax_payers_data_dl_issue_date']),1,1,"C");
+
+    //    Driving License Expire Date
+    $pdf->SetLeftMargin(10);
+    $pdf->SetTextColor(255,255,255);
+    $pdf->SetFont('Arial','',10);
+    $pdf->SetFillColor(100,100,100);
+    $pdf->Cell(60,10,"Driving License Expire Date",1,0,"C",true);
+    $pdf->SetLeftMargin(10);
+    $pdf->SetTextColor(0,0,0);
+    $pdf->SetFont('Arial','',10);
+    $pdf->Cell(130,10,get_dob_display($ownder_data['tax_payers_data_dl_exp_date']),1,1,"C");
 
 
     //    Set font to ariel,bold,14pt
@@ -132,11 +187,11 @@ $pdf->Cell(200,20,"Taxpayer Information","0","1","C");
     $pdf->SetTextColor(255,255,255);
     $pdf->SetFont('Arial','',10);
     $pdf->SetFillColor(100,100,100);
-    $pdf->Cell(40,10,"Name",1,0,"C",true);
+    $pdf->Cell(60,10,"Name",1,0,"C",true);
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',10);
-    $pdf->Cell(150,10,ucfirst($ownder_data['tax_payers_data_spfname']).' '.ucfirst($ownder_data['tax_payers_data_spmname']).' '.ucfirst($ownder_data['tax_payers_data_splname']),1,1,"C");
+    $pdf->Cell(130,10,ucfirst($ownder_data['tax_payers_data_spfname']).' '.ucfirst($ownder_data['tax_payers_data_spmname']).' '.ucfirst($ownder_data['tax_payers_data_splname']),1,1,"C");
 
 
 //    User Owner's Wife SSN Details
@@ -144,11 +199,11 @@ $pdf->Cell(200,20,"Taxpayer Information","0","1","C");
     $pdf->SetTextColor(255,255,255);
     $pdf->SetFont('Arial','',10);
     $pdf->SetFillColor(100,100,100);
-    $pdf->Cell(40,10,"Soc. Sec. No.",1,0,"C",true);
+    $pdf->Cell(60,10,"Soc. Sec. No.",1,0,"C",true);
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',10);
-    $pdf->Cell(150,10,get_ssn_display_dashes($ownder_data['tax_payers_data_spssn']),1,1,"C");
+    $pdf->Cell(130,10,get_ssn_display_dashes($ownder_data['tax_payers_data_spssn']),1,1,"C");
 
 
 
@@ -157,45 +212,116 @@ $pdf->Cell(200,20,"Taxpayer Information","0","1","C");
     $pdf->SetTextColor(255,255,255);
     $pdf->SetFont('Arial','',10);
     $pdf->SetFillColor(100,100,100);
-    $pdf->Cell(40,10,"Date of Birth",1,0,"C",true);
+    $pdf->Cell(60,10,"Date of Birth",1,0,"C",true);
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',10);
-    $pdf->Cell(150,10,date_checker($ownder_data['tax_payers_data_spdob']),1,1,"C");
+    $pdf->Cell(130,10,get_dob_display($ownder_data['tax_payers_data_spdob']),1,1,"C");
+
+//    User IP Pin
+$pdf->SetLeftMargin(10);
+$pdf->SetTextColor(255,255,255);
+$pdf->SetFont('Arial','',10);
+$pdf->SetFillColor(100,100,100);
+$pdf->Cell(60,10,"IP Pin",1,0,"C",true);
+$pdf->SetLeftMargin(10);
+$pdf->SetTextColor(0,0,0);
+$pdf->SetFont('Arial','',10);
+$pdf->Cell(130,10,$ownder_data['tax_payers_data_sp_ip_pin'],1,1,"C");
 
 //    User Owner's Wife Occupation Details
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(255,255,255);
     $pdf->SetFont('Arial','',10);
     $pdf->SetFillColor(100,100,100);
-    $pdf->Cell(40,10,"Occupation",1,0,"C",true);
+    $pdf->Cell(60,10,"Occupation",1,0,"C",true);
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',10);
-    $pdf->Cell(150,10,ucfirst($ownder_data['tax_payers_data_spocupation']),1,1,"C");
+    $pdf->Cell(130,10,ucfirst($ownder_data['tax_payers_data_spocupation']),1,1,"C");
 
     //    User Owner's Wife Work Phone Details
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(255,255,255);
     $pdf->SetFont('Arial','',10);
     $pdf->SetFillColor(100,100,100);
-    $pdf->Cell(40,10,"Phone",1,0,"C",true);
+    $pdf->Cell(60,10,"Phone",1,0,"C",true);
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',10);
-    $pdf->Cell(150,10,$ownder_data['tax_payers_data_spphone'],1,1,"C");
+    $pdf->Cell(130,10,$ownder_data['tax_payers_data_spphone'],1,1,"C");
 
     //    User Owner's Wife Email Details
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(255,255,255);
     $pdf->SetFont('Arial','',10);
     $pdf->SetFillColor(100,100,100);
-    $pdf->Cell(40,10,"Email",1,0,"C",true);
+    $pdf->Cell(60,10,"Email",1,0,"C",true);
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',10);
-    $pdf->Cell(150,10,$ownder_data['tax_payers_data_spemail'],1,1,"C");
+    $pdf->Cell(130,10,$ownder_data['tax_payers_data_spemail'],1,1,"C");
 
+//    Driving License
+$pdf->SetLeftMargin(10);
+$pdf->SetTextColor(255,255,255);
+$pdf->SetFont('Arial','',10);
+$pdf->SetFillColor(100,100,100);
+$pdf->Cell(60,10,"Driving License",1,0,"C",true);
+$pdf->SetLeftMargin(10);
+$pdf->SetTextColor(0,0,0);
+$pdf->SetFont('Arial','',10);
+$pdf->Cell(130,10,$ownder_data['tax_payers_data_sp_dl_no'],1,1,"C");
+
+//    Driving License State
+$pdf->SetLeftMargin(10);
+$pdf->SetTextColor(255,255,255);
+$pdf->SetFont('Arial','',10);
+$pdf->SetFillColor(100,100,100);
+$pdf->Cell(60,10,"Driving License State",1,0,"C",true);
+$pdf->SetLeftMargin(10);
+$pdf->SetTextColor(0,0,0);
+$pdf->SetFont('Arial','',10);
+$pdf->Cell(130,10,$ownder_data['tax_payers_data_sp_dl_state'],1,1,"C");
+
+//    Driving License Issue Date
+$pdf->SetLeftMargin(10);
+$pdf->SetTextColor(255,255,255);
+$pdf->SetFont('Arial','',10);
+$pdf->SetFillColor(100,100,100);
+$pdf->Cell(60,10,"Driving License Issue Date",1,0,"C",true);
+$pdf->SetLeftMargin(10);
+$pdf->SetTextColor(0,0,0);
+$pdf->SetFont('Arial','',10);
+$pdf->Cell(130,10,get_dob_display($ownder_data['tax_payers_data_sp_dl_issue_date']),1,1,"C");
+
+//    Driving License Expire Date
+$pdf->SetLeftMargin(10);
+$pdf->SetTextColor(255,255,255);
+$pdf->SetFont('Arial','',10);
+$pdf->SetFillColor(100,100,100);
+$pdf->Cell(60,10,"Driving License Expire Date",1,0,"C",true);
+$pdf->SetLeftMargin(10);
+$pdf->SetTextColor(0,0,0);
+$pdf->SetFont('Arial','',10);
+$pdf->Cell(130,10,get_dob_display($ownder_data['tax_payers_data_sp_dl_exp_date']),1,1,"C");
+
+
+//    Same As Tax Payers Address:
+$pdf->SetLeftMargin(10);
+$pdf->SetTextColor(255,255,255);
+$pdf->SetFont('Arial','',10);
+$pdf->SetFillColor(100,100,100);
+$pdf->Cell(60,10,"Address same as Tax Payer",1,0,"C",true);
+$pdf->SetLeftMargin(10);
+$pdf->SetTextColor(0,0,0);
+$pdf->SetFont('Arial','',10);
+
+if (empty($ownder_data['tax_payers_data_same_as']) || $ownder_data['tax_payers_data_same_as'] === 'no'){
+    $pdf->Cell(130,10,"No",1,1,"C");
+}else{
+    $pdf->Cell(130,10,"Yes",1,1,"C");
+}
 
     //    Set font to ariel,bold,14pt
     $pdf->SetFont('Times','',14);
@@ -232,7 +358,7 @@ $pdf->Cell(200,20,"Taxpayer Information","0","1","C");
     $pdf->Cell(50,10,ucfirst($ownder_data['tax_payers_data_rcpntssn']),1,1,"C");
 
     $pdf->Cell(140,10,"Date of divorce or separation",1,0,"C");
-    $pdf->Cell(50,10,date_checker($ownder_data['tax_payers_data_doseparation']),1,1,"C");
+    $pdf->Cell(50,10,get_dob_display($ownder_data['tax_payers_data_doseparation']),1,1,"C");
 
 //    Set font to ariel,bold,14pt
     $pdf->SetFont('Times','',14);
@@ -241,10 +367,12 @@ $pdf->Cell(200,20,"Taxpayer Information","0","1","C");
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',10);
-    $pdf->Cell(95,10,"Filing Status",1,0,"C");
-    $pdf->Cell(95,10,"Spouse Death Date",1,1,"C");
-    $pdf->Cell(95,10,ucwords(str_replace('_',' ',$ownder_data['tax_payers_data_marital_status'])),1,0,"C");
-    $pdf->Cell(95,10,date_checker($ownder_data['tax_payers_data_spousedead']),1,1,"C");
+    $pdf->Cell(63,10,"Marital Status",1,0,"C");
+    $pdf->Cell(63,10,"Filing Jointly",1,0,"C");
+    $pdf->Cell(64,10,"Spouse Death Date",1,1,"C");
+    $pdf->Cell(63,10,ucwords(str_replace('_',' ',$ownder_data['tax_payers_data_marital_status'])),1,0,"C");
+    $pdf->Cell(63,10,ucwords(str_replace('_',' ',$ownder_data['tax_payers_data_file_jointly'])),1,0,"C");
+    $pdf->Cell(64,10,get_dob_display($ownder_data['tax_payers_data_spousedead']),1,1,"C");
 
     $pdf->Ln(5);
 
@@ -281,37 +409,113 @@ $pdf->Cell(200,20,"Taxpayer Information","0","1","C");
         $pdf->Cell(190,10,"No Dependant Data Found",1,1,"C");
     } else{
 
-        //    Dependant Header
-        $pdf->Cell(47.5,10,"Name",1,0,"C");
-        $pdf->Cell(47.5,10,"Relationship",1,0,"C");
-        $pdf->Cell(45,10,"DOB",1,0,"C");
-        $pdf->Cell(50,10,"SSN",1,1,"C");
+//        //    Dependant Header
+//        $pdf->Cell(47.5,10,"Name",1,0,"C");
+//        $pdf->Cell(47.5,10,"Relationship",1,0,"C");
+//        $pdf->Cell(45,10,"DOB",1,0,"C");
+//        $pdf->Cell(50,10,"SSN",1,1,"C");
 
         while ($depData = $depResult->fetch_assoc()){
-            $pdf->Cell(47.5,10,ucfirst($depData['tax_payers_dependants_data_depname']),1,0,"C");
-            $pdf->Cell(47.5,10,ucfirst($depData['tax_payers_dependants_data_rel']),1,0,"C");
-            $pdf->Cell(45,10,date_checker($depData['tax_payers_dependants_data_depdob']),1,0,"C");
-            $pdf->Cell(50,10,get_ssn_display_dashes($depData['tax_payers_dependants_data_depssn']),1,1,"C");
-        }
-    }
+            //    Dependents Name
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(255,255,255);
+            $pdf->SetFont('Arial','',10);
+            $pdf->SetFillColor(100,100,100);
+            $pdf->Cell(60,10,"Name",1,0,"C",true);
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(0,0,0);
+            $pdf->SetFont('Arial','',10);
+            $pdf->Cell(130,10,ucfirst($depData['tax_payers_dependants_data_depname']),1,1,"C");
 
-    $pdf->Ln(5);
+//    Dependents Name
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(255,255,255);
+            $pdf->SetFont('Arial','',10);
+            $pdf->SetFillColor(100,100,100);
+            $pdf->Cell(60,10,"Relationship",1,0,"C",true);
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(0,0,0);
+            $pdf->SetFont('Arial','',10);
+            $pdf->Cell(130,10,ucfirst($depData['tax_payers_dependants_data_rel']),1,1,"C");
 
-    $ownerSnn = $ownder_data['tax_payers_data_ssn'];
-    $depSql = "SELECT * FROM tax_payers_dependants_data WHERE tax_payers_dependants_data_owner_ssn = '$ownerSnn'";
-    $depResult = $db->select($depSql);
+            //    Dependents Date of Birth
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(255,255,255);
+            $pdf->SetFont('Arial','',10);
+            $pdf->SetFillColor(100,100,100);
+            $pdf->Cell(60,10,"Date of Birth",1,0,"C",true);
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(0,0,0);
+            $pdf->SetFont('Arial','',10);
+            $pdf->Cell(130,10,get_dob_display($depData['tax_payers_dependants_data_depdob']),1,1,"C");
 
-    if ($depResult->num_rows >0){
-        $pdf->Cell(47.5,10,"Name",1,0,"C");
-        $pdf->Cell(47.5,10,"Months Lived",1,0,"C");
-        $pdf->Cell(45,10,"Is Disable",1,0,"C");
-        $pdf->Cell(45,10,"Is Student",1,1,"C");
+            //    Dependents SSn
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(255,255,255);
+            $pdf->SetFont('Arial','',10);
+            $pdf->SetFillColor(100,100,100);
+            $pdf->Cell(60,10,"SSN",1,0,"C",true);
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(0,0,0);
+            $pdf->SetFont('Arial','',10);
+            $pdf->Cell(130,10,get_ssn_display_dashes($depData['tax_payers_dependants_data_depssn']),1,1,"C");
 
-        while ($depData2 = $depResult->fetch_assoc()){
-            $pdf->Cell(47.5,10,ucfirst($depData2['tax_payers_dependants_data_depname']),1,0,"C");
-            $pdf->Cell(47.5,10,ucfirst($depData2['tax_payers_dependants_data_deplived']),1,0,"C");
-            $pdf->Cell(45,10,ucfirst($depData2['tax_payers_dependants_data_depdsiabled']),1,0,"C");
-            $pdf->Cell(45,10,ucfirst($depData2['tax_payers_dependants_data_depfullstudent']),1,1,"C");
+            //    Dependents IP Pin
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(255,255,255);
+            $pdf->SetFont('Arial','',10);
+            $pdf->SetFillColor(100,100,100);
+            $pdf->Cell(60,10,"IP Pin",1,0,"C",true);
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(0,0,0);
+            $pdf->SetFont('Arial','',10);
+            $pdf->Cell(130,10,$depData['tax_payers_data_dep_ip_pin'],1,1,"C");
+
+
+            //    Dependents Income
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(255,255,255);
+            $pdf->SetFont('Arial','',10);
+            $pdf->SetFillColor(100,100,100);
+            $pdf->Cell(60,10,"Income ($)",1,0,"C",true);
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(0,0,0);
+            $pdf->SetFont('Arial','',10);
+            $pdf->Cell(130,10,$depData['tax_payers_data_dep_income'],1,1,"C");
+
+            //    Dependents Month Live with
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(255,255,255);
+            $pdf->SetFont('Arial','',10);
+            $pdf->SetFillColor(100,100,100);
+            $pdf->Cell(60,10,"Month Lived With You",1,0,"C",true);
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(0,0,0);
+            $pdf->SetFont('Arial','',10);
+            $pdf->Cell(130,10,$depData['tax_payers_dependants_data_deplived'],1,1,"C");
+
+            //    is Dependents disabled?
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(255,255,255);
+            $pdf->SetFont('Arial','',10);
+            $pdf->SetFillColor(100,100,100);
+            $pdf->Cell(60,10,"Disabled?",1,0,"C",true);
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(0,0,0);
+            $pdf->SetFont('Arial','',10);
+            $pdf->Cell(130,10,$depData['tax_payers_dependants_data_depdsiabled'],1,1,"C");
+
+            //    is Dependents full time student?
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(255,255,255);
+            $pdf->SetFont('Arial','',10);
+            $pdf->SetFillColor(100,100,100);
+            $pdf->Cell(60,10,"Full time student?",1,0,"C",true);
+            $pdf->SetLeftMargin(10);
+            $pdf->SetTextColor(0,0,0);
+            $pdf->SetFont('Arial','',10);
+            $pdf->Cell(130,10,$depData['tax_payers_dependants_data_depfullstudent'],1,1,"C");
+
         }
     }
 
@@ -502,7 +706,7 @@ $pdf->Cell(30,10,ucfirst($ownder_data['tax_payers_data_impactpayments']),1,1,"C"
 
 //    Payment received date:
 $pdf->Cell(160,10,"Payment received date",1,0,"C");
-$pdf->Cell(30,10,date_checker($ownder_data['tax_payers_data_impactpaymentsdate']),1,1,"C");
+$pdf->Cell(30,10,get_dob_display($ownder_data['tax_payers_data_impactpaymentsdate']),1,1,"C");
 
 //    Question 33:
 $pdf->Cell(10,11,"33.",0,0,"C");
@@ -663,27 +867,27 @@ $pdf->Cell(35,10,"Date Paid",1,0,"C");
 $pdf->Cell(35,10,"State ($)",1,1,"C");
 
 $pdf->Cell(50,10,"First",1,0,"C");
-$pdf->Cell(35,10,date_checker($ownder_data['tax_payers_data_first_install_fed_date']),1,0,"C");
+$pdf->Cell(35,10,get_dob_display($ownder_data['tax_payers_data_first_install_fed_date']),1,0,"C");
 $pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_first_install_fed']),1,0,"C");
-$pdf->Cell(35,10,date_checker($ownder_data['tax_payers_data_first_install_state_date']),1,0,"C");
+$pdf->Cell(35,10,get_dob_display($ownder_data['tax_payers_data_first_install_state_date']),1,0,"C");
 $pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_first_install_state']),1,1,"C");
 
 $pdf->Cell(50,10,"Second",1,0,"C");
-$pdf->Cell(35,10,date_checker($ownder_data['tax_payers_data_second_install_fed_date']),1,0,"C");
+$pdf->Cell(35,10,get_dob_display($ownder_data['tax_payers_data_second_install_fed_date']),1,0,"C");
 $pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_second_install_fed']),1,0,"C");
-$pdf->Cell(35,10,date_checker($ownder_data['tax_payers_data_second_install_state_date']),1,0,"C");
+$pdf->Cell(35,10,get_dob_display($ownder_data['tax_payers_data_second_install_state_date']),1,0,"C");
 $pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_second_install_state']),1,1,"C");
 
 $pdf->Cell(50,10,"Third",1,0,"C");
-$pdf->Cell(35,10,date_checker($ownder_data['tax_payers_data_third_install_fed_date']),1,0,"C");
+$pdf->Cell(35,10,get_dob_display($ownder_data['tax_payers_data_third_install_fed_date']),1,0,"C");
 $pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_third_install_fed']),1,0,"C");
-$pdf->Cell(35,10,date_checker($ownder_data['tax_payers_data_third_install_state_date']),1,0,"C");
+$pdf->Cell(35,10,get_dob_display($ownder_data['tax_payers_data_third_install_state_date']),1,0,"C");
 $pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_third_install_state']),1,1,"C");
 
 $pdf->Cell(50,10,"Fourth",1,0,"C");
-$pdf->Cell(35,10,date_checker($ownder_data['tax_payers_data_fourth_install_fed_date']),1,0,"C");
+$pdf->Cell(35,10,get_dob_display($ownder_data['tax_payers_data_fourth_install_fed_date']),1,0,"C");
 $pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_fourth_install_fed']),1,0,"C");
-$pdf->Cell(35,10,date_checker($ownder_data['tax_payers_data_fourth_install_state_date']),1,0,"C");
+$pdf->Cell(35,10,get_dob_display($ownder_data['tax_payers_data_fourth_install_state_date']),1,0,"C");
 $pdf->Cell(35,10,ucfirst($ownder_data['tax_payers_data_fourth_install_state']),1,1,"C");
 
 $pdf->Cell(50,10,"2020 overpay amount?",1,0,"C");
@@ -722,6 +926,7 @@ $pdf->Cell(95,10,"July 15, 2021",1,0,"C");
 $pdf->Cell(95,10,$ownder_data['tax_payers_data_pay_rec_july'],1,1,"C");
 $pdf->Cell(95,10,"Septebmer 15, 2021",1,0,"C");
 $pdf->Cell(95,10,$ownder_data['tax_payers_data_pay_rec_sept'],1,1,"C");
+$pdf->Cell(95,10,"November 15, 2021",1,0,"C");
 $pdf->Cell(95,10,"November 15, 2021",1,0,"C");
 $pdf->Cell(95,10,$ownder_data['tax_payers_data_pay_rec_nov'],1,1,"C");
 $pdf->Cell(95,10,"August 15, 2021",1,0,"C");
@@ -837,7 +1042,7 @@ $pdf->Ln(5);
 
     $pdf->Cell(63,10,ucfirst($ownder_data['tax_payers_data_tax_initial_sig']),1,0,"C");
     $pdf->Cell(63,10,ucfirst($ownder_data['tax_payers_data_tax_sp_initial_sig']),1,0,"C");
-    $pdf->Cell(64,10,date_checker($ownder_data['tax_payers_data_sign_date']),1,1,"C");
+    $pdf->Cell(64,10,get_dob_display($ownder_data['tax_payers_data_sign_date']),1,1,"C");
 
     $pdf->Ln(5);
 

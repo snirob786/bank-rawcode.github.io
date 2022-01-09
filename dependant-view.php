@@ -47,6 +47,20 @@ while ($result_dep_array = $result_dep->fetch_assoc()){
                     <label for="deplived" class="white-text">Month Lived With You</label>
                 </div>
             </div>
+
+            <div class="col s12 l6">
+                <div class="input-field">
+                    <input type="text" id="dep_ip_pin" name="<?php echo 'dep_ip_pin'.$i;?>" value="<?php echo $result_dep_array['tax_payers_data_dep_ip_pin'];?>">
+                    <label for="dep_ip_pin" class="white-text">IP Pin</label>
+                </div>
+            </div>
+
+            <div class="col s12 l6">
+                <div class="input-field">
+                    <input type="text" id="dep_income" name="<?php echo 'dep_income'.$i;?>" value="<?php echo $result_dep_array['tax_payers_data_dep_income'];?>">
+                    <label for="dep_income" class="white-text">Dependent Income ($)</label>
+                </div>
+            </div>
         </div>
 
         <div class="row valign-wrapper">

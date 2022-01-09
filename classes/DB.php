@@ -50,6 +50,11 @@
             return $this->error;
         }
 
+        public function error_reason($query){
+            if (!mysqli_query($this->db,$query)) {
+                echo("Error description: " . mysqli_error($this->db));
+            }
+        }
 
 
 

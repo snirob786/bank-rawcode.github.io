@@ -42,7 +42,20 @@
             yearRange: [1920, currYear]
         });
 
-
+        let same_as = $('#same_as');
+        let sp_address = $('#spaddresscontainer');
+        if (same_as.is(":checked")){
+            sp_address.css('display','none');
+        }else{
+            sp_address.css('display','block');
+        }
+        same_as.on('click',function () {
+            if (same_as.is(":checked")){
+                sp_address.css('display','none');
+            }else{
+                sp_address.css('display','block');
+            }
+        });
 
     });
 </script>

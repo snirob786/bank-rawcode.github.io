@@ -12,6 +12,7 @@
 
 
 <!-------------------- Main Content ------------------>
+
     <div class="heading displayNone">Enter Your Details to Verify</div>
     <div class="form-container displayNone">
         <form id="check_user_details">

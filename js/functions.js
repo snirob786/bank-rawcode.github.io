@@ -13,8 +13,9 @@ function checkUserDetails() {
             // text.html(data);
             // console.log(data);
             var e = JSON.parse(data);
-            console.log(e.success);
+            // console.log(e.success);
             if(e.success === 'inserted' || e.success === 'already_exist'){
+                console.log(e.success);
                 window.location.replace("/user-update");
                 // $('#user-detail').addClass('displayNone');
                 // $('#user-detail-update').removeClass('displayNone');
@@ -101,7 +102,7 @@ function update_data(jsonData) {
                         text.addClass('red-text');
                         text.css('display','block');
                         window.location.assign('#heading');
-                        // console.log(e.message);
+                        console.log(e.message);
                     }
                     text.html(e.message);
                     setTimeout(function () {
@@ -285,7 +286,6 @@ function change_password() {
 
         },
     });
-
-
 }
+
 

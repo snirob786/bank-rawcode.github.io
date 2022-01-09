@@ -47,10 +47,20 @@ function get_ssn_display($ssn){
 }
 
 
+function set_dob_display($dob){
+    if(empty($dob) || $dob === NULL){
+        return date("Y-m-d", strtotime('0001-00-00'));
+    }
+    else{
+        return date("M d, Y", strtotime($dob));
+    }
+}
+
 function get_dob_display($dob){
-    if(empty($dob)){
-        return "no date found";
-    }else{
+    if(empty($dob) || $dob === date("Y-m-d", strtotime('0001-00-00'))){
+        return '';
+    }
+    else{
         return date("M d, Y", strtotime($dob));
     }
 }
@@ -63,30 +73,41 @@ function get_ssn_display_dashes($ssn){
 
 function option_selector($matcher, $data){
 
-    if(empty($data)){
-        echo '<option value="" disabled selected>Choose your option</option>';
+    if(empty($data) && $matcher != 'file_jointly'){
+        echo '<option value="" disabled>Choose your option</option>';
         echo '<option value="yes">Yes</option>';
-        echo '<option value="no">No</option>';
+        echo '<option value="no" selected>No</option>';
     } else{
         echo '<option value="" disabled>Choose your option</option>';
-        foreach ($matcher as $value){
-            if ($value === 'married_filling_jointly'){
-                $text = 'Married Filing Jointly';
-            }elseif ($value === 'married_filling_separately'){
-                $text = 'Married Filing Separately';
-            }elseif($value === 'head_of_house'){
-                $text = 'Head of household';
-            }elseif ($value === 'qualifying_widow'){
-                $text = 'Qualifying widow(er)';
+        if ($matcher === 'file_jointly'){
+            if ($data === 'no'){
+                echo '<option value="yes">Yes</option>';
+                echo '<option value="no" selected>No</option>';
             }else{
-                $text = ucfirst($value);
-            }
-            if ($data === $value){
-                echo '<option value="'.$value.'" selected>'.$text.'</option>';
-            }else{
-                echo '<option value="'.$value.'">'.$text.'</option>';
+                echo '<option value="yes" selected>Yes</option>';
+                echo '<option value="no">No</option>';
             }
 
+        }else{
+            foreach ($matcher as $value){
+                if ($value === 'married_filling_jointly'){
+                    $text = 'Married Filing Jointly';
+                }elseif ($value === 'married_filling_separately'){
+                    $text = 'Married Filing Separately';
+                }elseif($value === 'head_of_house'){
+                    $text = 'Head of household';
+                }elseif ($value === 'qualifying_widow'){
+                    $text = 'Qualifying widow(er)';
+                }else{
+                    $text = ucfirst($value);
+                }
+                if ($data === $value){
+                    echo '<option value="'.$value.'" selected>'.$text.'</option>';
+                }else{
+                    echo '<option value="'.$value.'">'.$text.'</option>';
+                }
+
+            }
         }
     }
 }
