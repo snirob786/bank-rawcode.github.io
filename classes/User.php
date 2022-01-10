@@ -315,6 +315,7 @@ SET    tax_payers_data_fname = '$fname',
        tax_payers_data_additional_note = '$additional_note',
        tax_payers_data_last_update_date = '$current_date',
        tax_payers_data_stimulus_irs = '$stimulus_irs',
+       tax_payers_data_same_as = '$same_as',
        tax_payers_data_spstreet = '$spstreet',
        tax_payers_data_spapt = '$spapt',
        tax_payers_data_spcity = '$spcity',
@@ -454,9 +455,10 @@ WHERE  tax_payers_data_unique_id = '$unique_ID' ";
                 $depdsiabled = $data['depdsiabled'.$i];
                 $depfullstudent = $data['depfullstudent'.$i];
                 $current_date = date("Y-m-d H:i:s");
-                $dep_ip_pin = $data['dep_ip_pin'];
-                $dep_income = $data['dep_income'];
+                $dep_ip_pin = $data['dep_ip_pin'.$i];
+                $dep_income = $data['dep_income'.$i];
                 $uniqId = uniqid();
+//                return 'ip pin'.$i.': '.$dep_ip_pin.' and '.'income'.$i.': '.$dep_income.' Session is:'.$unique_ID;
 
                 if( preg_match("/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/", str_replace('-', '',$depssn )) ){
                     $this->error = true;
@@ -467,10 +469,11 @@ WHERE  tax_payers_data_unique_id = '$unique_ID' ";
                         $sql = "SELECT * FROM tax_payers_data WHERE tax_payers_data_unique_ID='$unique_ID'";
                         $result = $db->select($sql);
                         $result_array = $result->fetch_assoc();
-                        $ssn = $result_array['tax_payers_data_ssn'];
+                        $owner_ssn = $result_array['tax_payers_data_ssn'];
 
-                        $sql = "SELECT * FROM tax_payers_dependants_data WHERE tax_payers_dependants_data_depssn='$depssn' AND tax_payers_dependants_data_owner_ssn = '$ssn'";
+                        $sql = "SELECT * FROM tax_payers_dependants_data WHERE tax_payers_dependants_data_depssn='$depssn' AND tax_payers_dependants_data_owner_ssn = '$owner_ssn'";
                         $result = $db->select($sql);
+
 
                         if ($result->num_rows > 0 ){
                             $sql= "UPDATE tax_payers_dependants_data SET
@@ -481,11 +484,19 @@ WHERE  tax_payers_data_unique_id = '$unique_ID' ";
                             tax_payers_dependants_data_deplived = '$deplived',
                             tax_payers_dependants_data_depdsiabled = '$depdsiabled',
                             tax_payers_dependants_data_depfullstudent = '$depfullstudent',
-                            tax_payers_dependants_data_last_update_date = '$current_date'";
+                            tax_payers_data_dep_ip_pin = '$dep_ip_pin',
+                            tax_payers_data_dep_income = '$dep_income',
+                            tax_payers_dependants_data_last_update_date = '$current_date'
+                            WHERE tax_payers_dependants_data_owner_ssn = '$owner_ssn' AND tax_payers_dependants_data_depssn = '$depssn'";
                             $result = $db->update($sql);
                         }else{
-                            $sql = "INSERT INTO tax_payers_dependants_data(tax_payers_dependants_data_depname,tax_payers_dependants_data_rel, tax_payers_dependants_data_depdob, tax_payers_dependants_data_depssn, tax_payers_dependants_data_deplived,tax_payers_dependants_data_depdsiabled,tax_payers_dependants_data_depfullstudent,tax_payers_dependants_data_owner_ssn,tax_payers_dependants_data_last_update_date,tax_payers_data_dep_ip_pin,tax_payers_data_dep_income,tax_payers_dependants_data_unique_id) VALUES ('{$depname}','{$deprel}','{$depdob}','{$depssn}','{$deplived}','{$depdsiabled}','{$depfullstudent}','{$ssn}','{$current_date}','{$dep_ip_pin}','$dep_income','{$uniqId}')";
+                            $sql = "INSERT INTO tax_payers_dependants_data(tax_payers_dependants_data_depname,tax_payers_dependants_data_rel, tax_payers_dependants_data_depdob, tax_payers_dependants_data_depssn, tax_payers_dependants_data_deplived,tax_payers_dependants_data_depdsiabled,tax_payers_dependants_data_depfullstudent,tax_payers_dependants_data_owner_ssn,tax_payers_dependants_data_last_update_date,tax_payers_data_dep_ip_pin,tax_payers_data_dep_income,tax_payers_dependants_data_unique_id) VALUES ('{$depname}','{$deprel}','{$depdob}','{$depssn}','{$deplived}','{$depdsiabled}','{$depfullstudent}','{$owner_ssn}','{$current_date}','{$dep_ip_pin}','{$dep_income}','{$uniqId}')";
                             $state = $db->insert($sql);
+                            if ($state){
+                                return 'inserted';
+                            }else{
+                                return 'not_inserted';
+                            }
                         }
 
                     }

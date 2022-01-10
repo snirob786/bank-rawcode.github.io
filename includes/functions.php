@@ -52,12 +52,12 @@ function set_dob_display($dob){
         return date("Y-m-d", strtotime('0001-00-00'));
     }
     else{
-        return date("M d, Y", strtotime($dob));
+        return date("Y-m-d", strtotime($dob));
     }
 }
 
 function get_dob_display($dob){
-    if(empty($dob) || $dob === date("Y-m-d", strtotime('0001-00-00'))){
+    if(empty($dob) || date("Y", strtotime($dob)) < '1850'){
         return '';
     }
     else{

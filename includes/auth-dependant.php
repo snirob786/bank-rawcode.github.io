@@ -4,6 +4,10 @@
 
     $status = $user->dep_updater($_POST['data'],$_POST['counter']);
 
+
+    print_r($status);
+
+
 //    for($i = 1; $i<=$counter;$i++){
 //        echo 'depdsiabled '.$i." is: ".$data['depdsiabled'.$i].'<br>';
 //    }

@@ -8,7 +8,7 @@ function adddependantupdate() {
     var html = '<div class="dependant-container">\n' +
         '                    <div class="row valign-wrapper">\n' +
         '                        <div class="col s8">\n' +
-        '                            <h6 class="left">Dependant</h6>\n' +
+        '                            <h6 class="left">Dependant '+depnum+'</h6>\n' +
         '                        </div>\n' +
         '                        <div class="col s4">\n' +
         '                            <a class="btn red white-text waves-effect waves-light right"  id="removeDependant">-</a>\n' +

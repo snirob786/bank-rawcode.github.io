@@ -47,7 +47,7 @@
                     <div class="col s12 l4">
                         <div class="input-field">
                             <input type="text" id="mname" name="mname" value="<?php echo $data['tax_payers_data_mname'];?>">
-                            <label for="mname" class="white-text">Middle Name</label>
+                            <label for="mname" class="white-text">Middle Initial</label>
                         </div>
                     </div>
                     <div class="col s12 l4">
@@ -138,7 +138,7 @@
                 <!--        Tax Payer's Address Details-->
                 <div class="row">
                     <div class="col s12">
-                        <div class="sub-heading">Tax Payer's Address</div>
+                        <div class="sub-heading">Taxpayer's Address</div>
                     </div>
                 </div>
 
@@ -198,20 +198,20 @@
                     <div class="col s12 l4">
                         <div class="input-field">
                             <input type="text" id="spfname" name="spfname" value="<?php echo $data['tax_payers_data_spfname'];?>">
-                            <label for="spfname" class="white-text">Spouse's First Name</label>
+                            <label for="spfname" class="white-text">First Name</label>
                         </div>
                     </div>
 
                     <div class="col s12 l4">
                         <div class="input-field">
                             <input type="text" id="spmname" name="spmname" value="<?php echo $data['tax_payers_data_spmname'];?>">
-                            <label for="spmname" class="white-text">Spouse's Middle Name</label>
+                            <label for="spmname" class="white-text">Middle Initial</label>
                         </div>
                     </div>
                     <div class="col s12 l4">
                         <div class="input-field">
                             <input type="text" id="splname" name="splname" value="<?php echo $data['tax_payers_data_splname'];?>">
-                            <label for="splname" class="white-text">Spouse's Last Name</label>
+                            <label for="splname" class="white-text">Last Name</label>
                         </div>
                     </div>
 
@@ -221,21 +221,21 @@
                     <div class="col s12 l4">
                         <div class="input-field">
                             <input type="text" id="spssn" name="spssn" value="<?php echo $data['tax_payers_data_spssn'];?>">
-                            <label for="spssn" class="white-text">Spouse's Social Security Number</label>
+                            <label for="spssn" class="white-text">Social Security Number</label>
                         </div>
                     </div>
 
                     <div class="col s12 l4">
                         <div class="input-field">
                             <input type="text" id="spdob" name="spdob" class="datepicker" value="<?php echo $spdob_display;?>">
-                            <label for="spdob" class="white-text">Spouse's Date of Birth</label>
+                            <label for="spdob" class="white-text">Date of Birth</label>
                         </div>
                     </div>
 
                     <div class="col s12 l4">
                         <div class="input-field">
                             <input type="text" id="sp_ip_pin" name="sp_ip_pin" value="<?php echo $data['tax_payers_data_sp_ip_pin'];?>">
-                            <label for="sp_ip_pin" class="white-text">Spouse's IP Pin</label>
+                            <label for="sp_ip_pin" class="white-text">IP Pin</label>
                         </div>
                     </div>
 
@@ -245,21 +245,21 @@
                     <div class="col s12 l4">
                         <div class="input-field">
                             <input type="text" id="spocupation" name="spocupation" value="<?php echo $data['tax_payers_data_spocupation'];?>">
-                            <label for="spocupation" class="white-text">Spouse's Occupation</label>
+                            <label for="spocupation" class="white-text">Occupation</label>
                         </div>
                     </div>
 
                     <div class="col s12 l4">
                         <div class="input-field">
                             <input type="text" id="spphone" name="spphone" value="<?php echo $data['tax_payers_data_spphone'];?>">
-                            <label for="spphone" class="white-text">Spouse's Phone Number</label>
+                            <label for="spphone" class="white-text">Phone Number</label>
                         </div>
                     </div>
 
                     <div class="col s12 l4">
                         <div class="input-field">
                             <input type="text" id="spemail" name="spemail" value="<?php echo $data['tax_payers_data_spemail'];?>">
-                            <label for="spemail" class="white-text">Spouse's Email Address</label>
+                            <label for="spemail" class="white-text">Email Address</label>
                         </div>
                     </div>
                 </div>
@@ -307,7 +307,7 @@
                     <div class="col s12" style="display: flex; align-items: center; justify-content: flex-start;">
                         <label>
                             <?php checkbox_toggler($data['tax_payers_data_same_as'],'same_as');?>
-                            <span class="white-text"><b>Same as Tax Payer's address</b></span>
+                            <span class="white-text"><b>Same as Taxpayer's address</b></span>
                         </label>
                     </div>
                     <br><br>
@@ -410,7 +410,7 @@
 
                 <div class="row valign-wrapper">
                     <div class="col s8">
-                        <div class="sub-heading">Taxpayer Child/Dependents Information</div>
+                        <div class="sub-heading">Child/Other Dependents Information</div>
                         <div id="depCounterParent" class="input-field">
                             <input id="depCount" name="depCount" type="number" value="<?php echo $depcount;?>" class="" disabled>
                             <label for="depCount" class="white-text">Dependant Counter</label>
