@@ -491,11 +491,11 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">4.</span> Do you have health insurance last year?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">4.</span> Did you buy, sell, or use any digital currency during the year?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_healthinsurance'],'healthinsurance');?>
+                                <?php option_checked($matcher,$data['tax_payers_data_digitalcurrency'],'digitalcurrency');?>
                             </div>
                         </div>
                     </div>
@@ -991,25 +991,6 @@
                     </div>
 
                     <div class="row">
-                        <div class="col s12 l4">
-                            <div class="input-field">
-                                <input type="text" id="tution_for_private_stud" name="tution_for_private_stud" value="<?php echo $data['tax_payers_data_tution_for_private_stud'];?>" >
-                                <label for="tution_for_private_stud" class="white-text">Dependent student name</label>
-                            </div>
-                        </div>
-                        <div class="col s12 l4">
-                            <div class="input-field">
-                                <input type="text" id="tution_for_private_amount" name="tution_for_private_amount" value="<?php echo $data['tax_payers_data_tution_for_private_amount'];?>" >
-                                <label for="tution_for_private_amount" class="white-text">Dependent student amount paid</label>
-                            </div>
-                        </div>
-                        <div class="col s12 l4">
-                            <div class="input-field">
-                                <input type="text" id="tution_for_private_schl" name="tution_for_private_schl" value="<?php echo $data['tax_payers_data_tution_for_private_schl'];?>" >
-                                <label for="tution_for_private_schl" class="white-text">Dependent student school's name and address</label>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
@@ -1358,6 +1339,19 @@ the “Yes” or “No” questions under “Questions — All Taxpayers.”</sp
                                     <span class="white-text">Copy of all acknowledgement letters received from charitable organizations for contributions made in 2021.</span>
                                 </label>
                             </div>
+                            <div class="col s12">
+                                <label>
+                                    <?php checkbox_toggler($data['tax_payers_data_stimulus_check_payment'],'stimulus_check_payment');?>
+                                    <span class="white-text">IRS for Stimulus check payment.</span>
+                                </label>
+                            </div>
+                            <div class="col s12">
+                                <label>
+                                    <?php checkbox_toggler($data['tax_payers_data_advance_child_tax_credit_payment'],'advance_child_tax_credit_payment');?>
+                                    <span class="white-text">IRS for Advance Child tax credit payment.</span>
+                                </label>
+                            </div>
+
                         </div>
 
                         <div class="row responsibilities_list">

@@ -331,7 +331,7 @@ function admin_user_data_iteration($current_page,$total_data,$data_per_iteration
 
 function pdf_call_function($pdf,$string,$rowNumber,$data){
     $cellWidth = 160;
-    $cellHeight = 10;
+    $cellHeight = 7;
 
     if ($pdf->GetStringWidth($string)<$cellWidth){
         $line = 1;
@@ -360,19 +360,38 @@ function pdf_call_function($pdf,$string,$rowNumber,$data){
 
         $line = count($textArray);
     }
+
+
+
     $pdf->Cell(10,10,$rowNumber,0,0,"C");
     $xPox = $pdf->GetX();
     $yPos = $pdf->GetY();
     $pdf->MultiCell($cellWidth,$cellHeight,$string,0,"L");
     $pdf->SetXY($xPox + $cellWidth,$yPos);
-
     $pdf->Cell(20,($line*$cellHeight),$data,0,1,"C");
+
+    $page_height = 286.93; // mm (portrait letter)
+    $bottom_margin = 15; // mm
+    for ($i = 0; $i <= 100; $i++):
+        $space_left = $page_height - ($pdf -> GetY() + $bottom_margin); // space left on page
+        if ($i / 6 == floor($i / 6) && $cellHeight > $space_left) {
+            $pdf -> AddPage(); // page break
+        }
+
+        if ($space_left < 30){
+            $pdf -> SetAutoPageBreak(false);
+        }else{
+            $pdf -> SetAutoPageBreak(true);
+        }
+    endfor;
+
+
 }
 
 
 function pdf_check_generator($pdf,$string,$data){
     $cellWidth = 160;
-    $cellHeight = 10;
+    $cellHeight = 7;
 
     if ($pdf->GetStringWidth($string)<$cellWidth){
         $line = 1;
@@ -404,14 +423,18 @@ function pdf_check_generator($pdf,$string,$data){
 
 
     if($data === 'on'){
+
         $xPos = $pdf->GetX();
         $yPos = $pdf->GetY();
         $pdf->SetXY($xPos,$yPos);
         $pdf->setFillColor(0,0,0);
         $pdf->SetDrawColor(255,255,255);
-        $pdf->SetLineWidth(5);
-        $pdf->Cell(5,7,'','T',0,"C",true);
+//        $pdf->SetLineWidth(5);
+        $pdf->Cell(5,5,'','T',0,"C",true);
         $pdf->SetLineWidth(0.2);
+        $xPos = $pdf->GetX();
+        $yPos = $pdf->GetY();
+        $pdf->SetXY($xPos+1,$yPos-1);
         $pdf->MultiCell($cellWidth,$cellHeight,$string,0,"L");
 
     }else{
@@ -425,7 +448,7 @@ function pdf_check_generator($pdf,$string,$data){
         $pdf->SetLineWidth(0.2);
         $xPos = $pdf->GetX();
         $yPos = $pdf->GetY();
-        $pdf->SetXY($xPos,$yPos-2.5);
+        $pdf->SetXY($xPos+1,$yPos-1);
         $pdf->MultiCell($cellWidth,$cellHeight,$string,0,"L");
     }
 }
@@ -498,4 +521,12 @@ function total_calc($data,$state){
 
     $total = $first + $second + $third + $fourth + $overpay;
     return $total;
+}
+
+function pdf_option_toggle($data){
+    if ($data === "not_applicable"){
+        return "N/A";
+    }else{
+        return ucfirst($data);
+    }
 }
