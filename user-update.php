@@ -387,19 +387,13 @@
                 </div>
 
                 <div class="row">
-                    <div class="input-field col s12 l4">
+                    <div class="input-field col s12 l6">
                         <select name="marital_status" id="marital_status" >
-                            <?php option_selector($matcher_marriage,$data['tax_payers_data_marital_status']);?>
+                            <?php option_selector_marital($matcher_marriage,$data['tax_payers_data_marital_status']);?>
                         </select>
-                        <label class="white-text">Marriage Status</label>
+                        <label class="white-text">Marriage Status<i class="tiny material-icons red-text text-lighten-1 lp-5">star_rate</i></label>
                     </div>
-                    <div class="input-field col s12 l4">
-                        <select name="file_jointly" id="file_jointly" >
-                           <?php option_selector('file_jointly',$data['tax_payers_data_file_jointly']);?>
-                        </select>
-                        <label class="white-text">Filing Jointly</label>
-                    </div>
-                    <div class="col s12 l4">
+                    <div class="col s12 l6">
                         <div class="input-field">
                             <input type="text" id="spousedead" name="spousedead" class="datepicker" value="<?php echo $data['tax_payers_data_spousedead'];?>" >
                             <label for="spousedead" class="white-text">Date of Spouse's Death</label>
@@ -497,17 +491,6 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">4.</span> Are you (or your spouse) blind or permanently disabled?</div>
-                        </div>
-                        <div class="col s4 l3">
-                            <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_permdisabled'],'permdisabled');?>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="radio-btn-close">
-                        <div class="col s8 l9">
                             <div class="white-text left left-align"><span class="teal-text text-darken-4">5.</span> Do you have health insurance last year?</div>
                         </div>
                         <div class="col s4 l3">
@@ -546,17 +529,6 @@
                         <div class="col s4 l3">
                             <div class="right">
                                 <?php option_checked($matcher,$data['tax_payers_data_foreignbankaccount'],'foreignbankaccount');?>
-                        </div>
-                    </div>
-
-                    <div class="radio-btn-close">
-                        <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">9.</span> Were there any births, deaths, marriages, divorces or adoptions in your immediate family?</div>
-                        </div>
-                        <div class="col s4 l3">
-                            <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_immediatefamilyadoptaion'],'immediatefamilyadoptaion');?>
-                            </div>
                         </div>
                     </div>
 
@@ -604,16 +576,7 @@
                         </div>
                     </div>
 
-                    <div class="radio-btn-close">
-                        <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">14.</span> Did you buy, sell, or use any digital currency during the year?</div>
-                        </div>
-                        <div class="col s4 l3">
-                            <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_digitalcurrency'],'digitalcurrency');?>
-                            </div>
-                        </div>
-                    </div>
+
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
@@ -771,18 +734,6 @@
                         </div>
                     </div>
 
-
-                    <div class="radio-btn-close">
-                        <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">29.</span> Did you purchase a new energy-efficient car, truck, or van?</div>
-                        </div>
-                        <div class="col s4 l3">
-                            <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_pur_new_energy'],'pur_new_energy');?>
-
-                            </div>
-                        </div>
-                    </div>
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
                             <div class="white-text left left-align"><span class="teal-text text-darken-4">30.</span> Are you a member of the military?</div>
@@ -818,16 +769,6 @@
                         </div>
                     </div>
 
-                    <div class="radio-btn-close">
-                        <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">32.</span> Did you receive any economic impact payments (stimulus payments) during 2021?</div>
-                        </div>
-                        <div class="col s4 l3">
-                            <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_rcv_ecn_impact'],'rcv_ecn_impact');?>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="row" style="margin-top: 50px; margin-bottom: 0 !important;">
                         <div class="col s12 l6">
@@ -935,50 +876,6 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">41.</span> Did you, or do you plan to, contribute money before April 18, 2022 to an HSA for 2021?</div>
-                        </div>
-                        <div class="col s4 l3">
-                            <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_contributee_hsa'],'contributee_hsa');?>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="radio-btn-close">
-                        <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">42.</span> Did you pay any interest on a loan for a boat or RV that has living quarters?</div>
-                        </div>
-                        <div class="col s4 l3">
-                            <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_interest_loan_rv'],'interest_loan_rv');?>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="radio-btn-close">
-                        <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">43.</span> Did you pay sales taxes on a major purchase in 2021, such as a vehicle, boat, or home?</div>
-                        </div>
-                        <div class="col s4 l3">
-                            <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_taxes_major_purchase'],'taxes_major_purchase');?>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="radio-btn-close">
-                        <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">44.</span> Did you work from a home office or use your car for business?</div>
-                        </div>
-                        <div class="col s4 l3">
-                            <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_work_from_home'],'work_from_home');?>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="radio-btn-close">
-                        <div class="col s8 l9">
                             <div class="white-text left left-align"><span class="teal-text text-darken-4">45.</span> Did you receive income from a sharing/gig economy activity (e.g. Airbnb, Uber, etc.)?</div>
                         </div>
                         <div class="col s4 l3">
@@ -1018,17 +915,6 @@
                         <div class="col s4 l3">
                             <div class="right">
                                 <?php option_checked($matcher,$data['tax_payers_data_refinance_mortgage'],'refinance_mortgage');?>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="radio-btn-close">
-                        <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">49.</span> Did you use any mortgage loan proceeds for purposes other than to buy, build, or substantially improve your home?</div>
-                        </div>
-                        <div class="col s4 l3">
-                            <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_substantially_improve_home'],'substantially_improve_home');?>
                             </div>
                         </div>
                     </div>
@@ -1104,17 +990,6 @@
                         </div>
                     </div>
 
-                    <div class="radio-btn-close">
-                        <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">52.</span> Did you pay any tuition for a private school for a dependent or take classes yourself?</div>
-                        </div>
-                        <div class="col s4 l3">
-                            <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_tution_for_private'],'tution_for_private');?>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="row">
                         <div class="col s12 l4">
                             <div class="input-field">
@@ -1148,25 +1023,25 @@
                     </div>
 
                     <div class="row">
-                        <div class="col s12 l3">
+                        <div class="col s12 l6">
                             <div class="input-field">
                                 <input type="text" id="depcare_prov" name="depcare_prov" value="<?php echo $data['tax_payers_data_depcare_prov'];?>" >
                                 <label for="depcare_prov" class="white-text">Name of provider</label>
                             </div>
                         </div>
-                        <div class="col s12 l3">
+                        <div class="col s12 l6">
                             <div class="input-field">
                                 <input type="text" id="depcare_prov_ssn" name="depcare_prov_ssn" value="<?php echo $data['tax_payers_data_depcare_prov_ssn'];?>" >
-                                <label for="depcare_prov_ssn" class="white-text">Provider's ssn</label>
+                                <label for="depcare_prov_ssn" class="white-text">Provider's EIN/SSN</label>
                             </div>
                         </div>
-                        <div class="col s12 l3">
+                        <div class="col s12 l6">
                             <div class="input-field">
                                 <input type="text" id="depcare_prov_add" name="depcare_prov_add" value="<?php echo $data['tax_payers_data_depcare_prov_add'];?>" >
                                 <label for="tution_for_private_schl" class="white-text">Provider's address</label>
                             </div>
                         </div>
-                        <div class="col s12 l3">
+                        <div class="col s12 l6">
                             <div class="input-field">
                                 <input type="text" id="depcare_prov_amnt" name="depcare_prov_amnt" value="<?php echo $data['tax_payers_data_depcare_prov_amnt'];?>" >
                                 <label for="depcare_prov_amnt" class="white-text">Amount paid to provider</label>

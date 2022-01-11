@@ -73,49 +73,54 @@ function get_ssn_display_dashes($ssn){
 
 function option_selector($matcher, $data){
 
-    if(empty($data) && $matcher != 'file_jointly'){
-        echo '<option value="" disabled>Choose your option</option>';
+    if(empty($data)){
+        echo '<option value="not_applicable" selected>Not Applicable</option>';
         echo '<option value="yes">Yes</option>';
-        echo '<option value="no" selected>No</option>';
+        echo '<option value="no">No</option>';
     } else{
-        echo '<option value="" disabled>Choose your option</option>';
-        if ($matcher === 'file_jointly'){
-            if ($data === 'no'){
-                echo '<option value="yes">Yes</option>';
-                echo '<option value="no" selected>No</option>';
-            }else{
-                echo '<option value="yes" selected>Yes</option>';
-                echo '<option value="no">No</option>';
-            }
-
+        echo '<option value="not_applicable">Not Applicable</option>';
+        if ($data === 'no'){
+            echo '<option value="yes">Yes</option>';
+            echo '<option value="no" selected>No</option>';
         }else{
-            foreach ($matcher as $value){
-                if ($value === 'married_filling_jointly'){
-                    $text = 'Married Filing Jointly';
-                }elseif ($value === 'married_filling_separately'){
-                    $text = 'Married Filing Separately';
-                }elseif($value === 'head_of_house'){
-                    $text = 'Head of household';
-                }elseif ($value === 'qualifying_widow'){
-                    $text = 'Qualifying widow(er)';
-                }else{
-                    $text = ucfirst($value);
-                }
-                if ($data === $value){
-                    echo '<option value="'.$value.'" selected>'.$text.'</option>';
-                }else{
-                    echo '<option value="'.$value.'">'.$text.'</option>';
-                }
-
-            }
+            echo '<option value="yes" selected>Yes</option>';
+            echo '<option value="no">No</option>';
         }
+    }
+}
+
+function option_selector_marital($matcher,$data){
+
+    if (empty($data)){
+        echo '<option value="not_applicable" selected>Not Applicable</option>';
+    }else{
+        echo '<option value="not_applicable">Not Applicable</option>';
+    }
+    foreach ($matcher as $value){
+        if ($value === 'married_filling_jointly'){
+            $text = 'Married Filing Jointly';
+        }elseif ($value === 'married_filling_separately'){
+            $text = 'Married Filing Separately';
+        }elseif($value === 'head_of_house'){
+            $text = 'Head of household';
+        }elseif ($value === 'qualifying_widow'){
+            $text = 'Qualifying widow(er)';
+        }else{
+            $text = ucfirst($value);
+        }
+        if ($data === $value){
+            echo '<option value="'.$value.'" selected>'.$text.'</option>';
+        }else{
+            echo '<option value="'.$value.'">'.$text.'</option>';
+        }
+
     }
 }
 
 function custom_paid_select($array_datas, $data){
 
     if(empty($data)){
-        echo '<option value="none" selected>None</option>';
+        echo '<option value="not_applicable" selected>N/A</option>';
         echo '<option value="paid">Paid</option>';
         echo '<option value="received">Received</option>';
     }else{
@@ -126,8 +131,8 @@ function custom_paid_select($array_datas, $data){
             }elseif ($value === 'received'){
                 $text = 'Received';
             }
-            elseif ($value === 'none'){
-                $text = 'None';
+            elseif ($value === 'not_applicable'){
+                $text = 'N/A';
             }
             else{
                 $text = ucfirst($value);
@@ -145,20 +150,38 @@ function custom_paid_select($array_datas, $data){
 
 
 function option_checked($matcher,$data, $data_name){
-    foreach ($matcher as $value){
-        if (empty($value)){
-            $value = "no";
-        }
-        if ($data === $value){
-            echo '<label>';
-            echo '<input name="'.$data_name.'" type="radio" class="with-gap" value="'.$value.'" checked/>';
-            echo '<span class="white-text">'.$value.'</span>';
-            echo '</label>';
-        }else{
-            echo '<label>';
-            echo '<input name="'.$data_name.'" type="radio" class="with-gap" value="'.$value.'" checked/>';
-            echo '<span class="white-text">'.$value.'</span>';
-            echo '</label>';
+
+    if (empty($data)){
+        echo '<input style="visibility: hidden" name="'.$data_name.'" type="radio" class="with-gap" value="not_applicable" checked/>';
+        echo '<label>';
+        echo '<input name="'.$data_name.'" type="radio" class="with-gap" value="yes"/>';
+        echo '<span class="white-text">Yes</span>';
+        echo '</label>';
+
+        echo '<label>';
+        echo '<input name="'.$data_name.'" type="radio" class="with-gap" value="no" />';
+        echo '<span class="white-text">No</span>';
+        echo '</label>';
+    }
+
+    else{
+        foreach ($matcher as $value){
+            if($value === "not_applicable"){
+                echo '<input style="visibility: hidden" name="'.$data_name.'" type="radio" class="with-gap" value="not_applicable" checked/>';
+            }else{
+                if ($data === $value){
+                    echo '<label>';
+                    echo '<input name="'.$data_name.'" type="radio" class="with-gap" value="'.$value.'" checked/>';
+                    echo '<span class="white-text">'.$value.'</span>';
+                    echo '</label>';
+
+                }else{
+                    echo '<label>';
+                    echo '<input name="'.$data_name.'" type="radio" class="with-gap" value="'.$value.'"/>';
+                    echo '<span class="white-text">'.$value.'</span>';
+                    echo '</label>';
+                }
+            }
         }
     }
 

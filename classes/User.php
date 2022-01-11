@@ -114,12 +114,10 @@
             $addresschange = $data['addresschange'];
             $claimeddependant = $data['claimeddependant'];
             $notifiedirs = $data['notifiedirs'];
-            $permdisabled = $data['permdisabled'];
             $healthinsurance = $data['healthinsurance'];
             $marketplace = $data['marketplace'];
             $rentfrom = $data['rentfrom'];
             $foreignbankaccount = $data['foreignbankaccount'];
-            $immediatefamilyadoptaion = $data['immediatefamilyadoptaion'];
             $moreforeignfinance = $data['moreforeignfinance'];
             $foreignincome = $data['foreignincome'];
             $pensionplan = $data['pensionplan'];
@@ -152,12 +150,10 @@
             $purchase_health = $data['purchase_health'];
             $ded_retirement = $data['ded_retirement'];
             $pay_domestic = $data['pay_domestic'];
-            $pur_new_energy = $data['pur_new_energy'];
             $mem_military = $data['mem_military'];
             $stateofresidency = $data['stateofresidency'];
             $lived_foreign = $data['lived_foreign'];
             $foreigncountryname = $data['foreigncountryname'];
-            $rcv_ecn_impact = $data['rcv_ecn_impact'];
             $impactpayments = $data['impactpayments'];
             $impactpaymentsdate = set_dob_display($data['impactpaymentsdate']);
             $adopted_child = $data['adopted_child'];
@@ -168,15 +164,10 @@
             $investment_theft = $data['investment_theft'];
             $employee_stock = $data['employee_stock'];
             $dispose_financial_interest = $data['dispose_financial_interest'];
-            $contributee_hsa = $data['contributee_hsa'];
-            $interest_loan_rv = $data['interest_loan_rv'];
-            $taxes_major_purchase = $data['taxes_major_purchase'];
-            $work_from_home = $data['work_from_home'];
             $income_sharing_economy = $data['income_sharing_economy'];
             $interest_part_venture = $data['interest_part_venture'];
             $homebuyer_credit = $data['homebuyer_credit'];
             $refinance_mortgage = $data['refinance_mortgage'];
-            $substantially_improve_home = $data['substantially_improve_home'];
             $energy_efficient_improvements = $data['energy_efficient_improvements'];
             $child_attending_college = $data['child_attending_college'];
             $atnd_clg_year = $data['atnd_clg_year'];
@@ -186,7 +177,6 @@
             $atnd_clg_student_tution = $data['atnd_clg_student_tution'];
             $atnd_clg_student_loan = $data['atnd_clg_student_loan'];
             $atnd_clg_student_books = $data['atnd_clg_student_books'];
-            $tution_for_private = $data['tution_for_private'];
             $tution_for_private_stud = $data['tution_for_private_stud'];
             $tution_for_private_amount = $data['tution_for_private_amount'];
             $tution_for_private_schl = $data['tution_for_private_schl'];
@@ -235,7 +225,7 @@
             $list_item_ded_cat = array_index_exist_checker($data,'list_item_ded_cat');
             $copy_all_acknow = array_index_exist_checker($data,'copy_all_acknow');
             $same_as = array_index_exist_checker($data,'same_as');
-            $file_jointly = $data['file_jointly'];
+//            $file_jointly = $data['file_jointly'];
             $ip_pin = $data['ip_pin'];
             $sp_ip_pin = $data['sp_ip_pin'];
             $dl_no = $data['dl_no'];
@@ -250,7 +240,7 @@
             $unique_ID =  $new_ses->get_session('special_id');
 
 
-            if (empty($fname) || empty($lname) || empty($dob) || empty($marital_status)){
+            if (empty($fname) || empty($lname) || empty($dob) || $marital_status === "not_applicable" || empty($ocupation) || empty($phone) || empty($email) || empty($street) || empty($city) || empty($state) || empty($zip) || $isblind === "not_applicable" || $isspblind === "not_applicable" || $isdisable === "not_applicable" || $isspdisable === "not_applicable"){
                 $this->error = true;
                 return 'empty_fields';
             }else if( preg_match("/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/", str_replace('-', '', $spssn)) ){
@@ -291,12 +281,10 @@ SET    tax_payers_data_fname = '$fname',
        tax_payers_data_addresschange = '$addresschange',
        tax_payers_data_claimeddependant = '$claimeddependant',
        tax_payers_data_notifiedirs = '$notifiedirs',
-       tax_payers_data_permdisabled = '$permdisabled',
        tax_payers_data_healthinsurance = '$healthinsurance',
        tax_payers_data_marketplace = '$marketplace',
        tax_payers_data_rentfrom = '$rentfrom',
        tax_payers_data_foreignbankaccount = '$foreignbankaccount',
-       tax_payers_data_immediatefamilyadoptaion = '$immediatefamilyadoptaion',
        tax_payers_data_moreforeignfinance = '$moreforeignfinance',
        tax_payers_data_foreignincome = '$foreignincome',
        tax_payers_data_pensionplan = '$pensionplan',
@@ -328,12 +316,10 @@ SET    tax_payers_data_fname = '$fname',
        tax_payers_data_purchase_health = '$purchase_health',
        tax_payers_data_ded_retirement = '$ded_retirement',
        tax_payers_data_pay_domestic = '$pay_domestic',
-       tax_payers_data_pur_new_energy = '$pur_new_energy',
        tax_payers_data_mem_military = '$mem_military',
        tax_payers_data_stateofresidency = '$stateofresidency',
        tax_payers_data_lived_foreign = '$lived_foreign',
        tax_payers_data_foreigncountryname = '$foreigncountryname',
-       tax_payers_data_rcv_ecn_impact = '$rcv_ecn_impact',
        tax_payers_data_impactpayments = '$impactpayments',
        tax_payers_data_impactpaymentsdate = '$impactpaymentsdate',
        tax_payers_data_adopted_child = '$adopted_child',
@@ -345,16 +331,10 @@ SET    tax_payers_data_fname = '$fname',
        tax_payers_data_employee_stock = '$employee_stock',
        tax_payers_data_dispose_financial_interest =
        '$dispose_financial_interest',
-       tax_payers_data_contributee_hsa = '$contributee_hsa',
-       tax_payers_data_interest_loan_rv = '$interest_loan_rv',
-       tax_payers_data_taxes_major_purchase = '$taxes_major_purchase',
-       tax_payers_data_work_from_home = '$work_from_home',
        tax_payers_data_income_sharing_economy = '$income_sharing_economy',
        tax_payers_data_interest_part_venture = '$interest_part_venture',
        tax_payers_data_homebuyer_credit = '$homebuyer_credit',
        tax_payers_data_refinance_mortgage = '$refinance_mortgage',
-       tax_payers_data_substantially_improve_home =
-       '$substantially_improve_home',
        tax_payers_data_energy_efficient_improvements =
        '$energy_efficient_improvements',
        tax_payers_data_child_attending_college = '$child_attending_college',
@@ -365,7 +345,6 @@ SET    tax_payers_data_fname = '$fname',
        tax_payers_data_atnd_clg_student_tution = '$atnd_clg_student_tution',
        tax_payers_data_atnd_clg_student_loan = '$atnd_clg_student_loan',
        tax_payers_data_atnd_clg_student_books = '$atnd_clg_student_books',
-       tax_payers_data_tution_for_private = '$tution_for_private',
        tax_payers_data_tution_for_private_stud = '$tution_for_private_stud',
        tax_payers_data_tution_for_private_amount = '$tution_for_private_amount',
        tax_payers_data_tution_for_private_schl = '$tution_for_private_schl',
@@ -411,7 +390,6 @@ SET    tax_payers_data_fname = '$fname',
        tax_payers_data_inc_ded_cat = '$inc_ded_cat',
        tax_payers_data_list_item_ded_cat = '$list_item_ded_cat',
        tax_payers_data_copy_all_acknow = '$copy_all_acknow',
-       tax_payers_data_file_jointly = '$file_jointly',
        tax_payers_data_ip_pin = '$ip_pin',
        tax_payers_data_sp_ip_pin = '$sp_ip_pin',
        tax_payers_data_dl_no = '$dl_no',

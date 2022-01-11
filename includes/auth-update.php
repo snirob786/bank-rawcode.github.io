@@ -6,7 +6,7 @@
 //    echo json_encode(['success' => 'error','message' => $status]);
 
     if ($status === 'empty_fields'){
-            echo json_encode(['success' => 'error','message'=>'All fields are required']);
+            echo json_encode(['success' => 'error','message'=>'All red starred fields are required']);
     }
     else if ($status === 'invalid_spssn'){
         echo json_encode(['success' => 'error','message'=>'Spouse Social Security Network is invalid']);

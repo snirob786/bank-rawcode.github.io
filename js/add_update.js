@@ -70,8 +70,9 @@ function adddependantupdate() {
         '<div class="radio-btn-close radio-btn-close1">\n' +
         '<div class="white-text left">Is the dependant Disabled?</div>\n' +
         '<div class="right">\n'+
+        '<input style="visibility: hidden" name="depdsiabled'+depnum+'" type="radio" class="with-gap" value="not_applicable" checked/>'+
         '<label>\n' +
-        '<input name="depdsiabled'+depnum+'" type="radio" class="with-gap" value="yes" checked/>\n' +
+        '<input name="depdsiabled'+depnum+'" type="radio" class="with-gap" value="yes"/>\n' +
         '<span class="white-text">yes</span>\n' +
         '</label>\n' +
         '<label>\n' +
@@ -84,8 +85,9 @@ function adddependantupdate() {
         '<div class="radio-btn-close radio-btn-close2">\n' +
         '<div class="white-text left">Is the dependant full time student?</div>\n' +
         '<div class="right">\n'+
+        '<input style="visibility: hidden" name="depfullstudent'+depnum+'" type="radio" class="with-gap" value="not_applicable" checked/>'+
         '<label>\n' +
-        '<input name="depfullstudent'+depnum+'" type="radio" class="with-gap" value="yes" checked/>\n' +
+        '<input name="depfullstudent'+depnum+'" type="radio" class="with-gap" value="yes"/>\n' +
         '<span class="white-text">yes</span>\n' +
         '</label>\n' +
         '<label>\n' +
