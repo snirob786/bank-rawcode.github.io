@@ -491,7 +491,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">5.</span> Do you have health insurance last year?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">4.</span> Do you have health insurance last year?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -502,7 +502,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">6.</span> Did you receive form 1095-a from marketplace?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">5.</span> Did you receive form 1095-a from marketplace?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -513,7 +513,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">7.</span> Did you receive rent from real estate or other property? </div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">6.</span> Did you receive rent from real estate or other property? </div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -524,7 +524,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">8.</span> Do you have a foreign bank account, trust, or business? </div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">7.</span> Do you have a foreign bank account, trust, or business? </div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -534,7 +534,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">10.</span> Did you own $50,000 or more in foreign financial assets?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">8.</span> Did you own $50,000 or more in foreign financial assets?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -545,7 +545,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">11.</span> Do you have any foreign income, bank account, trust or business?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">9.</span> Do you have any foreign income, bank account, trust or business?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -556,7 +556,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">12.</span> Did you receive any distribution from an IRA, profit sharing or pension plan?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">10.</span> Did you receive any distribution from an IRA, profit sharing or pension plan?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -567,7 +567,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">13.</span> Do you have a Medical or Health Savings Account (MSA or HAS)?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">11.</span> Do you have a Medical or Health Savings Account (MSA or HAS)?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -580,7 +580,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">15.</span> Did you pay interest on a student loan for yourself, your spouse, or your dependent during the year?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">12.</span> Did you pay interest on a student loan for yourself, your spouse, or your dependent during the year?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -591,7 +591,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">16.</span> Did you receive 1098 T (tuition form) for yourself, your spouse or your dependents?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">13.</span> Did you receive 1098 T (tuition form) for yourself, your spouse or your dependents?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -602,7 +602,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">17.</span> Have you or your dependents taken a distribution from a qualified Tuition program (QTP) or 529 plan during the year?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">14.</span> Have you or your dependents taken a distribution from a qualified Tuition program (QTP) or 529 plan during the year?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -613,7 +613,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">18.</span> Did you purchase a new alternative technology vehicle or electric vehicle?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">15.</span> Did you purchase a new alternative technology vehicle or electric vehicle?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -624,7 +624,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">19.</span> Did you install any energy property to your residence such as solar water heaters, generators or fuel cells or energy efficient improvements such as exterior doors or windows, insulation, heat pumps, furnaces, central air conditioners or water heaters? </div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">16.</span> Did you install any energy property to your residence such as solar water heaters, generators or fuel cells or energy efficient improvements such as exterior doors or windows, insulation, heat pumps, furnaces, central air conditioners or water heaters? </div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -636,7 +636,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">20.</span> Did you purchase or sell a main home during the year</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">17.</span> Did you purchase or sell a main home during the year</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -647,7 +647,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">21.</span> Did you sell or transfer any stock or sell rental or investment property?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">18.</span> Did you sell or transfer any stock or sell rental or investment property?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -657,7 +657,7 @@
                     </div>
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">22.</span> Did you make any charitable contributions in 2021?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">19.</span> Did you make any charitable contributions in 2021?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -667,7 +667,7 @@
                     </div>
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">23.</span> Did you have any debts cancelled, forgiven, or refinanced??</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">20.</span> Did you have any debts cancelled, forgiven, or refinanced??</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -677,7 +677,7 @@
                     </div>
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">24.</span> Are you involved in bankruptcy, foreclosure, repossession, or had any debt (including credit cards) cancelled?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">21.</span> Are you involved in bankruptcy, foreclosure, repossession, or had any debt (including credit cards) cancelled?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -688,7 +688,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">25.</span> Did you receive both stimulus checks from IRS?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">22.</span> Did you receive both stimulus checks from IRS?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -699,7 +699,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">26.</span> Did you purchase health insurance through a public exchange?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">23.</span> Did you purchase health insurance through a public exchange?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -712,7 +712,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">27.</span> Will there be any significant changes in income or deductions next year, such as retirement?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">24.</span> Will there be any significant changes in income or deductions next year, such as retirement?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -724,7 +724,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">28.</span> Did you pay anyone for domestic services in your home?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">25.</span> Did you pay anyone for domestic services in your home?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -736,7 +736,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">30.</span> Are you a member of the military?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">26.</span> Are you a member of the military?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -753,7 +753,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">31.</span> Were you a citizen of or lived in a foreign country?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">27.</span> Were you a citizen of or lived in a foreign country?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -788,7 +788,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">33.</span> Were any children born or adopted in 2021?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">28.</span> Were any children born or adopted in 2021?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -799,7 +799,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">34.</span> Did you receive any advance Child Tax Credit payment?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">29.</span> Did you receive any advance Child Tax Credit payment?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -810,7 +810,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">35.</span> Do you have any children who have unearned income of $1,100 or more?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">30.</span> Do you have any children who have unearned income of $1,100 or more?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -821,7 +821,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">36.</span> Did you roll over any amounts from a retirement account in 2021?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">31.</span> Did you roll over any amounts from a retirement account in 2021?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -832,7 +832,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">37.</span> Did you receive any income from an installment sale?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">32.</span> Did you receive any income from an installment sale?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -843,7 +843,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">38.</span> Did you have any investments become worthless or were you a victim of investment theft in 2021?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">33.</span> Did you have any investments become worthless or were you a victim of investment theft in 2021?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -854,7 +854,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">39.</span> Were you granted, or did you exercise, any employee stock options during 2021?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">34.</span> Were you granted, or did you exercise, any employee stock options during 2021?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -865,7 +865,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">40.</span> Did you receive, sell, send, exchange, or otherwise dispose of any financial interest in any virtual currency?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">35.</span> Did you receive, sell, send, exchange, or otherwise dispose of any financial interest in any virtual currency?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -876,7 +876,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">45.</span> Did you receive income from a sharing/gig economy activity (e.g. Airbnb, Uber, etc.)?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">36.</span> Did you receive income from a sharing/gig economy activity (e.g. Airbnb, Uber, etc.)?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -888,7 +888,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">46.</span> Do you own a business or an interest in a partnership, corporation, LLC, farming activities, or other venture?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">37.</span> Do you own a business or an interest in a partnership, corporation, LLC, farming activities, or other venture?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -899,7 +899,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">47.</span> If you sold a home, did you claim the First-Time Homebuyer Credit when it was purchased?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">38.</span> If you sold a home, did you claim the First-Time Homebuyer Credit when it was purchased?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -910,7 +910,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">48.</span> Did you refinance a mortgage or take a home equity loan?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">39.</span> Did you refinance a mortgage or take a home equity loan?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -921,7 +921,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">50.</span> Did you make any new energy-efficient improvements to your home?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">40.</span> Did you make any new energy-efficient improvements to your home?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -932,7 +932,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">51.</span> Were any children attending college?</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">41.</span> Were any children attending college?</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
@@ -1013,7 +1013,7 @@
 
                     <div class="radio-btn-close">
                         <div class="col s8 l9">
-                            <div class="white-text left left-align"><span class="teal-text text-darken-4">53.</span> Did you pay for child or dependent care so you could work or go to school? (add statement if needed)</div>
+                            <div class="white-text left left-align"><span class="teal-text text-darken-4">42.</span> Did you pay for child or dependent care so you could work or go to school? (add statement if needed)</div>
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
