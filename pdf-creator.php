@@ -20,24 +20,33 @@
 $pdf->Ln(5);
 
 //    Set font to ariel,bold,14pt
-$pdf->SetFont('Times','',14);
+$pdf->SetFont('Times','B',16);
 $pdf->Cell(200,7,"HBC Tax & Accounting Inc.","0","1","C");
 
 //    Set font to ariel,bold,14pt
-$pdf->SetFont('Times','',14);
-$pdf->Cell(200,7,"200 Little Falls St, #502 Falls Church, VA 22046","0","1","C");
+$pdf->SetFont('Times','',12);
+$pdf->Cell(95,7,"Address:","0","0","L");
 
 //    Set font to ariel,bold,14pt
-$pdf->SetFont('Times','',14);
-$pdf->Cell(200,7,"7857 Heritage Dr, #D Annandale, VA 22003.","0","1","C");
+$pdf->SetFont('Times','',12);
+$pdf->Cell(95,7,"Phone: 703-942-8443, 703-890-2907","0","1","R");
 
 //    Set font to ariel,bold,14pt
-$pdf->SetFont('Times','',14);
-$pdf->Cell(200,7,"Phone: 703-942-8443, 703-890-2907","0","1","C");
+$pdf->SetFont('Times','',12);
+$pdf->Cell(95,7,"200 Little Falls St, #502 Falls Church, VA 22046","0","0","L");
+
 
 //    Set font to ariel,bold,14pt
-$pdf->SetFont('Times','',14);
-$pdf->Cell(200,7,"www.hbctaxacct.com","0","1","C");
+$pdf->SetFont('Times','',12);
+$pdf->Cell(95,7,"Website: www.hbctaxacct.com","0","1","R");
+
+//    Set font to ariel,bold,14pt
+$pdf->SetFont('Times','',12);
+$pdf->Cell(95,7,"7857 Heritage Dr, #D Annandale, VA 22003.","0","0","L");
+
+//    Set font to ariel,bold,14pt
+$pdf->SetFont('Times','',12);
+$pdf->Cell(95,7,"Email: info@hbctaxacct.com","0","1","R");
 
 
 
@@ -174,7 +183,7 @@ $pdf->Ln(10);
 
     //    Set font to ariel,bold,14pt
        $pdf->SetFont('Times','',18);
-       $pdf->Cell(200,20," Taxpayers Address","0","1","C");
+       $pdf->Cell(200,20," Taxpayer Address","0","1","C");
     //    Personal Details
        $pdf->SetLeftMargin(10);
        $pdf->SetTextColor(0,0,0);
@@ -344,12 +353,12 @@ $pdf->Ln(10);
 
     //    Set font to ariel,bold,14pt
     $pdf->SetFont('Times','',18);
-    $pdf->Cell(200,20," Taxpayer's Spouse Address","0","1","C");
+    $pdf->Cell(200,20,"Spouse Address","0","1","C");
     //    Spouse Address Heading Details
     $pdf->SetLeftMargin(10);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',10);
-    $pdf->Cell(60,10,"Spouse ".'\n'."Street Address",1,0,"C");
+    $pdf->Cell(60,10,"Spouse Street Address",1,0,"C");
     $pdf->Cell(30,10,"Spouse Apt/Suite",1,0,"C");
     $pdf->Cell(40,10,"Spouse City",1,0,"C");
     $pdf->Cell(30,10,"Spouse State",1,0,"C");
@@ -362,22 +371,6 @@ $pdf->Ln(10);
     $pdf->Cell(30,10,ucfirst($ownder_data['tax_payers_data_spstate']),1,0,"C");
     $pdf->Cell(30,10,$ownder_data['tax_payers_data_spzip'],1,1,"C");
 
-
-    //    Alimony Heading
-    $pdf->SetLeftMargin(10);
-    $pdf->SetTextColor(0,0,0);
-    $pdf->SetFont('Arial','',10);
-    $pdf->Cell(140,10,"Did you pay or receive alimony in 2021?",1,0,"C");
-    $pdf->Cell(50,10,ucfirst($ownder_data['tax_payers_data_rcvalimony']),1,1,"C");
-
-    $pdf->Cell(140,10,"Amount of the alimony",1,0,"C");
-    $pdf->Cell(50,10,ucfirst($ownder_data['tax_payers_data_rcvalimonyamnt']),1,1,"C");
-
-    $pdf->Cell(140,10,"Recipient's SSN",1,0,"C");
-    $pdf->Cell(50,10,ucfirst($ownder_data['tax_payers_data_rcpntssn']),1,1,"C");
-
-    $pdf->Cell(140,10,"Date of divorce or separation",1,0,"C");
-    $pdf->Cell(50,10,get_dob_display($ownder_data['tax_payers_data_doseparation']),1,1,"C");
 
 $pdf->Ln(10);
 //    Set font to ariel,bold,14pt
@@ -407,7 +400,7 @@ $pdf->Ln(10);
     $pdf->Cell(63.3,10,ucfirst($ownder_data['tax_payers_data_isspdisable']),1,0,"C");
 
     //    Dependant Information
-    $pdf->Ln(10);
+    $pdf->Ln(20);
 
 
     //    Dependant Sub Header
@@ -422,12 +415,18 @@ $pdf->Ln(10);
     $ownerSnn = $ownder_data['tax_payers_data_ssn'];
     $depSql = "SELECT * FROM tax_payers_dependants_data WHERE tax_payers_dependants_data_owner_ssn = '$ownerSnn'";
     $depResult = $db->select($depSql);
+    $depCount = 0;
 
     if ($depResult->num_rows <=0){
         $pdf->Cell(190,10,"No Dependant Data Found",1,1,"C");
     } else{
 
         while ($depData = $depResult->fetch_assoc()){
+            $depCount++;
+            $pdf->SetFont('Arial','B',12);
+            $pdf->Cell(190,10,ucfirst('Dependant No. '.$depCount),1,1,"C");
+            $pdf->Ln(5);
+
             //    Dependents Name
             $pdf->SetLeftMargin(10);
             $pdf->SetTextColor(255,255,255);
@@ -527,10 +526,13 @@ $pdf->Ln(10);
             $pdf->SetTextColor(0,0,0);
             $pdf->SetFont('Arial','',10);
             $pdf->Cell(130,10,$depData['tax_payers_dependants_data_depfullstudent'],1,1,"C");
+            $pdf->Ln(10);
 
         }
     }
 
+
+    $pdf->Ln(30);
 
 //  Tax Payers Other Information
     $pdf->SetFont('Times','',18);
@@ -542,9 +544,29 @@ $pdf->Ln(10);
     $pdf->SetFont('Arial','',12);
 
 
+
+//    Alimony Heading
+    $pdf->SetLeftMargin(10);
+    $pdf->SetTextColor(0,0,0);
+    $pdf->SetFont('Arial','',10);
+    $pdf->Cell(140,10,"Did you pay or receive alimony in 2021?",1,0,"C");
+    $pdf->Cell(50,10,ucwords(str_replace('_',' ',$ownder_data['tax_payers_data_rcvalimony'])),1,1,"C");
+
+    $pdf->Cell(140,10,"Amount of the alimony",1,0,"C");
+    $pdf->Cell(50,10,ucfirst($ownder_data['tax_payers_data_rcvalimonyamnt']),1,1,"C");
+
+    $pdf->Cell(140,10,"Recipient's SSN",1,0,"C");
+    $pdf->Cell(50,10,ucfirst($ownder_data['tax_payers_data_rcpntssn']),1,1,"C");
+
+    $pdf->Cell(140,10,"Date of divorce or separation",1,0,"C");
+    $pdf->Cell(50,10,get_dob_display($ownder_data['tax_payers_data_doseparation']),1,1,"C");
+
+
+    $pdf->Ln(20);
+
 //    Question 1:
     $pdf->Cell(10,10,"1.",0,0,"C");
-    $pdf->Cell(160,10,"Did you name, address or marital status change during the year?",0,0,"L");
+    $pdf->Cell(160,10,"Did your name, address or marital status change during the year?",0,0,"L");
     $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_addresschange']),0,1,"C");
 
 //    Question 2:
@@ -572,49 +594,44 @@ $pdf->Cell(10,11,"6.",0,0,"C");
 $pdf->Cell(160,10,"Did you purchase health insurance through a public exchange?",0,0,"L");
 $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_purchase_health']),0,1,"C");
 
-//    Question 34:
+//    Question 7:
 $pdf->Cell(10,11,"7.",0,0,"C");
 $pdf->Cell(160,10,"Did you receive any advance Child Tax Credit payment?",0,0,"L");
 $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_child_tax_credit']),0,1,"C");
 
 
-//    Question 7:
-    $pdf->Cell(10,10,"8.",0,0,"C");
-    $pdf->Cell(160,10,"Do you have health insurance last year?",0,0,"L");
-    $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_healthinsurance']),0,1,"C");
-
 //    Question 8:
-    $pdf->Cell(10,10,"9.",0,0,"C");
+    $pdf->Cell(10,10,"8.",0,0,"C");
     $pdf->Cell(160,10,"Did you receive form 1095-a from marketplace?",0,0,"L");
     $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_marketplace']),0,1,"C");
 //    Question 9:
-    $pdf->Cell(10,10,"10.",0,0,"C");
+    $pdf->Cell(10,10,"9.",0,0,"C");
     $pdf->Cell(160,10,"Did you receive rent from real estate or other property?",0,0,"L");
     $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_rentfrom']),0,1,"C");
 //    Question 10:
-    $pdf->Cell(10,10,"11.",0,0,"C");
+    $pdf->Cell(10,10,"10.",0,0,"C");
     $pdf->Cell(160,10,"Do you have a foreign bank account, trust, or business?",0,0,"L");
     $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_foreignbankaccount']),0,1,"C");
 
 
 
 //    Question 11:
-    $pdf->Cell(10,10,"12.",0,0,"C");
+    $pdf->Cell(10,10,"11.",0,0,"C");
     $pdf->Cell(160,10,"Did you own $50,000 or more in foreign financial assets?",0,0,"L");
     $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_moreforeignfinance']),0,1,"C");
 
 //    Question 12:
-$pdf->Cell(10,10,"13.",0,0,"C");
+$pdf->Cell(10,10,"12.",0,0,"C");
 $pdf->Cell(160,10,"Do you have any foreign income, bank account, trust or business?",0,0,"L");
 $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_foreignincome']),0,1,"C");
 
 //    Question 13:
-$pdf->Cell(10,10,"14.",0,0,"C");
+$pdf->Cell(10,10,"13.",0,0,"C");
 $pdf->Cell(160,10,"Did you receive any distribution from an IRA, profit sharing or pension plan?",0,0,"L");
 $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_pensionplan']),0,1,"C");
 
 //    Question 14:
-$pdf->Cell(10,10,"15.",0,0,"C");
+$pdf->Cell(10,10,"14.",0,0,"C");
 $pdf->Cell(160,10,"Do you have a Medical or Health Savings Account (MSA or HAS)?",0,0,"L");
 $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_msa_has']),0,1,"C");
 
@@ -622,70 +639,70 @@ $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_msa_has']),0,1,
 //    Question 15:
 
 $string = "Did you pay interest on a student loan for yourself, your spouse, or your dependent during the year?";
-pdf_call_function($pdf,$string,"16.",pdf_option_toggle($ownder_data['tax_payers_data_interestonstudentloan']));
+pdf_call_function($pdf,$string,"15.",pdf_option_toggle($ownder_data['tax_payers_data_interestonstudentloan']));
 
 
-//    Question 17:
-$pdf->Cell(10,10,"17.",0,0,"C");
+//    Question 16:
+$pdf->Cell(10,10,"16.",0,0,"C");
 $pdf->Cell(160,10,"Did you receive 1098 T (tuition form) for yourself, your spouse or your dependents?",0,0,"L");
 $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_tutionform1098']),0,1,"C");
 
-//    Question 18:
+//    Question 17:
 $string = "Have you or your dependents taken a distribution from a qualified Tuition program (QTP) or 529 plan during the year?";
-pdf_call_function($pdf,$string,"18.",pdf_option_toggle($ownder_data['tax_payers_data_dependantqtp']));
+pdf_call_function($pdf,$string,"17.",pdf_option_toggle($ownder_data['tax_payers_data_dependantqtp']));
 
-//    Question 19:
-$pdf->Cell(10,10,"19.",0,0,"C");
+//    Question 18:
+$pdf->Cell(10,10,"18.",0,0,"C");
 $pdf->Cell(160,10,"Did you purchase a new alternative technology vehicle or electric vehicle?",0,0,"L");
 $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_techvehicle']),0,1,"C");
 
-//    Question 20:
+//    Question 19:
     $string = "Did you install any energy property to your residence such as solar water heaters, generators or fuel cells or energy efficient improvements such as exterior doors or windows, insulation, heat pumps, furnaces, central air conditioners or water heaters?";
-    pdf_call_function($pdf,$string,"20.",pdf_option_toggle($ownder_data['tax_payers_data_energyproperty']));
+    pdf_call_function($pdf,$string,"19.",pdf_option_toggle($ownder_data['tax_payers_data_energyproperty']));
 
 
 
-//    Question 21:
+//    Question 20:
     
-    $pdf->Cell(10,11,"21.",0,0,"C");
+    $pdf->Cell(10,11,"20.",0,0,"C");
     $pdf->Cell(160,10,"Did you purchase or sell a main home during the year",0,0,"L");
     $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_purchasenewhome']),0,1,"C");
 
-//    Question 22:
-    $pdf->Cell(10,11,"22.",0,0,"C");
+//    Question 21:
+    $pdf->Cell(10,11,"21.",0,0,"C");
     $pdf->Cell(160,10,"Did you sell or transfer any stock or sell rental or investment property?",0,0,"L");
     $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_didusell']),0,1,"C");
 
-//    Question 23:
-    $pdf->Cell(10,11,"23.",0,0,"C");
+//    Question 22:
+    $pdf->Cell(10,11,"22.",0,0,"C");
     $pdf->Cell(160,10,"Did you make any charitable contributions in 2021?",0,0,"L");
     $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_donate_charitable']),0,1,"C");
 
-//    Question 24:
-    $pdf->Cell(10,11,"24",0,0,"C");
+//    Question 23:
+    $pdf->Cell(10,11,"23",0,0,"C");
     $pdf->Cell(160,10,"Did you have any debts cancelled, forgiven, or refinanced?",0,0,"L");
     $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_debtscancelled']),0,1,"C");
 
 
-//    Question 25:
+//    Question 24:
 
 $string = "Are you involved in bankruptcy, foreclosure, repossession, or had any debt (including credit cards) cancelled?";
-pdf_call_function($pdf,$string,"25.",pdf_option_toggle($ownder_data['tax_payers_data_bankruptcy']));
+pdf_call_function($pdf,$string,"24.",pdf_option_toggle($ownder_data['tax_payers_data_bankruptcy']));
 
-//    Question 26:
+//    Question 25:
 
 $string = "Will there be any significant changes in income or deductions next year, such as retirement?";
-pdf_call_function($pdf,$string,"26.",pdf_option_toggle($ownder_data['tax_payers_data_ded_retirement']));
+pdf_call_function($pdf,$string,"25.",pdf_option_toggle($ownder_data['tax_payers_data_ded_retirement']));
 
 
-//    Question 27:
-$pdf->Cell(10,11,"27.",0,0,"C");
+//    Question 26:
+$pdf->Cell(10,11,"26.",0,0,"C");
 $pdf->Cell(160,10,"Did you pay anyone for domestic services in your home?",0,0,"L");
 $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_pay_domestic']),0,1,"C");
 
 
-//    Question 28:
-$pdf->Cell(10,11,"28.",0,0,"C");
+//    Question 27:
+$pdf->Cell(10,11,"27.",0,0,"C");
 $pdf->Cell(160,10,"Are you a member of the military?",0,0,"L");
 $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_mem_military']),0,1,"C");
 
@@ -693,8 +710,8 @@ $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_mem_military'])
 $pdf->Cell(160,10,"State of residency",1,0,"C");
 $pdf->Cell(30,10,ucfirst($ownder_data['tax_payers_data_stateofresidency']),1,1,"C");
 
-//    Question 29:
-$pdf->Cell(10,11,"29.",0,0,"C");
+//    Question 28:
+$pdf->Cell(10,11,"28.",0,0,"C");
 $pdf->Cell(160,10,"Were you a citizen of or lived in a foreign country?",0,0,"L");
 $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_lived_foreign']),0,1,"C");
 
@@ -702,75 +719,67 @@ $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_lived_foreign']
 $pdf->Cell(160,10,"Foreign country",1,0,"C");
 $pdf->Cell(30,10,ucfirst($ownder_data['tax_payers_data_foreigncountryname']),1,1,"C");
 
-//    Impact payments amount:
-$pdf->Cell(160,10,"Impact payments amount",1,0,"C");
-$pdf->Cell(30,10,ucfirst($ownder_data['tax_payers_data_impactpayments']),1,1,"C");
-
-//    Payment received date:
-$pdf->Cell(160,10,"Payment received date",1,0,"C");
-$pdf->Cell(30,10,get_dob_display($ownder_data['tax_payers_data_impactpaymentsdate']),1,1,"C");
-
-//    Question 30:
-$pdf->Cell(10,11,"30.",0,0,"C");
+//    Question 29:
+$pdf->Cell(10,11,"29.",0,0,"C");
 $pdf->Cell(160,10,"Were any children born or adopted in 2021?",0,0,"L");
 $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_adopted_child']),0,1,"C");
 
 
-//    Question 31:
-$pdf->Cell(10,11,"31.",0,0,"C");
+//    Question 30:
+$pdf->Cell(10,11,"30.",0,0,"C");
 $pdf->Cell(160,10,"Do you have any children who have unearned income of $1,100 or more?",0,0,"L");
 $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_unearned_children']),0,1,"C");
 
-//    Question 32:
-$pdf->Cell(10,11,"32.",0,0,"C");
+//    Question 31:
+$pdf->Cell(10,11,"31.",0,0,"C");
 $pdf->Cell(160,10,"Did you roll over any amounts from a retirement account in 2021?",0,0,"L");
 $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_rollover_retirement_acnt']),0,1,"C");
 
-//    Question 33:
-$pdf->Cell(10,11,"33.",0,0,"C");
+//    Question 32:
+$pdf->Cell(10,11,"32.",0,0,"C");
 $pdf->Cell(160,10,"Did you receive any income from an installment sale?",0,0,"L");
 $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_installmentsale']),0,1,"C");
 
-//    Question 34:
+//    Question 33:
 $string = "Did you have any investments become worthless or were you a victim of investment theft in 2021?";
-pdf_call_function($pdf,$string,"34.",pdf_option_toggle($ownder_data['tax_payers_data_investment_theft']));
+pdf_call_function($pdf,$string,"33.",pdf_option_toggle($ownder_data['tax_payers_data_investment_theft']));
 
 
-//    Question 35:
-$pdf->Cell(10,11,"35.",0,0,"C");
+//    Question 34:
+$pdf->Cell(10,11,"34.",0,0,"C");
 $pdf->Cell(160,10,"Were you granted, or did you exercise, any employee stock options during 2021?",0,0,"L");
 $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_employee_stock']),0,1,"C");
 
-//    Question 36:
+//    Question 35:
 $string = "Did you receive, sell, send, exchange, or otherwise dispose of any financial interest in any virtual currency?";
-pdf_call_function($pdf,$string,"36.",pdf_option_toggle($ownder_data['tax_payers_data_dispose_financial_interest']));
+pdf_call_function($pdf,$string,"35.",pdf_option_toggle($ownder_data['tax_payers_data_dispose_financial_interest']));
 
-//    Question 37:
-$pdf->Cell(10,11,"37.",0,0,"C");
+//    Question 36:
+$pdf->Cell(10,11,"36.",0,0,"C");
 $pdf->Cell(160,10,"Did you receive income from a sharing/gig economy activity (e.g. Airbnb, Uber, etc.)?",0,0,"L");
 $pdf->Cell(20,10,pdf_option_toggle($ownder_data['tax_payers_data_income_sharing_economy']),0,1,"C");
 
-//    Question 38:
+//    Question 37:
 $string = "Do you own a business or an interest in a partnership, corporation, LLC, farming activities, or other venture?";
-pdf_call_function($pdf,$string,"38.",pdf_option_toggle($ownder_data['tax_payers_data_interest_part_venture']));
+pdf_call_function($pdf,$string,"37.",pdf_option_toggle($ownder_data['tax_payers_data_interest_part_venture']));
 
 
+
+//    Question 38:
+$string = "If you sold a home, did you claim the First-Time Homebuyer Credit when it was purchased?";
+pdf_call_function($pdf,$string,"38.",pdf_option_toggle($ownder_data['tax_payers_data_homebuyer_credit']));
 
 //    Question 39:
-$string = "If you sold a home, did you claim the First-Time Homebuyer Credit when it was purchased?";
-pdf_call_function($pdf,$string,"39.",pdf_option_toggle($ownder_data['tax_payers_data_homebuyer_credit']));
+$string = "Did you refinance a mortgage or take a home equity loan?";
+pdf_call_function($pdf,$string,"39.",pdf_option_toggle($ownder_data['tax_payers_data_refinance_mortgage']));
 
 //    Question 40:
-$string = "Did you refinance a mortgage or take a home equity loan?";
-pdf_call_function($pdf,$string,"40.",pdf_option_toggle($ownder_data['tax_payers_data_refinance_mortgage']));
+$string = "Did you make any new energy-efficient improvements to your home?";
+pdf_call_function($pdf,$string,"40.",pdf_option_toggle($ownder_data['tax_payers_data_energy_efficient_improvements']));
 
 //    Question 41:
-$string = "Did you make any new energy-efficient improvements to your home?";
-pdf_call_function($pdf,$string,"41.",pdf_option_toggle($ownder_data['tax_payers_data_energy_efficient_improvements']));
-
-//    Question 42:
 $string = "Were any children attending college?";
-pdf_call_function($pdf,$string,"42.",pdf_option_toggle($ownder_data['tax_payers_data_child_attending_college']));
+pdf_call_function($pdf,$string,"41.",pdf_option_toggle($ownder_data['tax_payers_data_child_attending_college']));
 
 $pdf->Ln(10);
 
@@ -801,11 +810,11 @@ $pdf->Cell(47.5,10,ucfirst($ownder_data['tax_payers_data_atnd_clg_student_books'
 
 $pdf->Ln(5);
 
-//    Question 43:
+//    Question 42:
 $string = "Did you pay for child or dependent care so you could work or go to school? (add statement if needed)";
-pdf_call_function($pdf,$string,"43.",pdf_option_toggle($ownder_data['tax_payers_data_depcare']));
+pdf_call_function($pdf,$string,"42.",pdf_option_toggle($ownder_data['tax_payers_data_depcare']));
 
-$pdf->Ln(5);
+$pdf->Ln(15);
 // Dependent Care Statement
 $pdf->Cell(95,10,"Provider Name",1,0,"C");
 $pdf->Cell(95,10,"Provider SSN",1,1,"C");
@@ -875,7 +884,7 @@ $pdf->Cell(35,10,"",1,0,"C");
 $pdf->Cell(35,10,$total_state,1,1,"C");
 
 
-$pdf->Ln(10);
+$pdf->Ln(30);
 
 //    Set font to ariel,bold,14pt
 $pdf->SetFont('Times','',20);
@@ -913,23 +922,19 @@ $pdf->Ln(5);
 //    Consent:
 $pdf->SetFont('Times','',14);
 $pdf->SetTextColor(0,0,0);
-    $string = 'All Forms W-2 (wages), 1099-INT (interest), 1099-DIV (dividends), 1099-B (proceeds from broker or barter transactions), 1099-R
-    (pensions and IRA distributions), Schedules K-1 from partnerships, S corporations, estates and trusts, and other income reporting
-    statements, including all copies provided from the payer.';
+    $string = 'All Forms W-2 (wages), 1099-INT (interest), 1099-DIV (dividends), 1099-B (proceeds from broker or barter transactions), 1099-R (pensions and IRA distributions), Schedules K-1 from partnerships, S corporations, estates and trusts, and other income reporting statements, including all copies provided from the payer.';
     pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_w2_form']);
     $pdf->Ln(5);
 
-    $string = 'Form 1095-A (for health insurance purchased through a public exchange), Form 1095-B (for health insurance purchased outside
-of a public exchange), or Form 1095-C (for employer-provided health insurance coverage).';
+    $string = 'Form 1095-A (for health insurance purchased through a public exchange), Form 1095-B (for health insurance purchased outside of a public exchange), or Form 1095-C (for employer-provided health insurance coverage).';
     pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_a1095_form']);
     $pdf->Ln(5);
 
-    $string = 'If you are a new client, provide copies of last year’s tax returns.';
-    pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_new_client_last_copy']);
+    $string = 'If you are a new client, provide copies of last year tax returns.';
+    pdf_check_generator($pdf,stripslashes($string),$ownder_data['tax_payers_data_new_client_last_copy']);
     $pdf->Ln(5);
 
-    $string = 'The completed Individual Income Tax Organizer. Note: If you choose not to fill out the organizer, you must at least answer
-the “Yes” or “No” questions under “Questions — All Taxpayers.”';
+    $string = 'The completed Individual Income Tax Organizer. Note: If you choose not to fill out the organizer, you must at least answer the Yes or No questions under Questions All Taxpayers.';
     pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_not_to_fill_out_org']);
     $pdf->Ln(5);
 
@@ -963,7 +968,7 @@ the “Yes” or “No” questions under “Questions — All Taxpayers.”';
 
     $string = 'IRS for Stimulus check payment.';
     pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_advance_child_tax_credit_payment']);
-    $pdf->Ln(5);
+    $pdf->Ln(20);
 
 
     //  Tax Payer Information
@@ -1010,15 +1015,15 @@ the “Yes” or “No” questions under “Questions — All Taxpayers.”';
 
     $pdf->Ln(10);
 
-    $pdf->Cell(63,10,"Taxpayer",1,0,"C");
-    $pdf->Cell(63,10,"Spouse",1,0,"C");
+    $pdf->Cell(63,10,"Taxpayer Name",1,0,"C");
+    $pdf->Cell(63,10,"Spouse Name",1,0,"C");
     $pdf->Cell(64,10,"Date",1,1,"C");
 
     $pdf->Cell(63,10,ucfirst($ownder_data['tax_payers_data_tax_initial_sig']),1,0,"C");
     $pdf->Cell(63,10,ucfirst($ownder_data['tax_payers_data_tax_sp_initial_sig']),1,0,"C");
     $pdf->Cell(64,10,get_dob_display($ownder_data['tax_payers_data_sign_date']),1,1,"C");
 
-    $pdf->Ln(5);
+    $pdf->Ln(60);
 
     //  Tax Payer Information
     $pdf->SetFont('Times','',20);

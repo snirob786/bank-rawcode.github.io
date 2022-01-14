@@ -9,17 +9,24 @@ if($user_type === 'admin'){
     $home = '/';
     $display = 'displayNone';
 }
-
 ?>
-
 <div class="row valign-wrapper">
     <nav class="nav-extended">
         <div class="row nav-wrapper logo_header">
-            <div class="col s12 l2">
-                <a href="<?php echo $home;?>" class="brand-logo"><img class="logo" src="assets/HBC-logo.png" alt="Logo"></a>
-            </div>
-            <div class="col s12 l10">
-                <a href="<?php echo $home;?>" class="float_left">HBC Tax & Accounting Inc</a>
+            <div class="col s12">
+                <h5>HBC Tax & Accounting Inc.</h5>
+                <div class="information-container">
+                    <div class="address">
+                        <h6>Address:</h6>
+                        <h6>200 Little Falls St, #502 Falls Church, VA 22046</h6>
+                        <h6>7857 Heritage Dr, #D Annandale, VA 22003.</h6>
+                    </div>
+                    <div class="others-info-container">
+                        <h6>Phone: <a href="tel:703-942-8443">703-942-8443</a>, <a href="tel:703-890-2907">703-890-2907</a></h6>
+                        <h6>Email: <a href="mailto:info@hbctaxacct.com">info@hbctaxacct.com</a></h6>
+                        <h6>Website: <a href="www.hbctaxacct.com">www.hbctaxacct.com</a></h6>
+                    </div>
+                </div>
                 <ul id="nav-mobile" class="right hide-on-med-and-down <?php echo $display;?>">
                     <li><a href="/admin-dashboard">Home</a></li>
                     <li><a href="/users">Users</a></li>

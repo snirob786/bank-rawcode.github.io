@@ -450,6 +450,28 @@ td .input-field input[type=text]:disabled{
     transition: all 2s ease-in-out;
 }
 
+.mt-35{
+    margin-top: 35px;
+}
+
+.information-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 20px;
+}
+
+.information-container .address{
+    text-align: left;
+}
+.information-container .others-info-container{
+    text-align: right;
+}
+
+.full-section .container .container{
+    width: 80%;
+}
+
 /* Media Query Tab and Lower*/
 
 @media screen and (max-width: 1024px){

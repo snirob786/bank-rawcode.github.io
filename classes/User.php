@@ -153,8 +153,6 @@
             $stateofresidency = $data['stateofresidency'];
             $lived_foreign = $data['lived_foreign'];
             $foreigncountryname = $data['foreigncountryname'];
-            $impactpayments = $data['impactpayments'];
-            $impactpaymentsdate = set_dob_display($data['impactpaymentsdate']);
             $adopted_child = $data['adopted_child'];
             $child_tax_credit = $data['child_tax_credit'];
             $unearned_children = $data['unearned_children'];
@@ -317,8 +315,6 @@ SET    tax_payers_data_fname = '$fname',
        tax_payers_data_stateofresidency = '$stateofresidency',
        tax_payers_data_lived_foreign = '$lived_foreign',
        tax_payers_data_foreigncountryname = '$foreigncountryname',
-       tax_payers_data_impactpayments = '$impactpayments',
-       tax_payers_data_impactpaymentsdate = '$impactpaymentsdate',
        tax_payers_data_adopted_child = '$adopted_child',
        tax_payers_data_child_tax_credit = '$child_tax_credit',
        tax_payers_data_unearned_children = '$unearned_children',

@@ -138,7 +138,7 @@
                 <!--        Tax Payer's Address Details-->
                 <div class="row">
                     <div class="col s12">
-                        <div class="sub-heading">Taxpayer's Address</div>
+                        <div class="sub-heading">Taxpayer Address</div>
                     </div>
                 </div>
 
@@ -744,7 +744,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12">
+                    <div class="col s12 mt-35">
                         <div class="input-field">
                             <input type="text" id="stateofresidency" name="stateofresidency" value="<?php echo $data['tax_payers_data_stateofresidency'];?>" >
                             <label for="stateofresidency" class="white-text">State of residency</label>
@@ -762,27 +762,10 @@
                         </div>
                     </div>
 
-                    <div class="col s12">
+                    <div class="col s12 mt-35">
                         <div class="input-field">
                             <input type="text" id="foreigncountryname" name="foreigncountryname" value="<?php echo $data['tax_payers_data_foreigncountryname'];?>" >
                             <label for="foreigncountryname" class="white-text">Name of the Foreign country</label>
-                        </div>
-                    </div>
-
-
-                    <div class="row" style="margin-top: 50px; margin-bottom: 0 !important;">
-                        <div class="col s12 l6">
-                            <div class="input-field">
-                                <input type="text" id="impactpayments" name="impactpayments" value="<?php echo $data['tax_payers_data_impactpayments'];?>" >
-                                <label for="impactpayments" class="white-text">impact payments amount</label>
-                            </div>
-                        </div>
-
-                        <div class="col s12 l6">
-                            <div class="input-field" style="margin-bottom: 0 !important;">
-                                <input type="text" id="impactpaymentsdate" name="impactpaymentsdate" class="datepicker" value="<?php echo $impactpaymentsdate;?>">
-                                <label for="impactpaymentsdate" class="grey-text text-lighten-2">Date of Birth</label>
-                            </div>
                         </div>
                     </div>
 
@@ -936,19 +919,19 @@
                         </div>
                         <div class="col s4 l3">
                             <div class="right">
-                                <?php option_checked($matcher,$data['tax_payers_data_substantially_improve_home'],'child_attending_college');?>
+                                <?php option_checked($matcher,$data['tax_payers_data_child_attending_college'],'child_attending_college');?>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row mt-35">
                         <div class="col s12 l3">
                                 <div class="input-field">
                                     <input type="text" id="atnd_clg_year" name="atnd_clg_year" value="<?php echo $data['tax_payers_data_atnd_clg_year'];?>" >
                                     <label for="atnd_clg_year" class="white-text">Year of attending college</label>
                                 </div>
                         </div>
-                        <div class="col s12">
+                        <div class="col s12 mt-35">
                             <div class="col s12 l4">
                                 <div class="input-field">
                                     <input type="text" id="atnd_clg_you_tution" name="atnd_clg_you_tution" value="<?php echo $data['tax_payers_data_atnd_clg_you_tution'];?>" >
@@ -1003,7 +986,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row mt-35">
                         <div class="col s12 l6">
                             <div class="input-field">
                                 <input type="text" id="depcare_prov" name="depcare_prov" value="<?php echo $data['tax_payers_data_depcare_prov'];?>" >
@@ -1380,19 +1363,19 @@ the “Yes” or “No” questions under “Questions — All Taxpayers.”</sp
                                 <span style="text-align: left"><p><b>Signatures.</b> By signing below, you acknowledge that you have read, understand, and accept your obligations and responsibilities.
                                         For a joint return, both taxpayers must sign.</p></span>
                             </div>
-                            <div class="col s12 l4">
+                            <div class="col s12 l4 mt-35">
                                 <div class="input-field">
                                     <input type="text" id="tax_initial_sig" name="tax_initial_sig" value="<?php echo $data['tax_payers_data_tax_initial_sig'];?>" >
-                                    <label for="tax_initial_sig" class="white-text">Taxpayer initials</label>
+                                    <label for="tax_initial_sig" class="white-text">Taxpayer Name</label>
                                 </div>
                             </div>
-                            <div class="col s12 l4">
+                            <div class="col s12 l4 mt-35">
                                 <div class="input-field">
                                     <input type="text" id="tax_sp_initial_sig" name="tax_sp_initial_sig" value="<?php echo $data['tax_payers_data_tax_sp_initial_sig'];?>" >
-                                    <label for="tax_sp_initial_sig" class="white-text">Taxpayer's spouse initials</label>
+                                    <label for="tax_sp_initial_sig" class="white-text">Spouse Name</label>
                                 </div>
                             </div>
-                            <div class="col s12 l4">
+                            <div class="col s12 l4 mt-35">
                                 <div class="input-field">
                                     <input type="text" id="sign_date" name="sign_date" class="datepicker" value="<?php echo get_dob_display($data['tax_payers_data_sign_date']);?>">
                                     <label for="sign_date" class="grey-text text-lighten-2">Date</label>

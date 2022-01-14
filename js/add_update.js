@@ -32,7 +32,7 @@ function adddependantupdate() {
         '                        <div class="col s12 l4">\n' +
         '<div class="input-field">\n' +
         '<input type="text" id="depdob" name="depdob'+depnum+'" class="datepicker">\n' +
-        '                                <label for="depdob" class="white-text">Date of Birth</label>\n' +
+        '                                <label for="depdob" class="white-text">Date of Birth (MM/DD/YYYY)</label>\n' +
         '                            </div>\n' +
         '                        </div>\n' +
         '                        <div class="col s12 l6">\n' +

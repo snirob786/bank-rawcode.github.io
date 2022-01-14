@@ -32,7 +32,7 @@ while ($result_dep_array = $result_dep->fetch_assoc()){
             <div class="col s12 l4">
                 <div class="input-field">
                     <input type="text" id="depdob" name="<?php echo 'depdob'.$i;?>" class="datepicker" value="<?php echo get_dob_display($result_dep_array['tax_payers_dependants_data_depdob']);?>">
-                    <label for="depdob" class="white-text">Date of Birth</label>
+                    <label for="depdob" class="white-text">Date of Birth (MM/DD/YYYY)</label>
                 </div>
             </div>
             <div class="col s12 l6">

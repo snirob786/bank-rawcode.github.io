@@ -371,7 +371,7 @@ function pdf_call_function($pdf,$string,$rowNumber,$data){
     $pdf->Cell(20,($line*$cellHeight),$data,0,1,"C");
 
     $page_height = 286.93; // mm (portrait letter)
-    $bottom_margin = 15; // mm
+    $bottom_margin = 25; // mm
     for ($i = 0; $i <= 100; $i++):
         $space_left = $page_height - ($pdf -> GetY() + $bottom_margin); // space left on page
         if ($i / 6 == floor($i / 6) && $cellHeight > $space_left) {
