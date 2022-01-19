@@ -42,7 +42,7 @@ $pdf->Cell(95,7,"Website: www.hbctaxacct.com","0","1","R");
 
 //    Set font to ariel,bold,14pt
 $pdf->SetFont('Times','',12);
-$pdf->Cell(95,7,"7857 Heritage Dr, #D Annandale, VA 22003.","0","0","L");
+$pdf->Cell(95,7,"7857 Heritage Dr, #D Annandale, VA 22003","0","0","L");
 
 //    Set font to ariel,bold,14pt
 $pdf->SetFont('Times','',12);

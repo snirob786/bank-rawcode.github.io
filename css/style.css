@@ -472,6 +472,12 @@ td .input-field input[type=text]:disabled{
     width: 80%;
 }
 
+.information-container h6{
+    font-size: 14px;
+    line-height: 24px;
+    margin: 2px 0;
+}
+
 /* Media Query Tab and Lower*/
 
 @media screen and (max-width: 1024px){

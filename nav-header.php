@@ -19,7 +19,7 @@ if($user_type === 'admin'){
                     <div class="address">
                         <h6>Address:</h6>
                         <h6>200 Little Falls St, #502 Falls Church, VA 22046</h6>
-                        <h6>7857 Heritage Dr, #D Annandale, VA 22003.</h6>
+                        <h6>7857 Heritage Dr, #D Annandale, VA 22003</h6>
                     </div>
                     <div class="others-info-container">
                         <h6>Phone: <a href="tel:703-942-8443">703-942-8443</a>, <a href="tel:703-890-2907">703-890-2907</a></h6>
