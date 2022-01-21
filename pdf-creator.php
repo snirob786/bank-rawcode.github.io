@@ -962,11 +962,11 @@ $pdf->SetTextColor(0,0,0);
     pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_copy_all_acknow']);
     $pdf->Ln(5);
 
-    $string = 'IRS for Advance Child tax credit payment.';
+    $string = 'IRS Letter #6745 for Stimulus check payment.';
     pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_copy_all_acknow']);
     $pdf->Ln(5);
 
-    $string = 'IRS for Stimulus check payment.';
+    $string = 'IRS Letter #6419 for Advance Child tax credit payment.';
     pdf_check_generator($pdf,$string,$ownder_data['tax_payers_data_advance_child_tax_credit_payment']);
     $pdf->Ln(20);
 

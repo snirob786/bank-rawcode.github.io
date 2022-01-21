@@ -1325,13 +1325,13 @@ the “Yes” or “No” questions under “Questions — All Taxpayers.”</sp
                             <div class="col s12">
                                 <label>
                                     <?php checkbox_toggler($data['tax_payers_data_stimulus_check_payment'],'stimulus_check_payment');?>
-                                    <span class="white-text">IRS for Stimulus check payment.</span>
+                                    <span class="white-text">IRS Letter #6745 for Stimulus check payment.</span>
                                 </label>
                             </div>
                             <div class="col s12">
                                 <label>
                                     <?php checkbox_toggler($data['tax_payers_data_advance_child_tax_credit_payment'],'advance_child_tax_credit_payment');?>
-                                    <span class="white-text">IRS for Advance Child tax credit payment.</span>
+                                    <span class="white-text">IRS Letter #6419 for Advance Child tax credit payment.</span>
                                 </label>
                             </div>
 
