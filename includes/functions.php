@@ -530,3 +530,44 @@ function pdf_option_toggle($data){
         return ucfirst($data);
     }
 }
+
+
+function email_sender($data){
+    $html= $data.' has submitted or updated a record.';
+    smtp_mailer('Record Submitted/Update',$html);
+}
+
+function email_admin_sender(){
+    $html= 'The Admin Sign-in detected. Please check.';
+    smtp_mailer('Admin Sign-in Detected',$html);
+}
+
+function smtp_mailer($subject, $msg){
+    include('../smtp/PHPMailerAutoload.php');
+	$mail = new PHPMailer(); 
+	$mail->SMTPDebug  = 0;// previous was 3
+	$mail->IsSMTP(); 
+	$mail->SMTPAuth = true; 
+	$mail->SMTPSecure = 'tls'; 
+	$mail->Host = "mail.thedashstudio.net";
+	$mail->Port = 465;
+	$mail->IsHTML(true);
+	$mail->CharSet = 'UTF-8';
+	$mail->Username = "tasks@thedashstudio.net";
+	$mail->Password = "Universe123";
+	$mail->SetFrom("tasks@thedashstudio.net", 'Website Notifier');
+	$mail->Subject = $subject;
+	$mail->Body =$msg;
+	$mail->AddAddress('snirob786@gmail.com'); //First Recipient's Address
+	$mail->AddAddress("snirob12508@gmail.com"); //Second Recipient's Address
+	$mail->SMTPOptions=array('ssl'=>array(
+		'verify_peer'=>false,
+		'verify_peer_name'=>false,
+		'allow_self_signed'=>false
+	));
+	if(!$mail->Send()){
+		echo $mail->ErrorInfo;
+	}else{
+		return 'Sent';
+	}
+}

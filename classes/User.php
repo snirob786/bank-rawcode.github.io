@@ -396,6 +396,7 @@ WHERE  tax_payers_data_unique_id = '$unique_ID' ";
 
                     $result = $db->update($sql);
                     if ($result){
+                        email_sender($fname.' '.$mname.' '.$lname);
                         return 'updated';
                     } else{
                         return 'not_updated';

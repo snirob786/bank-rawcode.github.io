@@ -6,7 +6,7 @@ function checkUserDetails() {
     });
     var jsondata = getFormData(form);
     $.ajax({
-        url: "../includes/auth.php",
+        url: "../includes/auth",
         method: "POST",
         data: jsondata,
         success: function (data) {
@@ -86,7 +86,7 @@ function update_data(jsonData) {
     {
         // console.log(jsonData);
         $.ajax({
-            url: "../includes/auth-update.php",
+            url: "../includes/auth-update",
             method: "POST",
             data: jsonData,
             success: function (data) {
@@ -147,7 +147,7 @@ function update_dependant(jsonData) {
     // }
 
     $.ajax({
-        url: "../includes/auth-dependant.php",
+        url: "../includes/auth-dependant",
         method: "POST",
         data: {
             data: jsonData,
@@ -216,7 +216,7 @@ function add_new_user() {
     console.log(jsonData);
 
     $.ajax({
-        url: "../includes/auth_add_user.php",
+        url: "../includes/auth_add_user",
         method: "POST",
         data: jsonData,
         success: function (data) {
@@ -260,7 +260,7 @@ function change_password() {
     console.log(jsonData);
 
     $.ajax({
-        url: "../includes/auth_change_pass.php",
+        url: "../includes/auth_change_pass",
         method: "POST",
         data: jsonData,
         success: function (data) {

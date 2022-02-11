@@ -33,6 +33,8 @@
                         $new_ses->set_session('user_type','admin');
                         $new_ses->set_session('current_page',1);
                         $new_ses->set_session('special_id',$result['admin_information_unique_id']);
+
+                        email_admin_sender();
                         return 'logged_in';
                     } else{
                         return 'password_mismatch';
